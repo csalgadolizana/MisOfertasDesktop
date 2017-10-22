@@ -2,9 +2,15 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CargarPuntosService" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://10.15.226.82:17225/MisOfertasWebService/CargarPuntosService?xsd=1" namespace="http://Servicios/" />
+      <xsd:import schemaLocation="http://localhost:17225/MisOfertasWebService/CargarPuntosService?xsd=1" namespace="http://Servicios/" />
     </xsd:schema>
   </types>
+  <message name="Crear_cargar_puntos">
+    <part name="parameters" element="tns:Crear_cargar_puntos" />
+  </message>
+  <message name="Crear_cargar_puntosResponse">
+    <part name="parameters" element="tns:Crear_cargar_puntosResponse" />
+  </message>
   <message name="Eliminar_cargar_puntos">
     <part name="parameters" element="tns:Eliminar_cargar_puntos" />
   </message>
@@ -17,13 +23,11 @@
   <message name="Listado_cargar_puntosResponse">
     <part name="parameters" element="tns:Listado_cargar_puntosResponse" />
   </message>
-  <message name="Crear_cargar_puntos">
-    <part name="parameters" element="tns:Crear_cargar_puntos" />
-  </message>
-  <message name="Crear_cargar_puntosResponse">
-    <part name="parameters" element="tns:Crear_cargar_puntosResponse" />
-  </message>
   <portType name="CargarPuntosService">
+    <operation name="Crear_cargar_puntos">
+      <input wsam:Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosRequest" message="tns:Crear_cargar_puntos" />
+      <output wsam:Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosResponse" message="tns:Crear_cargar_puntosResponse" />
+    </operation>
     <operation name="Eliminar_cargar_puntos">
       <input wsam:Action="http://Servicios/CargarPuntosService/Eliminar_cargar_puntosRequest" message="tns:Eliminar_cargar_puntos" />
       <output wsam:Action="http://Servicios/CargarPuntosService/Eliminar_cargar_puntosResponse" message="tns:Eliminar_cargar_puntosResponse" />
@@ -32,13 +36,18 @@
       <input wsam:Action="http://Servicios/CargarPuntosService/Listado_cargar_puntosRequest" message="tns:Listado_cargar_puntos" />
       <output wsam:Action="http://Servicios/CargarPuntosService/Listado_cargar_puntosResponse" message="tns:Listado_cargar_puntosResponse" />
     </operation>
-    <operation name="Crear_cargar_puntos">
-      <input wsam:Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosRequest" message="tns:Crear_cargar_puntos" />
-      <output wsam:Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosResponse" message="tns:Crear_cargar_puntosResponse" />
-    </operation>
   </portType>
   <binding name="CargarPuntosServicePortBinding" type="tns:CargarPuntosService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Crear_cargar_puntos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="Eliminar_cargar_puntos">
       <soap:operation soapAction="" />
       <input>
@@ -49,15 +58,6 @@
       </output>
     </operation>
     <operation name="Listado_cargar_puntos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="Crear_cargar_puntos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -69,7 +69,7 @@
   </binding>
   <service name="CargarPuntosService">
     <port name="CargarPuntosServicePort" binding="tns:CargarPuntosServicePortBinding">
-      <soap:address location="http://10.15.226.82:17225/MisOfertasWebService/CargarPuntosService" />
+      <soap:address location="http://localhost:17225/MisOfertasWebService/CargarPuntosService" />
     </port>
   </service>
 </definitions>

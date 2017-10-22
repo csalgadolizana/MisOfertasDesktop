@@ -2,14 +2,14 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="LocalService" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://10.15.226.82:17225/MisOfertasWebService/LocalService?xsd=1" namespace="http://Servicios/" />
+      <xsd:import schemaLocation="http://localhost:17225/MisOfertasWebService/LocalService?xsd=1" namespace="http://Servicios/" />
     </xsd:schema>
   </types>
-  <message name="Listado_local">
-    <part name="parameters" element="tns:Listado_local" />
+  <message name="Modificar_local">
+    <part name="parameters" element="tns:Modificar_local" />
   </message>
-  <message name="Listado_localResponse">
-    <part name="parameters" element="tns:Listado_localResponse" />
+  <message name="Modificar_localResponse">
+    <part name="parameters" element="tns:Modificar_localResponse" />
   </message>
   <message name="Crear_local">
     <part name="parameters" element="tns:Crear_local" />
@@ -17,11 +17,11 @@
   <message name="Crear_localResponse">
     <part name="parameters" element="tns:Crear_localResponse" />
   </message>
-  <message name="Modificar_local">
-    <part name="parameters" element="tns:Modificar_local" />
+  <message name="Listado_local">
+    <part name="parameters" element="tns:Listado_local" />
   </message>
-  <message name="Modificar_localResponse">
-    <part name="parameters" element="tns:Modificar_localResponse" />
+  <message name="Listado_localResponse">
+    <part name="parameters" element="tns:Listado_localResponse" />
   </message>
   <message name="Eliminar_local">
     <part name="parameters" element="tns:Eliminar_local" />
@@ -30,17 +30,17 @@
     <part name="parameters" element="tns:Eliminar_localResponse" />
   </message>
   <portType name="LocalService">
-    <operation name="Listado_local">
-      <input wsam:Action="http://Servicios/LocalService/Listado_localRequest" message="tns:Listado_local" />
-      <output wsam:Action="http://Servicios/LocalService/Listado_localResponse" message="tns:Listado_localResponse" />
+    <operation name="Modificar_local">
+      <input wsam:Action="http://Servicios/LocalService/Modificar_localRequest" message="tns:Modificar_local" />
+      <output wsam:Action="http://Servicios/LocalService/Modificar_localResponse" message="tns:Modificar_localResponse" />
     </operation>
     <operation name="Crear_local">
       <input wsam:Action="http://Servicios/LocalService/Crear_localRequest" message="tns:Crear_local" />
       <output wsam:Action="http://Servicios/LocalService/Crear_localResponse" message="tns:Crear_localResponse" />
     </operation>
-    <operation name="Modificar_local">
-      <input wsam:Action="http://Servicios/LocalService/Modificar_localRequest" message="tns:Modificar_local" />
-      <output wsam:Action="http://Servicios/LocalService/Modificar_localResponse" message="tns:Modificar_localResponse" />
+    <operation name="Listado_local">
+      <input wsam:Action="http://Servicios/LocalService/Listado_localRequest" message="tns:Listado_local" />
+      <output wsam:Action="http://Servicios/LocalService/Listado_localResponse" message="tns:Listado_localResponse" />
     </operation>
     <operation name="Eliminar_local">
       <input wsam:Action="http://Servicios/LocalService/Eliminar_localRequest" message="tns:Eliminar_local" />
@@ -49,7 +49,7 @@
   </portType>
   <binding name="LocalServicePortBinding" type="tns:LocalService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="Listado_local">
+    <operation name="Modificar_local">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Modificar_local">
+    <operation name="Listado_local">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -88,7 +88,7 @@
   </binding>
   <service name="LocalService">
     <port name="LocalServicePort" binding="tns:LocalServicePortBinding">
-      <soap:address location="http://10.15.226.82:17225/MisOfertasWebService/LocalService" />
+      <soap:address location="http://localhost:17225/MisOfertasWebService/LocalService" />
     </port>
   </service>
 </definitions>

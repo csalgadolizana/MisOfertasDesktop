@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Crear_reporte" type="tns:Crear_reporte" />
+  <xs:element name="Crear_reporteResponse" type="tns:Crear_reporteResponse" />
+  <xs:element name="Eliminar_reporte" type="tns:Eliminar_reporte" />
+  <xs:element name="Eliminar_reporteResponse" type="tns:Eliminar_reporteResponse" />
+  <xs:element name="Listado_reportes" type="tns:Listado_reportes" />
+  <xs:element name="Listado_reportesResponse" type="tns:Listado_reportesResponse" />
+  <xs:element name="Modificar_reporte" type="tns:Modificar_reporte" />
+  <xs:element name="Modificar_reporteResponse" type="tns:Modificar_reporteResponse" />
+  <xs:element name="ciudad" type="tns:ciudad" />
+  <xs:element name="empresa" type="tns:empresa" />
+  <xs:element name="estado" type="tns:estado" />
+  <xs:element name="local" type="tns:local" />
+  <xs:element name="region" type="tns:region" />
+  <xs:element name="reporte" type="tns:reporte" />
+  <xs:complexType name="Modificar_reporte">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="local_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Modificar_reporteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_reporte">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_reporteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Listado_reportes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Listado_reportesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reporte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idReporte" type="xs:decimal" />
+      <xs:element minOccurs="0" name="localIdLocal" type="tns:local" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="local">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ciudadIdCiudad" type="tns:ciudad" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="empresaIdEmpresa" type="tns:empresa" />
+      <xs:element minOccurs="0" name="idLocal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ciudad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idCiudad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="regionIdRegion" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idRegion" type="xs:long" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="empresa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
+      <xs:element minOccurs="0" name="idEmpresa" type="xs:decimal" />
+      <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idEstado" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_reporte">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="local_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_reporteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

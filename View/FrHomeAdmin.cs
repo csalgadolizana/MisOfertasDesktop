@@ -83,7 +83,7 @@ namespace Desk.View
         private void btnGuardaEmpresa_Click(object sender, EventArgs e)
         {
             Service_Empresa.EmpresaServiceClient empre = new Service_Empresa.EmpresaServiceClient();
-            empre.Crear_empresa(0, txtRutEmpresa.Text, txtNombreEmpresa.Text, txtDescripcionEmpresa.Text, DateTime.Parse(dtFechaInicioEmpresa.Value.ToShortDateString()), DateTime.Parse(dtFechaActualizacionEmpresa.Value.ToShortDateString()),txtEstado.Text);
+            //empre.Crear_empresa(0, txtRutEmpresa.Text, txtNombreEmpresa.Text, txtDescripcionEmpresa.Text, DateTime.Parse(dtFechaInicioEmpresa.Value.ToShortDateString()), DateTime.Parse(dtFechaActualizacionEmpresa.Value.ToShortDateString()),txtEstado.Text);
 
             Service_Empresa.empresa empre1 = empre.Listado_empresa().OrderByDescending(x => x.idEmpresa).First();
             MessageBox.Show("Empresa " + empre1.idEmpresa);

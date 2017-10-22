@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="60c36457-2891-443a-9a52-6382bf6a88b5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6cb65203-e648-471f-abd1-c76d71db9904" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.15.226.82:17225/MisOfertasWebService/UsuarioService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:17225/MisOfertasWebService/UsuarioService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UsuarioService1.wsdl" MetadataType="Wsdl" ID="d44cea5a-d7d1-4ca0-97be-aea3f9ab78f0" SourceId="1" SourceUrl="http://10.15.226.82:17225/MisOfertasWebService/UsuarioService?WSDL" />
-    <MetadataFile FileName="UsuarioService1.xsd" MetadataType="Schema" ID="53a77391-5464-4d83-9918-93842404f99b" SourceId="1" SourceUrl="http://10.15.226.82:17225/MisOfertasWebService/UsuarioService?xsd=1" />
+    <MetadataFile FileName="UsuarioService.xsd" MetadataType="Schema" ID="5a208a93-7f57-4fa9-a193-a836ab65b46b" SourceId="1" SourceUrl="http://localhost:17225/MisOfertasWebService/UsuarioService?xsd=1" />
+    <MetadataFile FileName="UsuarioService.wsdl" MetadataType="Wsdl" ID="ef58a96c-ac12-4469-8138-4ee80c4d34c6" SourceId="1" SourceUrl="http://localhost:17225/MisOfertasWebService/UsuarioService?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

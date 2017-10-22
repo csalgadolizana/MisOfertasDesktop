@@ -16,3 +16,15 @@ C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\Desk\obj\Debug\De
 C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas2.0\bin\Debug\Desk.exe.config
 C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas2.0\obj\Debug\Desk.exe
 C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas2.0\obj\Debug\Desk.pdb
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Desk.Properties.Resources.resources
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Desk.View.FrHomeAdmin.resources
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Desk.View.FrHomeEncargadoTienda.resources
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Desk.View.FrHomeGerenteAsociacion.resources
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Desk.View.FrLogin.resources
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Mis_Ofertas.csproj.GenerateResource.Cache
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Mis_Ofertas.csproj.CoreCompileInputs.cache
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\bin\Debug\Desk.exe.config
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\bin\Debug\Desk.exe
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\bin\Debug\Desk.pdb
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Desk.exe
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Desk.pdb

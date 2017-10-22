@@ -2,7 +2,7 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ClienteService" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://10.15.226.82:17225/MisOfertasWebService/ClienteService?xsd=1" namespace="http://Servicios/" />
+      <xsd:import schemaLocation="http://localhost:17225/MisOfertasWebService/ClienteService?xsd=1" namespace="http://Servicios/" />
     </xsd:schema>
   </types>
   <message name="Modificar_cliente">
@@ -11,17 +11,17 @@
   <message name="Modificar_clienteResponse">
     <part name="parameters" element="tns:Modificar_clienteResponse" />
   </message>
+  <message name="Autenticacion">
+    <part name="parameters" element="tns:Autenticacion" />
+  </message>
+  <message name="AutenticacionResponse">
+    <part name="parameters" element="tns:AutenticacionResponse" />
+  </message>
   <message name="Eliminar_cliente">
     <part name="parameters" element="tns:Eliminar_cliente" />
   </message>
   <message name="Eliminar_clienteResponse">
     <part name="parameters" element="tns:Eliminar_clienteResponse" />
-  </message>
-  <message name="Crear_cliente">
-    <part name="parameters" element="tns:Crear_cliente" />
-  </message>
-  <message name="Crear_clienteResponse">
-    <part name="parameters" element="tns:Crear_clienteResponse" />
   </message>
   <message name="Listado_clientes">
     <part name="parameters" element="tns:Listado_clientes" />
@@ -29,22 +29,32 @@
   <message name="Listado_clientesResponse">
     <part name="parameters" element="tns:Listado_clientesResponse" />
   </message>
+  <message name="Crear_cliente">
+    <part name="parameters" element="tns:Crear_cliente" />
+  </message>
+  <message name="Crear_clienteResponse">
+    <part name="parameters" element="tns:Crear_clienteResponse" />
+  </message>
   <portType name="ClienteService">
     <operation name="Modificar_cliente">
       <input wsam:Action="http://Servicios/ClienteService/Modificar_clienteRequest" message="tns:Modificar_cliente" />
       <output wsam:Action="http://Servicios/ClienteService/Modificar_clienteResponse" message="tns:Modificar_clienteResponse" />
     </operation>
+    <operation name="Autenticacion">
+      <input wsam:Action="http://Servicios/ClienteService/AutenticacionRequest" message="tns:Autenticacion" />
+      <output wsam:Action="http://Servicios/ClienteService/AutenticacionResponse" message="tns:AutenticacionResponse" />
+    </operation>
     <operation name="Eliminar_cliente">
       <input wsam:Action="http://Servicios/ClienteService/Eliminar_clienteRequest" message="tns:Eliminar_cliente" />
       <output wsam:Action="http://Servicios/ClienteService/Eliminar_clienteResponse" message="tns:Eliminar_clienteResponse" />
     </operation>
-    <operation name="Crear_cliente">
-      <input wsam:Action="http://Servicios/ClienteService/Crear_clienteRequest" message="tns:Crear_cliente" />
-      <output wsam:Action="http://Servicios/ClienteService/Crear_clienteResponse" message="tns:Crear_clienteResponse" />
-    </operation>
     <operation name="Listado_clientes">
       <input wsam:Action="http://Servicios/ClienteService/Listado_clientesRequest" message="tns:Listado_clientes" />
       <output wsam:Action="http://Servicios/ClienteService/Listado_clientesResponse" message="tns:Listado_clientesResponse" />
+    </operation>
+    <operation name="Crear_cliente">
+      <input wsam:Action="http://Servicios/ClienteService/Crear_clienteRequest" message="tns:Crear_cliente" />
+      <output wsam:Action="http://Servicios/ClienteService/Crear_clienteResponse" message="tns:Crear_clienteResponse" />
     </operation>
   </portType>
   <binding name="ClienteServicePortBinding" type="tns:ClienteService">
@@ -58,7 +68,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Eliminar_cliente">
+    <operation name="Autenticacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Crear_cliente">
+    <operation name="Eliminar_cliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -85,10 +95,19 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="Crear_cliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
   </binding>
   <service name="ClienteService">
     <port name="ClienteServicePort" binding="tns:ClienteServicePortBinding">
-      <soap:address location="http://10.15.226.82:17225/MisOfertasWebService/ClienteService" />
+      <soap:address location="http://localhost:17225/MisOfertasWebService/ClienteService" />
     </port>
   </service>
 </definitions>

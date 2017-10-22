@@ -22,24 +22,28 @@ namespace Desk.View
             FrHomeAdmin home = new FrHomeAdmin();
             home.Show();
             Hide();
-        }        
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Service_Usuario.UsuarioServiceClient serv = new Service_Usuario.UsuarioServiceClient();
-            var usuario = serv.Autenticacion(txtUsuario.Text, txtPassword.Text);
-            if (usuario.idUsuario != 0)
+            Service_Usuario.UsuarioServiceClient serviceclient = new Service_Usuario.UsuarioServiceClient();
+
+            var usuario = serviceclient.Autenticacion(txtUsuario.Text.Trim().ToLower(), txtPassword.Text.Trim().ToLower());
+            if (int.Parse(usuario.idUsuario.ToString()) != 0)
             {
-                MessageBox.Show("Bienvenido " + usuario.personaIdpersona.nombre);
-                FrHomeAdmin admin = new FrHomeAdmin();
-                admin.Show();
-                Hide();
+
+                MessageBox.Show("bienvenido " + usuario.personaIdpersona.nombre);
+                //frhomeadmin admin = new frhomeadmin();
+                //admin.show();
+                //hide();
             }
-            else {
-                MessageBox.Show("El Correo Electronico o La Contraseña que ingresaste no coinciden con ninguna cuenta. " );
+            else
+            {
+                MessageBox.Show("el correo electronico o la contraseña que ingresaste no coinciden con ninguna cuenta. ");
             }
-           
-            
+
+
+
             if (txtUsuario.Text == "admin" && txtPassword.Text == "admin")
             {
                 FrHomeAdmin home = new FrHomeAdmin();
@@ -51,7 +55,7 @@ namespace Desk.View
                 lblMensaje.Text = "Usuario y/o Contraseña son Incorrectos ";
             }
 
-            
+
 
             if (txtUsuario.Text == "tienda" && txtPassword.Text == "tienda")
             {

@@ -2,21 +2,9 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EmpresaService" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://10.15.226.82:17225/MisOfertasWebService/EmpresaService?xsd=1" namespace="http://Servicios/" />
+      <xsd:import schemaLocation="http://localhost:17225/MisOfertasWebService/EmpresaService?xsd=1" namespace="http://Servicios/" />
     </xsd:schema>
   </types>
-  <message name="Crear_empresa">
-    <part name="parameters" element="tns:Crear_empresa" />
-  </message>
-  <message name="Crear_empresaResponse">
-    <part name="parameters" element="tns:Crear_empresaResponse" />
-  </message>
-  <message name="Eliminar_empresa">
-    <part name="parameters" element="tns:Eliminar_empresa" />
-  </message>
-  <message name="Eliminar_empresaResponse">
-    <part name="parameters" element="tns:Eliminar_empresaResponse" />
-  </message>
   <message name="Listado_empresa">
     <part name="parameters" element="tns:Listado_empresa" />
   </message>
@@ -29,15 +17,19 @@
   <message name="Modificar_empresaResponse">
     <part name="parameters" element="tns:Modificar_empresaResponse" />
   </message>
+  <message name="Crear_empresa">
+    <part name="parameters" element="tns:Crear_empresa" />
+  </message>
+  <message name="Crear_empresaResponse">
+    <part name="parameters" element="tns:Crear_empresaResponse" />
+  </message>
+  <message name="Eliminar_empresa">
+    <part name="parameters" element="tns:Eliminar_empresa" />
+  </message>
+  <message name="Eliminar_empresaResponse">
+    <part name="parameters" element="tns:Eliminar_empresaResponse" />
+  </message>
   <portType name="EmpresaService">
-    <operation name="Crear_empresa">
-      <input wsam:Action="http://Servicios/EmpresaService/Crear_empresaRequest" message="tns:Crear_empresa" />
-      <output wsam:Action="http://Servicios/EmpresaService/Crear_empresaResponse" message="tns:Crear_empresaResponse" />
-    </operation>
-    <operation name="Eliminar_empresa">
-      <input wsam:Action="http://Servicios/EmpresaService/Eliminar_empresaRequest" message="tns:Eliminar_empresa" />
-      <output wsam:Action="http://Servicios/EmpresaService/Eliminar_empresaResponse" message="tns:Eliminar_empresaResponse" />
-    </operation>
     <operation name="Listado_empresa">
       <input wsam:Action="http://Servicios/EmpresaService/Listado_empresaRequest" message="tns:Listado_empresa" />
       <output wsam:Action="http://Servicios/EmpresaService/Listado_empresaResponse" message="tns:Listado_empresaResponse" />
@@ -46,27 +38,17 @@
       <input wsam:Action="http://Servicios/EmpresaService/Modificar_empresaRequest" message="tns:Modificar_empresa" />
       <output wsam:Action="http://Servicios/EmpresaService/Modificar_empresaResponse" message="tns:Modificar_empresaResponse" />
     </operation>
+    <operation name="Crear_empresa">
+      <input wsam:Action="http://Servicios/EmpresaService/Crear_empresaRequest" message="tns:Crear_empresa" />
+      <output wsam:Action="http://Servicios/EmpresaService/Crear_empresaResponse" message="tns:Crear_empresaResponse" />
+    </operation>
+    <operation name="Eliminar_empresa">
+      <input wsam:Action="http://Servicios/EmpresaService/Eliminar_empresaRequest" message="tns:Eliminar_empresa" />
+      <output wsam:Action="http://Servicios/EmpresaService/Eliminar_empresaResponse" message="tns:Eliminar_empresaResponse" />
+    </operation>
   </portType>
   <binding name="EmpresaServicePortBinding" type="tns:EmpresaService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="Crear_empresa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="Eliminar_empresa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="Listado_empresa">
       <soap:operation soapAction="" />
       <input>
@@ -77,6 +59,24 @@
       </output>
     </operation>
     <operation name="Modificar_empresa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Crear_empresa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Eliminar_empresa">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -88,7 +88,7 @@
   </binding>
   <service name="EmpresaService">
     <port name="EmpresaServicePort" binding="tns:EmpresaServicePortBinding">
-      <soap:address location="http://10.15.226.82:17225/MisOfertasWebService/EmpresaService" />
+      <soap:address location="http://localhost:17225/MisOfertasWebService/EmpresaService" />
     </port>
   </service>
 </definitions>

@@ -206,8 +206,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\Service_CargarPuntos\CargarPuntosService1.wsdl" />
-    <None Include="Service References\Service_CargarPuntos\CargarPuntosService1.xsd">
+    <None Include="Service References\Service_CargarPuntos\CargarPuntosService.wsdl" />
+    <None Include="Service References\Service_CargarPuntos\CargarPuntosService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_CargarPuntos\Desk.Service_CargarPuntos.cargarPuntos.datasource">
@@ -222,8 +222,8 @@
     <None Include="Service References\Service_CargarPuntos\Desk.Service_CargarPuntos.Listado_cargar_puntosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Cargo\CargoService1.wsdl" />
-    <None Include="Service References\Service_Cargo\CargoService1.xsd">
+    <None Include="Service References\Service_Cargo\CargoService.wsdl" />
+    <None Include="Service References\Service_Cargo\CargoService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Cargo\Desk.Service_Cargo.cargo.datasource">
@@ -232,8 +232,8 @@
     <None Include="Service References\Service_Cargo\Desk.Service_Cargo.Listado_cargosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Categoria\CategoriaService1.wsdl" />
-    <None Include="Service References\Service_Categoria\CategoriaService1.xsd">
+    <None Include="Service References\Service_Categoria\CategoriaService.wsdl" />
+    <None Include="Service References\Service_Categoria\CategoriaService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Categoria\Desk.Service_Categoria.categoria.datasource">
@@ -251,9 +251,12 @@
     <None Include="Service References\Service_Categoria\Desk.Service_Categoria.Modificar_categoriaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Cliente\ClienteService1.wsdl" />
-    <None Include="Service References\Service_Cliente\ClienteService1.xsd">
+    <None Include="Service References\Service_Cliente\ClienteService.wsdl" />
+    <None Include="Service References\Service_Cliente\ClienteService.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Cliente\Desk.Service_Cliente.AutenticacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_Cliente\Desk.Service_Cliente.cliente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -270,8 +273,8 @@
     <None Include="Service References\Service_Cliente\Desk.Service_Cliente.Modificar_clienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Descuento\DescuentoService1.wsdl" />
-    <None Include="Service References\Service_Descuento\DescuentoService1.xsd">
+    <None Include="Service References\Service_Descuento\DescuentoService.wsdl" />
+    <None Include="Service References\Service_Descuento\DescuentoService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Descuento\Desk.Service_Descuento.Crear_descuentoResponse.datasource">
@@ -301,8 +304,8 @@
     <None Include="Service References\Service_DetalleOferta\Desk.Service_DetalleOferta.Listado_detalle_ofertaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_DetalleOferta\DetalleOfertaService1.wsdl" />
-    <None Include="Service References\Service_DetalleOferta\DetalleOfertaService1.xsd">
+    <None Include="Service References\Service_DetalleOferta\DetalleOfertaService.wsdl" />
+    <None Include="Service References\Service_DetalleOferta\DetalleOfertaService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Empresa\Desk.Service_Empresa.Crear_empresaResponse.datasource">
@@ -320,8 +323,8 @@
     <None Include="Service References\Service_Empresa\Desk.Service_Empresa.Modificar_empresaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Empresa\EmpresaService1.wsdl" />
-    <None Include="Service References\Service_Empresa\EmpresaService1.xsd">
+    <None Include="Service References\Service_Empresa\EmpresaService.wsdl" />
+    <None Include="Service References\Service_Empresa\EmpresaService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Local\Desk.Service_Local.Crear_localResponse.datasource">
@@ -339,8 +342,8 @@
     <None Include="Service References\Service_Local\Desk.Service_Local.Modificar_localResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Local\LocalService1.wsdl" />
-    <None Include="Service References\Service_Local\LocalService1.xsd">
+    <None Include="Service References\Service_Local\LocalService.wsdl" />
+    <None Include="Service References\Service_Local\LocalService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_OfertaLocal\Desk.Service_OfertaLocal.Crear_oferta_localResponse.datasource">
@@ -355,8 +358,8 @@
     <None Include="Service References\Service_OfertaLocal\Desk.Service_OfertaLocal.ofertalocal.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_OfertaLocal\OfertaLocalService1.wsdl" />
-    <None Include="Service References\Service_OfertaLocal\OfertaLocalService1.xsd">
+    <None Include="Service References\Service_OfertaLocal\OfertaLocalService.wsdl" />
+    <None Include="Service References\Service_OfertaLocal\OfertaLocalService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_OfertaVista\Desk.Service_OfertaVista.Crear_oferta_visitasResponse.datasource">
@@ -371,8 +374,8 @@
     <None Include="Service References\Service_OfertaVista\Desk.Service_OfertaVista.ofertasVisitas.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_OfertaVista\OfertaVisitaService.wsdl" />
-    <None Include="Service References\Service_OfertaVista\OfertaVisitaService.xsd">
+    <None Include="Service References\Service_OfertaVista\OfertaVisitaService1.wsdl" />
+    <None Include="Service References\Service_OfertaVista\OfertaVisitaService1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Oferta\Desk.Service_Oferta.Crear_ofertaResponse.datasource">
@@ -390,8 +393,8 @@
     <None Include="Service References\Service_Oferta\Desk.Service_Oferta.oferta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Oferta\OfertaService1.wsdl" />
-    <None Include="Service References\Service_Oferta\OfertaService1.xsd">
+    <None Include="Service References\Service_Oferta\OfertaService.wsdl" />
+    <None Include="Service References\Service_Oferta\OfertaService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Persona\Desk.Service_Persona.Crear_personaResponse.datasource">
@@ -409,8 +412,8 @@
     <None Include="Service References\Service_Persona\Desk.Service_Persona.persona.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Persona\PersonaService1.wsdl" />
-    <None Include="Service References\Service_Persona\PersonaService1.xsd">
+    <None Include="Service References\Service_Persona\PersonaService.wsdl" />
+    <None Include="Service References\Service_Persona\PersonaService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Producto\Desk.Service_Producto.Crear_productoResponse.datasource">
@@ -428,8 +431,8 @@
     <None Include="Service References\Service_Producto\Desk.Service_Producto.producto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Producto\ProductoService1.wsdl" />
-    <None Include="Service References\Service_Producto\ProductoService1.xsd">
+    <None Include="Service References\Service_Producto\ProductoService.wsdl" />
+    <None Include="Service References\Service_Producto\ProductoService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Puntos\Desk.Service_Puntos.Crear_puntosResponse.datasource">
@@ -447,8 +450,8 @@
     <None Include="Service References\Service_Puntos\Desk.Service_Puntos.puntos.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Puntos\PuntosService1.wsdl" />
-    <None Include="Service References\Service_Puntos\PuntosService1.xsd">
+    <None Include="Service References\Service_Puntos\PuntosService.wsdl" />
+    <None Include="Service References\Service_Puntos\PuntosService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Reporte\Desk.Service_Reporte.Crear_reporteResponse.datasource">
@@ -463,11 +466,11 @@
     <None Include="Service References\Service_Reporte\Desk.Service_Reporte.Modificar_reporteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Reporte\Desk.Service_Reporte.puntos.datasource">
+    <None Include="Service References\Service_Reporte\Desk.Service_Reporte.reporte.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Reporte\ReporteService1.wsdl" />
-    <None Include="Service References\Service_Reporte\ReporteService1.xsd">
+    <None Include="Service References\Service_Reporte\ReporteService.wsdl" />
+    <None Include="Service References\Service_Reporte\ReporteService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_UsuarioOferta\Desk.Service_UsuarioOferta.Crear_usuario_ofertaResponse.datasource">
@@ -482,8 +485,8 @@
     <None Include="Service References\Service_UsuarioOferta\Desk.Service_UsuarioOferta.usuariooferta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_UsuarioOferta\UsuarioOfertaService1.wsdl" />
-    <None Include="Service References\Service_UsuarioOferta\UsuarioOfertaService1.xsd">
+    <None Include="Service References\Service_UsuarioOferta\UsuarioOfertaService.wsdl" />
+    <None Include="Service References\Service_UsuarioOferta\UsuarioOfertaService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Usuario\Desk.Service_Usuario.AutenticacionResponse.datasource">
@@ -504,8 +507,8 @@
     <None Include="Service References\Service_Usuario\Desk.Service_Usuario.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\UsuarioService1.wsdl" />
-    <None Include="Service References\Service_Usuario\UsuarioService1.xsd">
+    <None Include="Service References\Service_Usuario\UsuarioService.wsdl" />
+    <None Include="Service References\Service_Usuario\UsuarioService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.Crear_valoracionResponse.datasource">
@@ -523,8 +526,8 @@
     <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.valoracion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Valoracion\ValoracionService1.wsdl" />
-    <None Include="Service References\Service_Valoracion\ValoracionService1.xsd">
+    <None Include="Service References\Service_Valoracion\ValoracionService.wsdl" />
+    <None Include="Service References\Service_Valoracion\ValoracionService.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -553,18 +556,6 @@
     <WCFMetadataStorage Include="Service References\Service_UsuarioOferta\" />
     <WCFMetadataStorage Include="Service References\Service_Usuario\" />
     <WCFMetadataStorage Include="Service References\Service_Valoracion\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service_Usuario\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service_Usuario\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service_Usuario\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Service_Categoria\configuration91.svcinfo" />
@@ -766,6 +757,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Service_OfertaVista\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Usuario\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Usuario\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Usuario\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
