@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA130A05-3D99-40BD-89DA-9CAF49056A43}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Desk</RootNamespace>
+    <AssemblyName>Desk</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\DAOempresa.cs" />
+    <Compile Include="DAO\DAOproductos.cs" />
+    <Compile Include="DAO\DAOusuario.cs" />
+    <Compile Include="DAO\DAO_Oferta.cs" />
+    <Compile Include="Entidades\cl_cliente.cs" />
+    <Compile Include="Entidades\cl_empresas.cs" />
+    <Compile Include="Entidades\cl_Local.cs" />
+    <Compile Include="Entidades\cl_Oferta.cs" />
+    <Compile Include="Entidades\cl_productos.cs" />
+    <Compile Include="Entidades\cl_usuario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Service_CargarPuntos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Cargo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Categoria\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Cliente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Descuento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_DetalleOferta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Empresa\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Local\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_OfertaLocal\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_OfertaVista\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Oferta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Persona\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Producto\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Puntos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Reporte\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_UsuarioOferta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Usuario\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_Valoracion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrHomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrHomeAdmin.Designer.cs">
+      <DependentUpon>FrHomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrHomeEncargadoTienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrHomeEncargadoTienda.Designer.cs">
+      <DependentUpon>FrHomeEncargadoTienda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrHomeGerenteAsociacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrHomeGerenteAsociacion.Designer.cs">
+      <DependentUpon>FrHomeGerenteAsociacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrLogin.Designer.cs">
+      <DependentUpon>FrLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\FrHomeAdmin.resx">
+      <DependentUpon>FrHomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrHomeEncargadoTienda.resx">
+      <DependentUpon>FrHomeEncargadoTienda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrHomeGerenteAsociacion.resx">
+      <DependentUpon>FrHomeGerenteAsociacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrLogin.resx">
+      <DependentUpon>FrLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\Service_CargarPuntos\CargarPuntosService1.wsdl" />
+    <None Include="Service References\Service_CargarPuntos\CargarPuntosService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_CargarPuntos\Desk.Service_CargarPuntos.cargarPuntos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_CargarPuntos\Desk.Service_CargarPuntos.Crear_cargar_puntosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_CargarPuntos\Desk.Service_CargarPuntos.Eliminar_cargar_puntosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_CargarPuntos\Desk.Service_CargarPuntos.Listado_cargar_puntosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Cargo\CargoService1.wsdl" />
+    <None Include="Service References\Service_Cargo\CargoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Cargo\Desk.Service_Cargo.cargo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Cargo\Desk.Service_Cargo.Listado_cargosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Categoria\CategoriaService1.wsdl" />
+    <None Include="Service References\Service_Categoria\CategoriaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Categoria\Desk.Service_Categoria.categoria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Categoria\Desk.Service_Categoria.Crear_categoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Categoria\Desk.Service_Categoria.Eliminar_categoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Categoria\Desk.Service_Categoria.Listado_categoriasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Categoria\Desk.Service_Categoria.Modificar_categoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Cliente\ClienteService1.wsdl" />
+    <None Include="Service References\Service_Cliente\ClienteService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Cliente\Desk.Service_Cliente.cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Cliente\Desk.Service_Cliente.Crear_clienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Cliente\Desk.Service_Cliente.Eliminar_clienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Cliente\Desk.Service_Cliente.Listado_clientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Cliente\Desk.Service_Cliente.Modificar_clienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Descuento\DescuentoService1.wsdl" />
+    <None Include="Service References\Service_Descuento\DescuentoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Descuento\Desk.Service_Descuento.Crear_descuentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Descuento\Desk.Service_Descuento.descuento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Descuento\Desk.Service_Descuento.Eliminar_descuentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Descuento\Desk.Service_Descuento.Listado_descuentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Descuento\Desk.Service_Descuento.Modificar_descuentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_DetalleOferta\Desk.Service_DetalleOferta.Crear_detalle_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_DetalleOferta\Desk.Service_DetalleOferta.detalleOferta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_DetalleOferta\Desk.Service_DetalleOferta.Eliminar_detalle_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_DetalleOferta\Desk.Service_DetalleOferta.Listado_detalle_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_DetalleOferta\DetalleOfertaService1.wsdl" />
+    <None Include="Service References\Service_DetalleOferta\DetalleOfertaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Empresa\Desk.Service_Empresa.Crear_empresaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Empresa\Desk.Service_Empresa.Eliminar_empresaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Empresa\Desk.Service_Empresa.empresa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Empresa\Desk.Service_Empresa.Listado_empresaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Empresa\Desk.Service_Empresa.Modificar_empresaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Empresa\EmpresaService1.wsdl" />
+    <None Include="Service References\Service_Empresa\EmpresaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Local\Desk.Service_Local.Crear_localResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Local\Desk.Service_Local.Eliminar_localResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Local\Desk.Service_Local.Listado_localResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Local\Desk.Service_Local.local.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Local\Desk.Service_Local.Modificar_localResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Local\LocalService1.wsdl" />
+    <None Include="Service References\Service_Local\LocalService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_OfertaLocal\Desk.Service_OfertaLocal.Crear_oferta_localResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_OfertaLocal\Desk.Service_OfertaLocal.Eliminar_oferta_localResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_OfertaLocal\Desk.Service_OfertaLocal.Listado_oferta_localResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_OfertaLocal\Desk.Service_OfertaLocal.ofertalocal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_OfertaLocal\OfertaLocalService1.wsdl" />
+    <None Include="Service References\Service_OfertaLocal\OfertaLocalService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_OfertaVista\Desk.Service_OfertaVista.Crear_oferta_visitasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_OfertaVista\Desk.Service_OfertaVista.Eliminar_oferta_visitasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_OfertaVista\Desk.Service_OfertaVista.Listado_oferta_visitasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_OfertaVista\Desk.Service_OfertaVista.ofertasVisitas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_OfertaVista\OfertaVisitaService.wsdl" />
+    <None Include="Service References\Service_OfertaVista\OfertaVisitaService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Oferta\Desk.Service_Oferta.Crear_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Oferta\Desk.Service_Oferta.Eliminar_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Oferta\Desk.Service_Oferta.Listado_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Oferta\Desk.Service_Oferta.Modificar_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Oferta\Desk.Service_Oferta.oferta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Oferta\OfertaService1.wsdl" />
+    <None Include="Service References\Service_Oferta\OfertaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Persona\Desk.Service_Persona.Crear_personaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Persona\Desk.Service_Persona.Eliminar_personaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Persona\Desk.Service_Persona.Listado_personasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Persona\Desk.Service_Persona.Modificar_personaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Persona\Desk.Service_Persona.persona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Persona\PersonaService1.wsdl" />
+    <None Include="Service References\Service_Persona\PersonaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Producto\Desk.Service_Producto.Crear_productoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Producto\Desk.Service_Producto.Eliminar_productoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Producto\Desk.Service_Producto.Listado_productosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Producto\Desk.Service_Producto.Modificar_productoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Producto\Desk.Service_Producto.producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Producto\ProductoService1.wsdl" />
+    <None Include="Service References\Service_Producto\ProductoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Puntos\Desk.Service_Puntos.Crear_puntosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Puntos\Desk.Service_Puntos.Eliminar_puntosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Puntos\Desk.Service_Puntos.Listado_puntosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Puntos\Desk.Service_Puntos.Modificar_puntosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Puntos\Desk.Service_Puntos.puntos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Puntos\PuntosService1.wsdl" />
+    <None Include="Service References\Service_Puntos\PuntosService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Reporte\Desk.Service_Reporte.Crear_reporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Reporte\Desk.Service_Reporte.Eliminar_reporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Reporte\Desk.Service_Reporte.Listado_reportesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Reporte\Desk.Service_Reporte.Modificar_reporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Reporte\Desk.Service_Reporte.puntos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Reporte\ReporteService1.wsdl" />
+    <None Include="Service References\Service_Reporte\ReporteService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_UsuarioOferta\Desk.Service_UsuarioOferta.Crear_usuario_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_UsuarioOferta\Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_UsuarioOferta\Desk.Service_UsuarioOferta.Listado_usuario_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_UsuarioOferta\Desk.Service_UsuarioOferta.usuariooferta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_UsuarioOferta\UsuarioOfertaService1.wsdl" />
+    <None Include="Service References\Service_UsuarioOferta\UsuarioOfertaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.AutenticacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.CREAR_USUARIOResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Eliminar_usuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Listado_usuariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Modificar_USUARIOResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Usuario\UsuarioService1.wsdl" />
+    <None Include="Service References\Service_Usuario\UsuarioService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.Crear_valoracionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.Eliminar_valoracionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.Listado_valoracionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.Modificar_valoracionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.valoracion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Valoracion\ValoracionService1.wsdl" />
+    <None Include="Service References\Service_Valoracion\ValoracionService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Service_CargarPuntos\" />
+    <WCFMetadataStorage Include="Service References\Service_Cargo\" />
+    <WCFMetadataStorage Include="Service References\Service_Categoria\" />
+    <WCFMetadataStorage Include="Service References\Service_Cliente\" />
+    <WCFMetadataStorage Include="Service References\Service_Descuento\" />
+    <WCFMetadataStorage Include="Service References\Service_DetalleOferta\" />
+    <WCFMetadataStorage Include="Service References\Service_Empresa\" />
+    <WCFMetadataStorage Include="Service References\Service_Local\" />
+    <WCFMetadataStorage Include="Service References\Service_OfertaLocal\" />
+    <WCFMetadataStorage Include="Service References\Service_OfertaVista\" />
+    <WCFMetadataStorage Include="Service References\Service_Oferta\" />
+    <WCFMetadataStorage Include="Service References\Service_Persona\" />
+    <WCFMetadataStorage Include="Service References\Service_Producto\" />
+    <WCFMetadataStorage Include="Service References\Service_Puntos\" />
+    <WCFMetadataStorage Include="Service References\Service_Reporte\" />
+    <WCFMetadataStorage Include="Service References\Service_UsuarioOferta\" />
+    <WCFMetadataStorage Include="Service References\Service_Usuario\" />
+    <WCFMetadataStorage Include="Service References\Service_Valoracion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Usuario\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Usuario\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Usuario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Categoria\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Categoria\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Categoria\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Cliente\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Cliente\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Cliente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Descuento\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Descuento\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Descuento\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_CargarPuntos\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_CargarPuntos\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_CargarPuntos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_DetalleOferta\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_DetalleOferta\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_DetalleOferta\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Empresa\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Empresa\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Empresa\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Local\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Local\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Local\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_OfertaLocal\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_OfertaLocal\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_OfertaLocal\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Oferta\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Oferta\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Oferta\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Persona\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Persona\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Persona\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Producto\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Producto\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Producto\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Puntos\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Puntos\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Puntos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Reporte\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Reporte\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Reporte\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_UsuarioOferta\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_UsuarioOferta\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_UsuarioOferta\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Valoracion\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Valoracion\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Valoracion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Cargo\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Cargo\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Cargo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_OfertaVista\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_OfertaVista\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_OfertaVista\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

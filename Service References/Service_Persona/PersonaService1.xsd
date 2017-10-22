@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Crear_persona" type="tns:Crear_persona" />
+  <xs:element name="Crear_personaResponse" type="tns:Crear_personaResponse" />
+  <xs:element name="Eliminar_persona" type="tns:Eliminar_persona" />
+  <xs:element name="Eliminar_personaResponse" type="tns:Eliminar_personaResponse" />
+  <xs:element name="Listado_personas" type="tns:Listado_personas" />
+  <xs:element name="Listado_personasResponse" type="tns:Listado_personasResponse" />
+  <xs:element name="Modificar_persona" type="tns:Modificar_persona" />
+  <xs:element name="Modificar_personaResponse" type="tns:Modificar_personaResponse" />
+  <xs:element name="persona" type="tns:persona" />
+  <xs:element name="sexo" type="tns:sexo" />
+  <xs:complexType name="Eliminar_persona">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_personaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Listado_personas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Listado_personasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="idpersona" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="sexoIdSexo" type="tns:sexo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sexo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idSexo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_persona">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element name="sexo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_personaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Modificar_persona">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element name="sexo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Modificar_personaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

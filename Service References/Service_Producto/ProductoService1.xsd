@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Crear_producto" type="tns:Crear_producto" />
+  <xs:element name="Crear_productoResponse" type="tns:Crear_productoResponse" />
+  <xs:element name="Eliminar_producto" type="tns:Eliminar_producto" />
+  <xs:element name="Eliminar_productoResponse" type="tns:Eliminar_productoResponse" />
+  <xs:element name="Listado_productos" type="tns:Listado_productos" />
+  <xs:element name="Listado_productosResponse" type="tns:Listado_productosResponse" />
+  <xs:element name="Modificar_producto" type="tns:Modificar_producto" />
+  <xs:element name="Modificar_productoResponse" type="tns:Modificar_productoResponse" />
+  <xs:element name="categoria" type="tns:categoria" />
+  <xs:element name="producto" type="tns:producto" />
+  <xs:complexType name="Modificar_producto">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="precio" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ruta_imagen" type="xs:string" />
+      <xs:element name="id_cagegoria" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Modificar_productoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_producto">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="precio" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ruta_imagen" type="xs:string" />
+      <xs:element name="id_cagegoria" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_productoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Listado_productos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Listado_productosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="categoriaIdCategoria" type="tns:categoria" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idProducto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="imagen" type="xs:string" />
+      <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="precio" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="categoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idCategoria" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_producto">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_productoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

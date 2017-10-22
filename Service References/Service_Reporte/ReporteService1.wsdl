@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ReporteService" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://10.15.226.82:17225/MisOfertasWebService/ReporteService?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="Listado_reportes">
+    <part name="parameters" element="tns:Listado_reportes" />
+  </message>
+  <message name="Listado_reportesResponse">
+    <part name="parameters" element="tns:Listado_reportesResponse" />
+  </message>
+  <message name="Eliminar_reporte">
+    <part name="parameters" element="tns:Eliminar_reporte" />
+  </message>
+  <message name="Eliminar_reporteResponse">
+    <part name="parameters" element="tns:Eliminar_reporteResponse" />
+  </message>
+  <message name="Crear_reporte">
+    <part name="parameters" element="tns:Crear_reporte" />
+  </message>
+  <message name="Crear_reporteResponse">
+    <part name="parameters" element="tns:Crear_reporteResponse" />
+  </message>
+  <message name="Modificar_reporte">
+    <part name="parameters" element="tns:Modificar_reporte" />
+  </message>
+  <message name="Modificar_reporteResponse">
+    <part name="parameters" element="tns:Modificar_reporteResponse" />
+  </message>
+  <portType name="ReporteService">
+    <operation name="Listado_reportes">
+      <input wsam:Action="http://Servicios/ReporteService/Listado_reportesRequest" message="tns:Listado_reportes" />
+      <output wsam:Action="http://Servicios/ReporteService/Listado_reportesResponse" message="tns:Listado_reportesResponse" />
+    </operation>
+    <operation name="Eliminar_reporte">
+      <input wsam:Action="http://Servicios/ReporteService/Eliminar_reporteRequest" message="tns:Eliminar_reporte" />
+      <output wsam:Action="http://Servicios/ReporteService/Eliminar_reporteResponse" message="tns:Eliminar_reporteResponse" />
+    </operation>
+    <operation name="Crear_reporte">
+      <input wsam:Action="http://Servicios/ReporteService/Crear_reporteRequest" message="tns:Crear_reporte" />
+      <output wsam:Action="http://Servicios/ReporteService/Crear_reporteResponse" message="tns:Crear_reporteResponse" />
+    </operation>
+    <operation name="Modificar_reporte">
+      <input wsam:Action="http://Servicios/ReporteService/Modificar_reporteRequest" message="tns:Modificar_reporte" />
+      <output wsam:Action="http://Servicios/ReporteService/Modificar_reporteResponse" message="tns:Modificar_reporteResponse" />
+    </operation>
+  </portType>
+  <binding name="ReporteServicePortBinding" type="tns:ReporteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Listado_reportes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Eliminar_reporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Crear_reporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Modificar_reporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ReporteService">
+    <port name="ReporteServicePort" binding="tns:ReporteServicePortBinding">
+      <soap:address location="http://10.15.226.82:17225/MisOfertasWebService/ReporteService" />
+    </port>
+  </service>
+</definitions>

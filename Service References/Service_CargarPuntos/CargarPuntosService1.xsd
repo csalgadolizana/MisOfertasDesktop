@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Crear_cargar_puntos" type="tns:Crear_cargar_puntos" />
+  <xs:element name="Crear_cargar_puntosResponse" type="tns:Crear_cargar_puntosResponse" />
+  <xs:element name="Eliminar_cargar_puntos" type="tns:Eliminar_cargar_puntos" />
+  <xs:element name="Eliminar_cargar_puntosResponse" type="tns:Eliminar_cargar_puntosResponse" />
+  <xs:element name="Listado_cargar_puntos" type="tns:Listado_cargar_puntos" />
+  <xs:element name="Listado_cargar_puntosResponse" type="tns:Listado_cargar_puntosResponse" />
+  <xs:element name="cargarPuntos" type="tns:cargarPuntos" />
+  <xs:element name="categoria" type="tns:categoria" />
+  <xs:element name="ciudad" type="tns:ciudad" />
+  <xs:element name="cliente" type="tns:cliente" />
+  <xs:element name="descuento" type="tns:descuento" />
+  <xs:element name="estado" type="tns:estado" />
+  <xs:element name="persona" type="tns:persona" />
+  <xs:element name="puntos" type="tns:puntos" />
+  <xs:element name="region" type="tns:region" />
+  <xs:element name="sexo" type="tns:sexo" />
+  <xs:complexType name="Eliminar_cargar_puntos">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_cargar_puntosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Listado_cargar_puntos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Listado_cargar_puntosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cargarPuntos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargarPuntos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cargarPuntosPK" type="tns:cargarPuntosPK" />
+      <xs:element minOccurs="0" name="descuento" type="tns:descuento" />
+      <xs:element minOccurs="0" name="puntos" type="xs:integer" />
+      <xs:element minOccurs="0" name="puntos1" type="tns:puntos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargarPuntosPK">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descuentoEstadoIdEstado" type="xs:integer" />
+      <xs:element minOccurs="0" name="descuentoIdDescuento" type="xs:integer" />
+      <xs:element minOccurs="0" name="descuentoValor" type="xs:integer" />
+      <xs:element minOccurs="0" name="idCargarPuntos" type="xs:integer" />
+      <xs:element minOccurs="0" name="puntosIdPuntos" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="descuento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="categoriaIdCategoria" type="tns:categoria" />
+      <xs:element minOccurs="0" name="clienteIdCliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="descuentoPK" type="tns:descuentoPK" />
+      <xs:element minOccurs="0" name="estado" type="tns:estado" />
+      <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="puntosUsados" type="xs:integer" />
+      <xs:element minOccurs="0" name="tope" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="categoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idCategoria" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aceptaInformativo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ciudadIdCiudad" type="tns:ciudad" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idCliente" type="xs:decimal" />
+      <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="personaIdpersona" type="tns:persona" />
+      <xs:element minOccurs="0" name="telefono" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ciudad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idCiudad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="regionIdRegion" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idRegion" type="xs:long" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idEstado" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="idpersona" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="sexoIdSexo" type="tns:sexo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sexo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idSexo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="descuentoPK">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estadoIdEstado" type="xs:integer" />
+      <xs:element minOccurs="0" name="idDescuento" type="xs:integer" />
+      <xs:element minOccurs="0" name="valor" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="puntos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clienteIdCliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="fechaActualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPuntos" type="xs:decimal" />
+      <xs:element minOccurs="0" name="puntosCanjeados" type="xs:integer" />
+      <xs:element minOccurs="0" name="totalPuntos" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_cargar_puntos">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="puntos" type="xs:int" />
+      <xs:element name="id_punto" type="xs:int" />
+      <xs:element name="id_desc" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_cargar_puntosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

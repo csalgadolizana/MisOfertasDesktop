@@ -1,0 +1,31 @@
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\bin\Debug\Desk.exe.config
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.csprojResolveAssemblyReference.cache
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.Properties.Resources.resources
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.csproj.GenerateResource.Cache
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\bin\Debug\Desk.exe
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\bin\Debug\Desk.pdb
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.exe
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.pdb
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.View.FrLogin.resources
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.View.FrEmpresas.resources
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.View.FrHome.resources
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.View.FrCrearEmpresa.resources
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.View.FrCrearPromo.resources
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.View.FrCrearUsuario.resources
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.View.FrPromociones.resources
+C:\Users\mcuqr\Desktop\Portafolio\MisOfertas\Desk\obj\Debug\Desk.View.FrUsuario.resources
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\bin\Debug\Desk.exe.config
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.exe
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.pdb
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\bin\Debug\Desk.exe
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\bin\Debug\Desk.pdb
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.csprojResolveAssemblyReference.cache
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.Properties.Resources.resources
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.View.FrLogin.resources
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.csproj.GenerateResource.Cache
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.View.FrModificarOferta.resources
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.View.FrModificarUsuario.resources
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.View.FrModificarEmpresa.resources
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.View.FrHomeAdmin.resources
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.View.FrHomeEncargadoTienda.resources
+C:\Users\felipeandres\Desktop\Portafolio de Titulo\Iteracion 2\MisOfertas\Desk\obj\Debug\Desk.View.FrHomeGerenteAsociacion.resources

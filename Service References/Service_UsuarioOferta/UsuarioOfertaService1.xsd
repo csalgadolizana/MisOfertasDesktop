@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Crear_usuario_oferta" type="tns:Crear_usuario_oferta" />
+  <xs:element name="Crear_usuario_ofertaResponse" type="tns:Crear_usuario_ofertaResponse" />
+  <xs:element name="Eliminar_usuario_oferta" type="tns:Eliminar_usuario_oferta" />
+  <xs:element name="Eliminar_usuario_ofertaResponse" type="tns:Eliminar_usuario_ofertaResponse" />
+  <xs:element name="Listado_usuario_oferta" type="tns:Listado_usuario_oferta" />
+  <xs:element name="Listado_usuario_ofertaResponse" type="tns:Listado_usuario_ofertaResponse" />
+  <xs:element name="cargo" type="tns:cargo" />
+  <xs:element name="estado" type="tns:estado" />
+  <xs:element name="informativo" type="tns:informativo" />
+  <xs:element name="oferta" type="tns:oferta" />
+  <xs:element name="persona" type="tns:persona" />
+  <xs:element name="sexo" type="tns:sexo" />
+  <xs:element name="usuario" type="tns:usuario" />
+  <xs:element name="usuariooferta" type="tns:usuariooferta" />
+  <xs:complexType name="Crear_usuario_oferta">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id_usuario" type="xs:int" />
+      <xs:element name="id_oferta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_usuario_ofertaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_usuario_oferta">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_usuario_ofertaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Listado_usuario_oferta">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Listado_usuario_ofertaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuariooferta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuariooferta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="oferta" type="tns:oferta" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+      <xs:element minOccurs="0" name="usuarioofertaPK" type="tns:usuarioofertaPK" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="oferta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
+      <xs:element minOccurs="0" name="idOferta" type="xs:decimal" />
+      <xs:element minOccurs="0" name="informativo" type="tns:informativo" />
+      <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="maximoCompra" type="xs:integer" />
+      <xs:element minOccurs="0" name="minimoCompra" type="xs:integer" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroVisitas" type="xs:integer" />
+      <xs:element minOccurs="0" name="precioNormal" type="xs:integer" />
+      <xs:element minOccurs="0" name="precioOferta" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idEstado" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="informativo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idInformativo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ofertaIdOferta" type="tns:oferta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="cargoIdcargo" type="tns:cargo" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
+      <xs:element minOccurs="0" name="fechacreado" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:decimal" />
+      <xs:element minOccurs="0" name="personaIdpersona" type="tns:persona" />
+      <xs:element minOccurs="0" name="telefono" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idcargo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="idpersona" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="sexoIdSexo" type="tns:sexo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sexo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idSexo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuarioofertaPK">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idusuariooferta" type="xs:integer" />
+      <xs:element minOccurs="0" name="ofertaIdOferta" type="xs:integer" />
+      <xs:element minOccurs="0" name="usuarioIdUsuario" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
