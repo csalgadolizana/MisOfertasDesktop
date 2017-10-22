@@ -31,11 +31,29 @@ namespace Desk.View
             var usuario = serviceclient.Autenticacion(txtUsuario.Text.Trim().ToLower(), txtPassword.Text.Trim().ToLower());
             if (int.Parse(usuario.idUsuario.ToString()) != 0)
             {
-
                 MessageBox.Show("bienvenido " + usuario.personaIdpersona.nombre);
-                //frhomeadmin admin = new frhomeadmin();
-                //admin.show();
-                //hide();
+                switch (int.Parse(usuario.cargoIdcargo.idcargo.ToString()))
+                {
+                    case 1:
+                        FrHomeGerenteAsociacion gerenteAsociacion = new FrHomeGerenteAsociacion();
+                        gerenteAsociacion.Show();
+                        this.Hide();
+                        break;
+                    case 2:
+                        FrHomeAdmin admin = new FrHomeAdmin();
+                        admin.Show();
+                        this.Hide();
+                        break;
+                    case 3:
+                        FrHomeEncargadoTienda encargadoTienda = new FrHomeEncargadoTienda();
+                        encargadoTienda.Show();
+                        this.Hide();
+                        break;
+                    default:
+                        MessageBox.Show("Ha ocurrido un error /n" +
+                            "contacte al administrador");
+                        break;
+                }
             }
             else
             {
