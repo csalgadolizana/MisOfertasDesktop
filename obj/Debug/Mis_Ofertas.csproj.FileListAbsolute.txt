@@ -28,3 +28,4 @@ C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Mi
 C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Mis_Ofertas.csproj.CoreCompileInputs.cache
 C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Desk.exe
 C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Desk.pdb
+C:\Users\PC-Cristopher\Documents\NetBeansProjects\MisOfertasDesktop\obj\Debug\Mis_Ofertas.csprojResolveAssemblyReference.cache

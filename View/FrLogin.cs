@@ -27,8 +27,7 @@ namespace Desk.View
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Service_Usuario.UsuarioServiceClient serviceclient = new Service_Usuario.UsuarioServiceClient();
-
-            var usuario = serviceclient.Autenticacion(txtUsuario.Text.Trim().ToLower(), txtPassword.Text.Trim().ToLower());
+            var usuario = serviceclient.AutenticarTrabajador(txtUsuario.Text.Trim(), txtPassword.Text.Trim());
             if (int.Parse(usuario.idUsuario.ToString()) != 0)
             {
                 MessageBox.Show("bienvenido " + usuario.personaIdpersona.nombre);

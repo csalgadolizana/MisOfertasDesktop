@@ -489,19 +489,22 @@
     <None Include="Service References\Service_UsuarioOferta\UsuarioOfertaService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.AutenticacionResponse.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.AutenticacionResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.CREAR_USUARIOResponse.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.AutenticarTrabajadorResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Eliminar_usuarioResponse.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.CREAR_USUARIOResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Eliminar_usuarioResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Listado_usuariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Modificar_USUARIOResponse.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Modificar_USUARIOResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_Usuario\Desk.Service_Usuario.usuario.datasource">

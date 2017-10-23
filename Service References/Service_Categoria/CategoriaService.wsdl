@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://localhost:17225/MisOfertasWebService/CategoriaService?xsd=1" namespace="http://Servicios/" />
     </xsd:schema>
   </types>
-  <message name="Listado_categorias">
-    <part name="parameters" element="tns:Listado_categorias" />
+  <message name="Modificar_categoria">
+    <part name="parameters" element="tns:Modificar_categoria" />
   </message>
-  <message name="Listado_categoriasResponse">
-    <part name="parameters" element="tns:Listado_categoriasResponse" />
-  </message>
-  <message name="Crear_categoria">
-    <part name="parameters" element="tns:Crear_categoria" />
-  </message>
-  <message name="Crear_categoriaResponse">
-    <part name="parameters" element="tns:Crear_categoriaResponse" />
+  <message name="Modificar_categoriaResponse">
+    <part name="parameters" element="tns:Modificar_categoriaResponse" />
   </message>
   <message name="Eliminar_categoria">
     <part name="parameters" element="tns:Eliminar_categoria" />
@@ -23,42 +17,39 @@
   <message name="Eliminar_categoriaResponse">
     <part name="parameters" element="tns:Eliminar_categoriaResponse" />
   </message>
-  <message name="Modificar_categoria">
-    <part name="parameters" element="tns:Modificar_categoria" />
+  <message name="Crear_categoria">
+    <part name="parameters" element="tns:Crear_categoria" />
   </message>
-  <message name="Modificar_categoriaResponse">
-    <part name="parameters" element="tns:Modificar_categoriaResponse" />
+  <message name="Crear_categoriaResponse">
+    <part name="parameters" element="tns:Crear_categoriaResponse" />
+  </message>
+  <message name="Listado_categorias">
+    <part name="parameters" element="tns:Listado_categorias" />
+  </message>
+  <message name="Listado_categoriasResponse">
+    <part name="parameters" element="tns:Listado_categoriasResponse" />
   </message>
   <portType name="CategoriaService">
-    <operation name="Listado_categorias">
-      <input wsam:Action="http://Servicios/CategoriaService/Listado_categoriasRequest" message="tns:Listado_categorias" />
-      <output wsam:Action="http://Servicios/CategoriaService/Listado_categoriasResponse" message="tns:Listado_categoriasResponse" />
-    </operation>
-    <operation name="Crear_categoria">
-      <input wsam:Action="http://Servicios/CategoriaService/Crear_categoriaRequest" message="tns:Crear_categoria" />
-      <output wsam:Action="http://Servicios/CategoriaService/Crear_categoriaResponse" message="tns:Crear_categoriaResponse" />
+    <operation name="Modificar_categoria">
+      <input wsam:Action="http://Servicios/CategoriaService/Modificar_categoriaRequest" message="tns:Modificar_categoria" />
+      <output wsam:Action="http://Servicios/CategoriaService/Modificar_categoriaResponse" message="tns:Modificar_categoriaResponse" />
     </operation>
     <operation name="Eliminar_categoria">
       <input wsam:Action="http://Servicios/CategoriaService/Eliminar_categoriaRequest" message="tns:Eliminar_categoria" />
       <output wsam:Action="http://Servicios/CategoriaService/Eliminar_categoriaResponse" message="tns:Eliminar_categoriaResponse" />
     </operation>
-    <operation name="Modificar_categoria">
-      <input wsam:Action="http://Servicios/CategoriaService/Modificar_categoriaRequest" message="tns:Modificar_categoria" />
-      <output wsam:Action="http://Servicios/CategoriaService/Modificar_categoriaResponse" message="tns:Modificar_categoriaResponse" />
+    <operation name="Crear_categoria">
+      <input wsam:Action="http://Servicios/CategoriaService/Crear_categoriaRequest" message="tns:Crear_categoria" />
+      <output wsam:Action="http://Servicios/CategoriaService/Crear_categoriaResponse" message="tns:Crear_categoriaResponse" />
+    </operation>
+    <operation name="Listado_categorias">
+      <input wsam:Action="http://Servicios/CategoriaService/Listado_categoriasRequest" message="tns:Listado_categorias" />
+      <output wsam:Action="http://Servicios/CategoriaService/Listado_categoriasResponse" message="tns:Listado_categoriasResponse" />
     </operation>
   </portType>
   <binding name="CategoriaServicePortBinding" type="tns:CategoriaService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="Listado_categorias">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="Crear_categoria">
+    <operation name="Modificar_categoria">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +67,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Modificar_categoria">
+    <operation name="Crear_categoria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Listado_categorias">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

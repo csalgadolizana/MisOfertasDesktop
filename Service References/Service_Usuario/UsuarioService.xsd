@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="Autenticacion" type="tns:Autenticacion" />
   <xs:element name="AutenticacionResponse" type="tns:AutenticacionResponse" />
+  <xs:element name="AutenticarTrabajador" type="tns:AutenticarTrabajador" />
+  <xs:element name="AutenticarTrabajadorResponse" type="tns:AutenticarTrabajadorResponse" />
   <xs:element name="CREAR_USUARIO" type="tns:CREAR_USUARIO" />
   <xs:element name="CREAR_USUARIOResponse" type="tns:CREAR_USUARIOResponse" />
   <xs:element name="Eliminar_usuario" type="tns:Eliminar_usuario" />
@@ -73,6 +75,17 @@
       <xs:element minOccurs="0" name="idSexo" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="AutenticarTrabajador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AutenticarTrabajadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="CREAR_USUARIO">
     <xs:sequence>
       <xs:element name="id" type="xs:int" />
@@ -99,7 +112,7 @@
   </xs:complexType>
   <xs:complexType name="AutenticacionResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:usuario" />
+      <xs:element minOccurs="0" name="return" type="xs:anyType" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Modificar_USUARIO">
