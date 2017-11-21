@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.20.65.11:8080/MisOfertasWebService/PersonaService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/MisOfertasWebService/PersonaService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PersonaService1.wsdl" MetadataType="Wsdl" ID="fe684925-9030-42b6-95f9-2d68c054c901" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/PersonaService?WSDL" />
-    <MetadataFile FileName="PersonaService1.xsd" MetadataType="Schema" ID="763e2c1f-f00a-434c-834b-cbcd06cae6ee" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/PersonaService?xsd=1" />
+    <MetadataFile FileName="PersonaService.wsdl" MetadataType="Wsdl" ID="28a82f37-81c2-4fbc-96dd-5ea0493a6bdc" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/PersonaService?WSDL" />
+    <MetadataFile FileName="PersonaService.xsd" MetadataType="Schema" ID="4c33aaee-d3cc-4763-a6e7-31c22e8cef40" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/PersonaService?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

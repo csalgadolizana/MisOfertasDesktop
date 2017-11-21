@@ -16,15 +16,6 @@ namespace Desk.Service_UsuarioOferta {
     public interface UsuarioOfertaService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioOfertaService/Eliminar_usuario_ofertaRequest", ReplyAction="http://Servicios/UsuarioOfertaService/Eliminar_usuario_ofertaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse Eliminar_usuario_oferta(Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioOfertaService/Eliminar_usuario_ofertaRequest", ReplyAction="http://Servicios/UsuarioOfertaService/Eliminar_usuario_ofertaResponse")]
-        System.Threading.Tasks.Task<Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse> Eliminar_usuario_ofertaAsync(Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioOfertaService/Listado_usuario_ofertaRequest", ReplyAction="http://Servicios/UsuarioOfertaService/Listado_usuario_ofertaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,46 +32,19 @@ namespace Desk.Service_UsuarioOferta {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioOfertaService/Crear_usuario_ofertaRequest", ReplyAction="http://Servicios/UsuarioOfertaService/Crear_usuario_ofertaResponse")]
         System.Threading.Tasks.Task<Desk.Service_UsuarioOferta.Crear_usuario_ofertaResponse> Crear_usuario_ofertaAsync(Desk.Service_UsuarioOferta.Crear_usuario_ofertaRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_usuario_oferta", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_usuario_ofertaRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioOfertaService/Eliminar_usuario_ofertaRequest", ReplyAction="http://Servicios/UsuarioOfertaService/Eliminar_usuario_ofertaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse Eliminar_usuario_oferta(Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest request);
         
-        public Eliminar_usuario_ofertaRequest() {
-        }
-        
-        public Eliminar_usuario_ofertaRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_usuario_ofertaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_usuario_ofertaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Eliminar_usuario_ofertaResponse() {
-        }
-        
-        public Eliminar_usuario_ofertaResponse(string @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioOfertaService/Eliminar_usuario_ofertaRequest", ReplyAction="http://Servicios/UsuarioOfertaService/Eliminar_usuario_ofertaResponse")]
+        System.Threading.Tasks.Task<Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse> Eliminar_usuario_ofertaAsync(Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest request);
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -154,7 +118,7 @@ namespace Desk.Service_UsuarioOferta {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -368,7 +332,7 @@ namespace Desk.Service_UsuarioOferta {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -428,7 +392,7 @@ namespace Desk.Service_UsuarioOferta {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -488,7 +452,7 @@ namespace Desk.Service_UsuarioOferta {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -548,7 +512,7 @@ namespace Desk.Service_UsuarioOferta {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -650,7 +614,7 @@ namespace Desk.Service_UsuarioOferta {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -710,7 +674,7 @@ namespace Desk.Service_UsuarioOferta {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -974,6 +938,42 @@ namespace Desk.Service_UsuarioOferta {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_usuario_oferta", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_usuario_ofertaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public Eliminar_usuario_ofertaRequest() {
+        }
+        
+        public Eliminar_usuario_ofertaRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_usuario_ofertaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_usuario_ofertaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Eliminar_usuario_ofertaResponse() {
+        }
+        
+        public Eliminar_usuario_ofertaResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuarioOfertaServiceChannel : Desk.Service_UsuarioOferta.UsuarioOfertaService, System.ServiceModel.IClientChannel {
     }
@@ -999,29 +999,6 @@ namespace Desk.Service_UsuarioOferta {
         
         public UsuarioOfertaServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse Desk.Service_UsuarioOferta.UsuarioOfertaService.Eliminar_usuario_oferta(Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest request) {
-            return base.Channel.Eliminar_usuario_oferta(request);
-        }
-        
-        public string Eliminar_usuario_oferta(int id) {
-            Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest inValue = new Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest();
-            inValue.id = id;
-            Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse retVal = ((Desk.Service_UsuarioOferta.UsuarioOfertaService)(this)).Eliminar_usuario_oferta(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse> Desk.Service_UsuarioOferta.UsuarioOfertaService.Eliminar_usuario_ofertaAsync(Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest request) {
-            return base.Channel.Eliminar_usuario_ofertaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse> Eliminar_usuario_ofertaAsync(int id) {
-            Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest inValue = new Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest();
-            inValue.id = id;
-            return ((Desk.Service_UsuarioOferta.UsuarioOfertaService)(this)).Eliminar_usuario_ofertaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1072,6 +1049,29 @@ namespace Desk.Service_UsuarioOferta {
             inValue.id_usuario = id_usuario;
             inValue.id_oferta = id_oferta;
             return ((Desk.Service_UsuarioOferta.UsuarioOfertaService)(this)).Crear_usuario_ofertaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse Desk.Service_UsuarioOferta.UsuarioOfertaService.Eliminar_usuario_oferta(Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest request) {
+            return base.Channel.Eliminar_usuario_oferta(request);
+        }
+        
+        public string Eliminar_usuario_oferta(int id) {
+            Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest inValue = new Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest();
+            inValue.id = id;
+            Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse retVal = ((Desk.Service_UsuarioOferta.UsuarioOfertaService)(this)).Eliminar_usuario_oferta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse> Desk.Service_UsuarioOferta.UsuarioOfertaService.Eliminar_usuario_ofertaAsync(Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest request) {
+            return base.Channel.Eliminar_usuario_ofertaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaResponse> Eliminar_usuario_ofertaAsync(int id) {
+            Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest inValue = new Desk.Service_UsuarioOferta.Eliminar_usuario_ofertaRequest();
+            inValue.id = id;
+            return ((Desk.Service_UsuarioOferta.UsuarioOfertaService)(this)).Eliminar_usuario_ofertaAsync(inValue);
         }
     }
 }

@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.20.65.11:8080/MisOfertasWebService/CiudadService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/MisOfertasWebService/CiudadService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CiudadService.wsdl" MetadataType="Wsdl" ID="f956745b-3cae-4ce7-ac94-69ecfa95743c" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/CiudadService?WSDL" />
-    <MetadataFile FileName="CiudadService.xsd" MetadataType="Schema" ID="84be0e58-a559-4e91-bd85-5f384f1c0345" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/CiudadService?xsd=1" />
+    <MetadataFile FileName="CiudadService1.xsd" MetadataType="Schema" ID="78682d88-8706-4fc3-a4a5-7d16871e68c7" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/CiudadService?xsd=1" />
+    <MetadataFile FileName="CiudadService1.wsdl" MetadataType="Wsdl" ID="621484ba-9a30-4167-a164-ebe840090740" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/CiudadService?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

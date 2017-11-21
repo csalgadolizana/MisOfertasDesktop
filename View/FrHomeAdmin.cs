@@ -905,6 +905,11 @@ namespace Desk.View
                 }
             }
         }
+
+        private void btnEliminarEmpre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

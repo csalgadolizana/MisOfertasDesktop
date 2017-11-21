@@ -25,13 +25,13 @@ namespace Desk.Service_Valoracion {
         System.Threading.Tasks.Task<Desk.Service_Valoracion.Crear_valoracionResponse> Crear_valoracionAsync(Desk.Service_Valoracion.Crear_valoracionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ValoracionService/Modificar_valoracionRequest", ReplyAction="http://Servicios/ValoracionService/Modificar_valoracionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ValoracionService/Eliminar_valoracionRequest", ReplyAction="http://Servicios/ValoracionService/Eliminar_valoracionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Valoracion.Modificar_valoracionResponse Modificar_valoracion(Desk.Service_Valoracion.Modificar_valoracionRequest request);
+        Desk.Service_Valoracion.Eliminar_valoracionResponse Eliminar_valoracion(Desk.Service_Valoracion.Eliminar_valoracionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ValoracionService/Modificar_valoracionRequest", ReplyAction="http://Servicios/ValoracionService/Modificar_valoracionResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Valoracion.Modificar_valoracionResponse> Modificar_valoracionAsync(Desk.Service_Valoracion.Modificar_valoracionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ValoracionService/Eliminar_valoracionRequest", ReplyAction="http://Servicios/ValoracionService/Eliminar_valoracionResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Valoracion.Eliminar_valoracionResponse> Eliminar_valoracionAsync(Desk.Service_Valoracion.Eliminar_valoracionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ValoracionService/Listado_valoracionesRequest", ReplyAction="http://Servicios/ValoracionService/Listado_valoracionesResponse")]
@@ -43,13 +43,13 @@ namespace Desk.Service_Valoracion {
         System.Threading.Tasks.Task<Desk.Service_Valoracion.Listado_valoracionesResponse> Listado_valoracionesAsync(Desk.Service_Valoracion.Listado_valoracionesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ValoracionService/Eliminar_valoracionRequest", ReplyAction="http://Servicios/ValoracionService/Eliminar_valoracionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ValoracionService/Modificar_valoracionRequest", ReplyAction="http://Servicios/ValoracionService/Modificar_valoracionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Valoracion.Eliminar_valoracionResponse Eliminar_valoracion(Desk.Service_Valoracion.Eliminar_valoracionRequest request);
+        Desk.Service_Valoracion.Modificar_valoracionResponse Modificar_valoracion(Desk.Service_Valoracion.Modificar_valoracionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ValoracionService/Eliminar_valoracionRequest", ReplyAction="http://Servicios/ValoracionService/Eliminar_valoracionResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Valoracion.Eliminar_valoracionResponse> Eliminar_valoracionAsync(Desk.Service_Valoracion.Eliminar_valoracionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ValoracionService/Modificar_valoracionRequest", ReplyAction="http://Servicios/ValoracionService/Modificar_valoracionResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Valoracion.Modificar_valoracionResponse> Modificar_valoracionAsync(Desk.Service_Valoracion.Modificar_valoracionRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -121,71 +121,41 @@ namespace Desk.Service_Valoracion {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_valoracion", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_valoracionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_valoracion", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_valoracionRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int id;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nota;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string boleta_adjunta;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_valoracion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_cliente;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_oferta;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_categoria;
-        
-        public Modificar_valoracionRequest() {
+        public Eliminar_valoracionRequest() {
         }
         
-        public Modificar_valoracionRequest(int id, int nota, string boleta_adjunta, System.DateTime fecha_valoracion, int id_cliente, int id_oferta, int id_categoria) {
+        public Eliminar_valoracionRequest(int id) {
             this.id = id;
-            this.nota = nota;
-            this.boleta_adjunta = boleta_adjunta;
-            this.fecha_valoracion = fecha_valoracion;
-            this.id_cliente = id_cliente;
-            this.id_oferta = id_oferta;
-            this.id_categoria = id_categoria;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_valoracionResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_valoracionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_valoracionResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_valoracionResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public Modificar_valoracionResponse() {
+        public Eliminar_valoracionResponse() {
         }
         
-        public Modificar_valoracionResponse(string @return) {
+        public Eliminar_valoracionResponse(string @return) {
             this.@return = @return;
         }
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -315,7 +285,7 @@ namespace Desk.Service_Valoracion {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -375,7 +345,7 @@ namespace Desk.Service_Valoracion {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -435,7 +405,7 @@ namespace Desk.Service_Valoracion {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -649,7 +619,7 @@ namespace Desk.Service_Valoracion {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -709,7 +679,7 @@ namespace Desk.Service_Valoracion {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -769,7 +739,7 @@ namespace Desk.Service_Valoracion {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -871,7 +841,7 @@ namespace Desk.Service_Valoracion {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -931,7 +901,7 @@ namespace Desk.Service_Valoracion {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1019,7 +989,7 @@ namespace Desk.Service_Valoracion {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1277,35 +1247,65 @@ namespace Desk.Service_Valoracion {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_valoracion", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_valoracionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_valoracion", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_valoracionRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int id;
         
-        public Eliminar_valoracionRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nota;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string boleta_adjunta;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_valoracion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_cliente;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_oferta;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_categoria;
+        
+        public Modificar_valoracionRequest() {
         }
         
-        public Eliminar_valoracionRequest(int id) {
+        public Modificar_valoracionRequest(int id, int nota, string boleta_adjunta, System.DateTime fecha_valoracion, int id_cliente, int id_oferta, int id_categoria) {
             this.id = id;
+            this.nota = nota;
+            this.boleta_adjunta = boleta_adjunta;
+            this.fecha_valoracion = fecha_valoracion;
+            this.id_cliente = id_cliente;
+            this.id_oferta = id_oferta;
+            this.id_categoria = id_categoria;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_valoracionResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_valoracionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_valoracionResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_valoracionResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public Eliminar_valoracionResponse() {
+        public Modificar_valoracionResponse() {
         }
         
-        public Eliminar_valoracionResponse(string @return) {
+        public Modificar_valoracionResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -1373,6 +1373,50 @@ namespace Desk.Service_Valoracion {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Valoracion.Eliminar_valoracionResponse Desk.Service_Valoracion.ValoracionService.Eliminar_valoracion(Desk.Service_Valoracion.Eliminar_valoracionRequest request) {
+            return base.Channel.Eliminar_valoracion(request);
+        }
+        
+        public string Eliminar_valoracion(int id) {
+            Desk.Service_Valoracion.Eliminar_valoracionRequest inValue = new Desk.Service_Valoracion.Eliminar_valoracionRequest();
+            inValue.id = id;
+            Desk.Service_Valoracion.Eliminar_valoracionResponse retVal = ((Desk.Service_Valoracion.ValoracionService)(this)).Eliminar_valoracion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Valoracion.Eliminar_valoracionResponse> Desk.Service_Valoracion.ValoracionService.Eliminar_valoracionAsync(Desk.Service_Valoracion.Eliminar_valoracionRequest request) {
+            return base.Channel.Eliminar_valoracionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Valoracion.Eliminar_valoracionResponse> Eliminar_valoracionAsync(int id) {
+            Desk.Service_Valoracion.Eliminar_valoracionRequest inValue = new Desk.Service_Valoracion.Eliminar_valoracionRequest();
+            inValue.id = id;
+            return ((Desk.Service_Valoracion.ValoracionService)(this)).Eliminar_valoracionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Valoracion.Listado_valoracionesResponse Desk.Service_Valoracion.ValoracionService.Listado_valoraciones(Desk.Service_Valoracion.Listado_valoracionesRequest request) {
+            return base.Channel.Listado_valoraciones(request);
+        }
+        
+        public Desk.Service_Valoracion.valoracion[] Listado_valoraciones() {
+            Desk.Service_Valoracion.Listado_valoracionesRequest inValue = new Desk.Service_Valoracion.Listado_valoracionesRequest();
+            Desk.Service_Valoracion.Listado_valoracionesResponse retVal = ((Desk.Service_Valoracion.ValoracionService)(this)).Listado_valoraciones(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Valoracion.Listado_valoracionesResponse> Desk.Service_Valoracion.ValoracionService.Listado_valoracionesAsync(Desk.Service_Valoracion.Listado_valoracionesRequest request) {
+            return base.Channel.Listado_valoracionesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Valoracion.Listado_valoracionesResponse> Listado_valoracionesAsync() {
+            Desk.Service_Valoracion.Listado_valoracionesRequest inValue = new Desk.Service_Valoracion.Listado_valoracionesRequest();
+            return ((Desk.Service_Valoracion.ValoracionService)(this)).Listado_valoracionesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Desk.Service_Valoracion.Modificar_valoracionResponse Desk.Service_Valoracion.ValoracionService.Modificar_valoracion(Desk.Service_Valoracion.Modificar_valoracionRequest request) {
             return base.Channel.Modificar_valoracion(request);
         }
@@ -1405,50 +1449,6 @@ namespace Desk.Service_Valoracion {
             inValue.id_oferta = id_oferta;
             inValue.id_categoria = id_categoria;
             return ((Desk.Service_Valoracion.ValoracionService)(this)).Modificar_valoracionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Valoracion.Listado_valoracionesResponse Desk.Service_Valoracion.ValoracionService.Listado_valoraciones(Desk.Service_Valoracion.Listado_valoracionesRequest request) {
-            return base.Channel.Listado_valoraciones(request);
-        }
-        
-        public Desk.Service_Valoracion.valoracion[] Listado_valoraciones() {
-            Desk.Service_Valoracion.Listado_valoracionesRequest inValue = new Desk.Service_Valoracion.Listado_valoracionesRequest();
-            Desk.Service_Valoracion.Listado_valoracionesResponse retVal = ((Desk.Service_Valoracion.ValoracionService)(this)).Listado_valoraciones(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Valoracion.Listado_valoracionesResponse> Desk.Service_Valoracion.ValoracionService.Listado_valoracionesAsync(Desk.Service_Valoracion.Listado_valoracionesRequest request) {
-            return base.Channel.Listado_valoracionesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Valoracion.Listado_valoracionesResponse> Listado_valoracionesAsync() {
-            Desk.Service_Valoracion.Listado_valoracionesRequest inValue = new Desk.Service_Valoracion.Listado_valoracionesRequest();
-            return ((Desk.Service_Valoracion.ValoracionService)(this)).Listado_valoracionesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Valoracion.Eliminar_valoracionResponse Desk.Service_Valoracion.ValoracionService.Eliminar_valoracion(Desk.Service_Valoracion.Eliminar_valoracionRequest request) {
-            return base.Channel.Eliminar_valoracion(request);
-        }
-        
-        public string Eliminar_valoracion(int id) {
-            Desk.Service_Valoracion.Eliminar_valoracionRequest inValue = new Desk.Service_Valoracion.Eliminar_valoracionRequest();
-            inValue.id = id;
-            Desk.Service_Valoracion.Eliminar_valoracionResponse retVal = ((Desk.Service_Valoracion.ValoracionService)(this)).Eliminar_valoracion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Valoracion.Eliminar_valoracionResponse> Desk.Service_Valoracion.ValoracionService.Eliminar_valoracionAsync(Desk.Service_Valoracion.Eliminar_valoracionRequest request) {
-            return base.Channel.Eliminar_valoracionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Valoracion.Eliminar_valoracionResponse> Eliminar_valoracionAsync(int id) {
-            Desk.Service_Valoracion.Eliminar_valoracionRequest inValue = new Desk.Service_Valoracion.Eliminar_valoracionRequest();
-            inValue.id = id;
-            return ((Desk.Service_Valoracion.ValoracionService)(this)).Eliminar_valoracionAsync(inValue);
         }
     }
 }

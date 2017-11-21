@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.20.65.11:8080/MisOfertasWebService/EmpresaService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/MisOfertasWebService/EmpresaService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EmpresaService1.xsd" MetadataType="Schema" ID="e4c389e3-27d3-4938-a46a-45663b077f93" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/EmpresaService?xsd=1" />
-    <MetadataFile FileName="EmpresaService1.wsdl" MetadataType="Wsdl" ID="6c34fa9c-a3db-4dae-a228-2670ac19a0af" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/EmpresaService?WSDL" />
+    <MetadataFile FileName="EmpresaService.xsd" MetadataType="Schema" ID="0eee02a3-5b77-4faa-9a20-be19b705e81d" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/EmpresaService?xsd=1" />
+    <MetadataFile FileName="EmpresaService.wsdl" MetadataType="Wsdl" ID="4ea0d7e0-3b42-493e-9d0f-f599bb93f801" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/EmpresaService?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

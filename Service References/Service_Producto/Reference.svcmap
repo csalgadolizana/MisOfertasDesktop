@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.20.65.11:8080/MisOfertasWebService/ProductoService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/MisOfertasWebService/ProductoService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ProductoService1.wsdl" MetadataType="Wsdl" ID="2334d1ec-eee6-433e-8b0a-3240852e00ac" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/ProductoService?WSDL" />
-    <MetadataFile FileName="ProductoService1.xsd" MetadataType="Schema" ID="2dd3396e-67e4-4840-89d3-a4c1c7e56cda" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/ProductoService?xsd=1" />
+    <MetadataFile FileName="ProductoService.wsdl" MetadataType="Wsdl" ID="46bfb73a-d10e-46b7-8135-3f40d39d6513" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/ProductoService?WSDL" />
+    <MetadataFile FileName="ProductoService.xsd" MetadataType="Schema" ID="35d1d14e-5f48-4a28-8f63-f33c69d5da25" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/ProductoService?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

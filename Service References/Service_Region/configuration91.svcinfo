@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ENAHlUrcMsNgT1inA+Z8LnEXFg0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="bBW0QD1gOA+/+KiOUrhTMpdTkyI=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="RegionServicePortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="RegionServicePort" contract="Service_Region.RegionService" bindingType="basicHttpBinding" address="http://10.20.65.11:8080/MisOfertasWebService/RegionService" bindingConfiguration="RegionServicePortBinding">
+    <endpoint name="RegionServicePort" contract="Service_Region.RegionService" bindingType="basicHttpBinding" address="http://localhost:8080/MisOfertasWebService/RegionService" bindingConfiguration="RegionServicePortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://10.20.65.11:8080/MisOfertasWebService/RegionService</serializedValue>
+          <serializedValue>http://localhost:8080/MisOfertasWebService/RegionService</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -56,7 +56,7 @@
             // 
             // clienteBindingSource
             // 
-            this.clienteBindingSource.DataSource = typeof(Desk.Service_Usuario.cliente);
+            this.clienteBindingSource.DataSource = typeof(Desk.Service_Usuario.usuario);
             // 
             // Usuarios_Registrados
             // 

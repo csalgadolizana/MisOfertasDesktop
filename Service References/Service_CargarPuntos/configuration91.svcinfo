@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="WbKJJaCjwOPJCgCAs0GKOytblG4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="G0A6BLQeMRTu6kJ8q7ahTtP7rkA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="CargarPuntosServicePortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="CargarPuntosServicePort" contract="Service_CargarPuntos.CargarPuntosService" bindingType="basicHttpBinding" address="http://10.20.65.11:8080/MisOfertasWebService/CargarPuntosService" bindingConfiguration="CargarPuntosServicePortBinding">
+    <endpoint name="CargarPuntosServicePort" contract="Service_CargarPuntos.CargarPuntosService" bindingType="basicHttpBinding" address="http://localhost:8080/MisOfertasWebService/CargarPuntosService" bindingConfiguration="CargarPuntosServicePortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://10.20.65.11:8080/MisOfertasWebService/CargarPuntosService</serializedValue>
+          <serializedValue>http://localhost:8080/MisOfertasWebService/CargarPuntosService</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

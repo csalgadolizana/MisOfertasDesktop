@@ -16,15 +16,6 @@ namespace Desk.Service_OfertaLocal {
     public interface OfertaLocalService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/OfertaLocalService/Eliminar_oferta_localRequest", ReplyAction="http://Servicios/OfertaLocalService/Eliminar_oferta_localResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_OfertaLocal.Eliminar_oferta_localResponse Eliminar_oferta_local(Desk.Service_OfertaLocal.Eliminar_oferta_localRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/OfertaLocalService/Eliminar_oferta_localRequest", ReplyAction="http://Servicios/OfertaLocalService/Eliminar_oferta_localResponse")]
-        System.Threading.Tasks.Task<Desk.Service_OfertaLocal.Eliminar_oferta_localResponse> Eliminar_oferta_localAsync(Desk.Service_OfertaLocal.Eliminar_oferta_localRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/OfertaLocalService/Listado_oferta_localRequest", ReplyAction="http://Servicios/OfertaLocalService/Listado_oferta_localResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,6 +23,15 @@ namespace Desk.Service_OfertaLocal {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/OfertaLocalService/Listado_oferta_localRequest", ReplyAction="http://Servicios/OfertaLocalService/Listado_oferta_localResponse")]
         System.Threading.Tasks.Task<Desk.Service_OfertaLocal.Listado_oferta_localResponse> Listado_oferta_localAsync(Desk.Service_OfertaLocal.Listado_oferta_localRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/OfertaLocalService/Eliminar_oferta_localRequest", ReplyAction="http://Servicios/OfertaLocalService/Eliminar_oferta_localResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_OfertaLocal.Eliminar_oferta_localResponse Eliminar_oferta_local(Desk.Service_OfertaLocal.Eliminar_oferta_localRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/OfertaLocalService/Eliminar_oferta_localRequest", ReplyAction="http://Servicios/OfertaLocalService/Eliminar_oferta_localResponse")]
+        System.Threading.Tasks.Task<Desk.Service_OfertaLocal.Eliminar_oferta_localResponse> Eliminar_oferta_localAsync(Desk.Service_OfertaLocal.Eliminar_oferta_localRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/OfertaLocalService/Crear_oferta_localRequest", ReplyAction="http://Servicios/OfertaLocalService/Crear_oferta_localResponse")]
@@ -43,44 +43,8 @@ namespace Desk.Service_OfertaLocal {
         System.Threading.Tasks.Task<Desk.Service_OfertaLocal.Crear_oferta_localResponse> Crear_oferta_localAsync(Desk.Service_OfertaLocal.Crear_oferta_localRequest request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_oferta_local", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_oferta_localRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public Eliminar_oferta_localRequest() {
-        }
-        
-        public Eliminar_oferta_localRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_oferta_localResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_oferta_localResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Eliminar_oferta_localResponse() {
-        }
-        
-        public Eliminar_oferta_localResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -154,7 +118,7 @@ namespace Desk.Service_OfertaLocal {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -256,7 +220,7 @@ namespace Desk.Service_OfertaLocal {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -344,7 +308,7 @@ namespace Desk.Service_OfertaLocal {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -404,7 +368,7 @@ namespace Desk.Service_OfertaLocal {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -464,7 +428,7 @@ namespace Desk.Service_OfertaLocal {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -678,7 +642,7 @@ namespace Desk.Service_OfertaLocal {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -738,7 +702,7 @@ namespace Desk.Service_OfertaLocal {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -926,6 +890,42 @@ namespace Desk.Service_OfertaLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_oferta_local", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_oferta_localRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public Eliminar_oferta_localRequest() {
+        }
+        
+        public Eliminar_oferta_localRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_oferta_localResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_oferta_localResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Eliminar_oferta_localResponse() {
+        }
+        
+        public Eliminar_oferta_localResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_oferta_local", WrapperNamespace="http://Servicios/", IsWrapped=true)]
     public partial class Crear_oferta_localRequest {
         
@@ -1002,6 +1002,27 @@ namespace Desk.Service_OfertaLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_OfertaLocal.Listado_oferta_localResponse Desk.Service_OfertaLocal.OfertaLocalService.Listado_oferta_local(Desk.Service_OfertaLocal.Listado_oferta_localRequest request) {
+            return base.Channel.Listado_oferta_local(request);
+        }
+        
+        public Desk.Service_OfertaLocal.ofertalocal[] Listado_oferta_local() {
+            Desk.Service_OfertaLocal.Listado_oferta_localRequest inValue = new Desk.Service_OfertaLocal.Listado_oferta_localRequest();
+            Desk.Service_OfertaLocal.Listado_oferta_localResponse retVal = ((Desk.Service_OfertaLocal.OfertaLocalService)(this)).Listado_oferta_local(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_OfertaLocal.Listado_oferta_localResponse> Desk.Service_OfertaLocal.OfertaLocalService.Listado_oferta_localAsync(Desk.Service_OfertaLocal.Listado_oferta_localRequest request) {
+            return base.Channel.Listado_oferta_localAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_OfertaLocal.Listado_oferta_localResponse> Listado_oferta_localAsync() {
+            Desk.Service_OfertaLocal.Listado_oferta_localRequest inValue = new Desk.Service_OfertaLocal.Listado_oferta_localRequest();
+            return ((Desk.Service_OfertaLocal.OfertaLocalService)(this)).Listado_oferta_localAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Desk.Service_OfertaLocal.Eliminar_oferta_localResponse Desk.Service_OfertaLocal.OfertaLocalService.Eliminar_oferta_local(Desk.Service_OfertaLocal.Eliminar_oferta_localRequest request) {
             return base.Channel.Eliminar_oferta_local(request);
         }
@@ -1022,27 +1043,6 @@ namespace Desk.Service_OfertaLocal {
             Desk.Service_OfertaLocal.Eliminar_oferta_localRequest inValue = new Desk.Service_OfertaLocal.Eliminar_oferta_localRequest();
             inValue.id = id;
             return ((Desk.Service_OfertaLocal.OfertaLocalService)(this)).Eliminar_oferta_localAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_OfertaLocal.Listado_oferta_localResponse Desk.Service_OfertaLocal.OfertaLocalService.Listado_oferta_local(Desk.Service_OfertaLocal.Listado_oferta_localRequest request) {
-            return base.Channel.Listado_oferta_local(request);
-        }
-        
-        public Desk.Service_OfertaLocal.ofertalocal[] Listado_oferta_local() {
-            Desk.Service_OfertaLocal.Listado_oferta_localRequest inValue = new Desk.Service_OfertaLocal.Listado_oferta_localRequest();
-            Desk.Service_OfertaLocal.Listado_oferta_localResponse retVal = ((Desk.Service_OfertaLocal.OfertaLocalService)(this)).Listado_oferta_local(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_OfertaLocal.Listado_oferta_localResponse> Desk.Service_OfertaLocal.OfertaLocalService.Listado_oferta_localAsync(Desk.Service_OfertaLocal.Listado_oferta_localRequest request) {
-            return base.Channel.Listado_oferta_localAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_OfertaLocal.Listado_oferta_localResponse> Listado_oferta_localAsync() {
-            Desk.Service_OfertaLocal.Listado_oferta_localRequest inValue = new Desk.Service_OfertaLocal.Listado_oferta_localRequest();
-            return ((Desk.Service_OfertaLocal.OfertaLocalService)(this)).Listado_oferta_localAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="RegionService" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/MisOfertasWebService/RegionService?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="Listado_regiones">
+    <part name="parameters" element="tns:Listado_regiones" />
+  </message>
+  <message name="Listado_regionesResponse">
+    <part name="parameters" element="tns:Listado_regionesResponse" />
+  </message>
+  <portType name="RegionService">
+    <operation name="Listado_regiones">
+      <input wsam:Action="http://Servicios/RegionService/Listado_regionesRequest" message="tns:Listado_regiones" />
+      <output wsam:Action="http://Servicios/RegionService/Listado_regionesResponse" message="tns:Listado_regionesResponse" />
+    </operation>
+  </portType>
+  <binding name="RegionServicePortBinding" type="tns:RegionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Listado_regiones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="RegionService">
+    <port name="RegionServicePort" binding="tns:RegionServicePortBinding">
+      <soap:address location="http://localhost:8080/MisOfertasWebService/RegionService" />
+    </port>
+  </service>
+</definitions>
