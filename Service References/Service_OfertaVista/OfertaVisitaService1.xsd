@@ -9,9 +9,8 @@
   <xs:element name="ciudad" type="tns:ciudad" />
   <xs:element name="cliente" type="tns:cliente" />
   <xs:element name="estado" type="tns:estado" />
-  <xs:element name="informativo" type="tns:informativo" />
   <xs:element name="oferta" type="tns:oferta" />
-  <xs:element name="ofertasVisitas" type="tns:ofertasVisitas" />
+  <xs:element name="ofertavisi" type="tns:ofertavisi" />
   <xs:element name="persona" type="tns:persona" />
   <xs:element name="region" type="tns:region" />
   <xs:element name="sexo" type="tns:sexo" />
@@ -20,14 +19,14 @@
   </xs:complexType>
   <xs:complexType name="Listado_oferta_visitasResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ofertasVisitas" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ofertavisi" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ofertasVisitas">
+  <xs:complexType name="ofertavisi">
     <xs:sequence>
       <xs:element minOccurs="0" name="clienteIdCliente" type="tns:cliente" />
       <xs:element minOccurs="0" name="fechaVisita" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="idOfertasVisitas" type="xs:decimal" />
+      <xs:element minOccurs="0" name="idofertav" type="xs:decimal" />
       <xs:element minOccurs="0" name="ofertaIdOferta" type="tns:oferta" />
     </xs:sequence>
   </xs:complexType>
@@ -87,7 +86,6 @@
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
       <xs:element minOccurs="0" name="idOferta" type="xs:decimal" />
-      <xs:element minOccurs="0" name="informativo" type="tns:informativo" />
       <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
       <xs:element minOccurs="0" name="maximoCompra" type="xs:integer" />
       <xs:element minOccurs="0" name="minimoCompra" type="xs:integer" />
@@ -95,12 +93,6 @@
       <xs:element minOccurs="0" name="numeroVisitas" type="xs:integer" />
       <xs:element minOccurs="0" name="precioNormal" type="xs:integer" />
       <xs:element minOccurs="0" name="precioOferta" type="xs:integer" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="informativo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idInformativo" type="xs:decimal" />
-      <xs:element minOccurs="0" name="ofertaIdOferta" type="tns:oferta" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Eliminar_oferta_visitas">
@@ -116,7 +108,6 @@
   <xs:complexType name="Crear_oferta_visitas">
     <xs:sequence>
       <xs:element minOccurs="0" name="fecha_vista" type="xs:dateTime" />
-      <xs:element name="id_oferta_visita" type="xs:int" />
       <xs:element name="id_cliente" type="xs:int" />
       <xs:element name="id_oferta" type="xs:int" />
     </xs:sequence>

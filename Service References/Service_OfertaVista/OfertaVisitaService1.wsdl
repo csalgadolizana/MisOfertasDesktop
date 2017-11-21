@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:17225/MisOfertasWebService/OfertaVisitaService?xsd=1" namespace="http://Servicios/" />
     </xsd:schema>
   </types>
-  <message name="Crear_oferta_visitas">
-    <part name="parameters" element="tns:Crear_oferta_visitas" />
-  </message>
-  <message name="Crear_oferta_visitasResponse">
-    <part name="parameters" element="tns:Crear_oferta_visitasResponse" />
-  </message>
   <message name="Listado_oferta_visitas">
     <part name="parameters" element="tns:Listado_oferta_visitas" />
   </message>
@@ -23,11 +17,13 @@
   <message name="Eliminar_oferta_visitasResponse">
     <part name="parameters" element="tns:Eliminar_oferta_visitasResponse" />
   </message>
+  <message name="Crear_oferta_visitas">
+    <part name="parameters" element="tns:Crear_oferta_visitas" />
+  </message>
+  <message name="Crear_oferta_visitasResponse">
+    <part name="parameters" element="tns:Crear_oferta_visitasResponse" />
+  </message>
   <portType name="OfertaVistaService">
-    <operation name="Crear_oferta_visitas">
-      <input wsam:Action="http://Servicios/OfertaVistaService/Crear_oferta_visitasRequest" message="tns:Crear_oferta_visitas" />
-      <output wsam:Action="http://Servicios/OfertaVistaService/Crear_oferta_visitasResponse" message="tns:Crear_oferta_visitasResponse" />
-    </operation>
     <operation name="Listado_oferta_visitas">
       <input wsam:Action="http://Servicios/OfertaVistaService/Listado_oferta_visitasRequest" message="tns:Listado_oferta_visitas" />
       <output wsam:Action="http://Servicios/OfertaVistaService/Listado_oferta_visitasResponse" message="tns:Listado_oferta_visitasResponse" />
@@ -36,18 +32,13 @@
       <input wsam:Action="http://Servicios/OfertaVistaService/Eliminar_oferta_visitasRequest" message="tns:Eliminar_oferta_visitas" />
       <output wsam:Action="http://Servicios/OfertaVistaService/Eliminar_oferta_visitasResponse" message="tns:Eliminar_oferta_visitasResponse" />
     </operation>
+    <operation name="Crear_oferta_visitas">
+      <input wsam:Action="http://Servicios/OfertaVistaService/Crear_oferta_visitasRequest" message="tns:Crear_oferta_visitas" />
+      <output wsam:Action="http://Servicios/OfertaVistaService/Crear_oferta_visitasResponse" message="tns:Crear_oferta_visitasResponse" />
+    </operation>
   </portType>
   <binding name="OfertaVistaServicePortBinding" type="tns:OfertaVistaService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="Crear_oferta_visitas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="Listado_oferta_visitas">
       <soap:operation soapAction="" />
       <input>
@@ -58,6 +49,15 @@
       </output>
     </operation>
     <operation name="Eliminar_oferta_visitas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Crear_oferta_visitas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

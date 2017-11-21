@@ -147,11 +147,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\Service_Valoracion\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="View\FrHomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,7 +366,7 @@
     <None Include="Service References\Service_OfertaVista\Desk.Service_OfertaVista.Listado_oferta_visitasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_OfertaVista\Desk.Service_OfertaVista.ofertasVisitas.datasource">
+    <None Include="Service References\Service_OfertaVista\Desk.Service_OfertaVista.ofertavisi.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_OfertaVista\OfertaVisitaService1.wsdl" />
@@ -379,6 +374,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Oferta\Desk.Service_Oferta.Crear_ofertaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Oferta\Desk.Service_Oferta.dejar_de_publicar_ofertaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_Oferta\Desk.Service_Oferta.Eliminar_ofertaResponse.datasource">
@@ -391,6 +389,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_Oferta\Desk.Service_Oferta.oferta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Oferta\Desk.Service_Oferta.publicar_ofertaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_Oferta\OfertaService.wsdl" />
@@ -489,22 +490,25 @@
     <None Include="Service References\Service_UsuarioOferta\UsuarioOfertaService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.AutenticacionResponse1.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.AutenticacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.AutenticarTrabajadorResponse1.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.AutenticarTrabajadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.CREAR_USUARIOResponse1.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.cliente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Eliminar_usuarioResponse1.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.CREAR_USUARIOResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Eliminar_usuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Listado_usuariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Modificar_USUARIOResponse1.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Modificar_USUARIOResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_Usuario\Desk.Service_Usuario.usuario.datasource">
@@ -512,25 +516,6 @@
     </None>
     <None Include="Service References\Service_Usuario\UsuarioService.wsdl" />
     <None Include="Service References\Service_Usuario\UsuarioService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.Crear_valoracionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.Eliminar_valoracionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.Listado_valoracionesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.Modificar_valoracionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.valoracion.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Service_Valoracion\ValoracionService.wsdl" />
-    <None Include="Service References\Service_Valoracion\ValoracionService.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -558,7 +543,6 @@
     <WCFMetadataStorage Include="Service References\Service_Reporte\" />
     <WCFMetadataStorage Include="Service References\Service_UsuarioOferta\" />
     <WCFMetadataStorage Include="Service References\Service_Usuario\" />
-    <WCFMetadataStorage Include="Service References\Service_Valoracion\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Service_Categoria\configuration91.svcinfo" />
@@ -724,18 +708,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Service_UsuarioOferta\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service_Valoracion\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service_Valoracion\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service_Valoracion\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

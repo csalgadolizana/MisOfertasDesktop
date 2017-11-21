@@ -25,13 +25,13 @@ namespace Desk.Service_Empresa {
         System.Threading.Tasks.Task<Desk.Service_Empresa.Listado_empresaResponse> Listado_empresaAsync(Desk.Service_Empresa.Listado_empresaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/EmpresaService/Modificar_empresaRequest", ReplyAction="http://Servicios/EmpresaService/Modificar_empresaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/EmpresaService/Eliminar_empresaRequest", ReplyAction="http://Servicios/EmpresaService/Eliminar_empresaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Empresa.Modificar_empresaResponse Modificar_empresa(Desk.Service_Empresa.Modificar_empresaRequest request);
+        Desk.Service_Empresa.Eliminar_empresaResponse Eliminar_empresa(Desk.Service_Empresa.Eliminar_empresaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/EmpresaService/Modificar_empresaRequest", ReplyAction="http://Servicios/EmpresaService/Modificar_empresaResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Empresa.Modificar_empresaResponse> Modificar_empresaAsync(Desk.Service_Empresa.Modificar_empresaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/EmpresaService/Eliminar_empresaRequest", ReplyAction="http://Servicios/EmpresaService/Eliminar_empresaResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Empresa.Eliminar_empresaResponse> Eliminar_empresaAsync(Desk.Service_Empresa.Eliminar_empresaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/EmpresaService/Crear_empresaRequest", ReplyAction="http://Servicios/EmpresaService/Crear_empresaResponse")]
@@ -43,13 +43,13 @@ namespace Desk.Service_Empresa {
         System.Threading.Tasks.Task<Desk.Service_Empresa.Crear_empresaResponse> Crear_empresaAsync(Desk.Service_Empresa.Crear_empresaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/EmpresaService/Eliminar_empresaRequest", ReplyAction="http://Servicios/EmpresaService/Eliminar_empresaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/EmpresaService/Modificar_empresaRequest", ReplyAction="http://Servicios/EmpresaService/Modificar_empresaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Empresa.Eliminar_empresaResponse Eliminar_empresa(Desk.Service_Empresa.Eliminar_empresaRequest request);
+        Desk.Service_Empresa.Modificar_empresaResponse Modificar_empresa(Desk.Service_Empresa.Modificar_empresaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/EmpresaService/Eliminar_empresaRequest", ReplyAction="http://Servicios/EmpresaService/Eliminar_empresaResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Empresa.Eliminar_empresaResponse> Eliminar_empresaAsync(Desk.Service_Empresa.Eliminar_empresaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/EmpresaService/Modificar_empresaRequest", ReplyAction="http://Servicios/EmpresaService/Modificar_empresaResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Empresa.Modificar_empresaResponse> Modificar_empresaAsync(Desk.Service_Empresa.Modificar_empresaRequest request);
     }
     
     /// <comentarios/>
@@ -301,65 +301,35 @@ namespace Desk.Service_Empresa {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_empresa", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_empresaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_empresa", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_empresaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idd;
+        public int id;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string rut;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string descripcion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_inicio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_actualizacion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_estado;
-        
-        public Modificar_empresaRequest() {
+        public Eliminar_empresaRequest() {
         }
         
-        public Modificar_empresaRequest(int idd, string rut, string nombre, string descripcion, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_estado) {
-            this.idd = idd;
-            this.rut = rut;
-            this.nombre = nombre;
-            this.descripcion = descripcion;
-            this.fecha_inicio = fecha_inicio;
-            this.fecha_actualizacion = fecha_actualizacion;
-            this.id_estado = id_estado;
+        public Eliminar_empresaRequest(int id) {
+            this.id = id;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_empresaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_empresaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_empresaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_empresaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public Modificar_empresaResponse() {
+        public Eliminar_empresaResponse() {
         }
         
-        public Modificar_empresaResponse(string @return) {
+        public Eliminar_empresaResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -433,35 +403,65 @@ namespace Desk.Service_Empresa {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_empresa", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_empresaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_empresa", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_empresaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
+        public int idd;
         
-        public Eliminar_empresaRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string descripcion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_inicio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_actualizacion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_estado;
+        
+        public Modificar_empresaRequest() {
         }
         
-        public Eliminar_empresaRequest(int id) {
-            this.id = id;
+        public Modificar_empresaRequest(int idd, string rut, string nombre, string descripcion, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_estado) {
+            this.idd = idd;
+            this.rut = rut;
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.fecha_inicio = fecha_inicio;
+            this.fecha_actualizacion = fecha_actualizacion;
+            this.id_estado = id_estado;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_empresaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_empresaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_empresaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_empresaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public Eliminar_empresaResponse() {
+        public Modificar_empresaResponse() {
         }
         
-        public Eliminar_empresaResponse(string @return) {
+        public Modificar_empresaResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -515,38 +515,26 @@ namespace Desk.Service_Empresa {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Empresa.Modificar_empresaResponse Desk.Service_Empresa.EmpresaService.Modificar_empresa(Desk.Service_Empresa.Modificar_empresaRequest request) {
-            return base.Channel.Modificar_empresa(request);
+        Desk.Service_Empresa.Eliminar_empresaResponse Desk.Service_Empresa.EmpresaService.Eliminar_empresa(Desk.Service_Empresa.Eliminar_empresaRequest request) {
+            return base.Channel.Eliminar_empresa(request);
         }
         
-        public string Modificar_empresa(int idd, string rut, string nombre, string descripcion, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_estado) {
-            Desk.Service_Empresa.Modificar_empresaRequest inValue = new Desk.Service_Empresa.Modificar_empresaRequest();
-            inValue.idd = idd;
-            inValue.rut = rut;
-            inValue.nombre = nombre;
-            inValue.descripcion = descripcion;
-            inValue.fecha_inicio = fecha_inicio;
-            inValue.fecha_actualizacion = fecha_actualizacion;
-            inValue.id_estado = id_estado;
-            Desk.Service_Empresa.Modificar_empresaResponse retVal = ((Desk.Service_Empresa.EmpresaService)(this)).Modificar_empresa(inValue);
+        public string Eliminar_empresa(int id) {
+            Desk.Service_Empresa.Eliminar_empresaRequest inValue = new Desk.Service_Empresa.Eliminar_empresaRequest();
+            inValue.id = id;
+            Desk.Service_Empresa.Eliminar_empresaResponse retVal = ((Desk.Service_Empresa.EmpresaService)(this)).Eliminar_empresa(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Empresa.Modificar_empresaResponse> Desk.Service_Empresa.EmpresaService.Modificar_empresaAsync(Desk.Service_Empresa.Modificar_empresaRequest request) {
-            return base.Channel.Modificar_empresaAsync(request);
+        System.Threading.Tasks.Task<Desk.Service_Empresa.Eliminar_empresaResponse> Desk.Service_Empresa.EmpresaService.Eliminar_empresaAsync(Desk.Service_Empresa.Eliminar_empresaRequest request) {
+            return base.Channel.Eliminar_empresaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Desk.Service_Empresa.Modificar_empresaResponse> Modificar_empresaAsync(int idd, string rut, string nombre, string descripcion, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_estado) {
-            Desk.Service_Empresa.Modificar_empresaRequest inValue = new Desk.Service_Empresa.Modificar_empresaRequest();
-            inValue.idd = idd;
-            inValue.rut = rut;
-            inValue.nombre = nombre;
-            inValue.descripcion = descripcion;
-            inValue.fecha_inicio = fecha_inicio;
-            inValue.fecha_actualizacion = fecha_actualizacion;
-            inValue.id_estado = id_estado;
-            return ((Desk.Service_Empresa.EmpresaService)(this)).Modificar_empresaAsync(inValue);
+        public System.Threading.Tasks.Task<Desk.Service_Empresa.Eliminar_empresaResponse> Eliminar_empresaAsync(int id) {
+            Desk.Service_Empresa.Eliminar_empresaRequest inValue = new Desk.Service_Empresa.Eliminar_empresaRequest();
+            inValue.id = id;
+            return ((Desk.Service_Empresa.EmpresaService)(this)).Eliminar_empresaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -585,26 +573,38 @@ namespace Desk.Service_Empresa {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Empresa.Eliminar_empresaResponse Desk.Service_Empresa.EmpresaService.Eliminar_empresa(Desk.Service_Empresa.Eliminar_empresaRequest request) {
-            return base.Channel.Eliminar_empresa(request);
+        Desk.Service_Empresa.Modificar_empresaResponse Desk.Service_Empresa.EmpresaService.Modificar_empresa(Desk.Service_Empresa.Modificar_empresaRequest request) {
+            return base.Channel.Modificar_empresa(request);
         }
         
-        public string Eliminar_empresa(int id) {
-            Desk.Service_Empresa.Eliminar_empresaRequest inValue = new Desk.Service_Empresa.Eliminar_empresaRequest();
-            inValue.id = id;
-            Desk.Service_Empresa.Eliminar_empresaResponse retVal = ((Desk.Service_Empresa.EmpresaService)(this)).Eliminar_empresa(inValue);
+        public string Modificar_empresa(int idd, string rut, string nombre, string descripcion, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_estado) {
+            Desk.Service_Empresa.Modificar_empresaRequest inValue = new Desk.Service_Empresa.Modificar_empresaRequest();
+            inValue.idd = idd;
+            inValue.rut = rut;
+            inValue.nombre = nombre;
+            inValue.descripcion = descripcion;
+            inValue.fecha_inicio = fecha_inicio;
+            inValue.fecha_actualizacion = fecha_actualizacion;
+            inValue.id_estado = id_estado;
+            Desk.Service_Empresa.Modificar_empresaResponse retVal = ((Desk.Service_Empresa.EmpresaService)(this)).Modificar_empresa(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Empresa.Eliminar_empresaResponse> Desk.Service_Empresa.EmpresaService.Eliminar_empresaAsync(Desk.Service_Empresa.Eliminar_empresaRequest request) {
-            return base.Channel.Eliminar_empresaAsync(request);
+        System.Threading.Tasks.Task<Desk.Service_Empresa.Modificar_empresaResponse> Desk.Service_Empresa.EmpresaService.Modificar_empresaAsync(Desk.Service_Empresa.Modificar_empresaRequest request) {
+            return base.Channel.Modificar_empresaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Desk.Service_Empresa.Eliminar_empresaResponse> Eliminar_empresaAsync(int id) {
-            Desk.Service_Empresa.Eliminar_empresaRequest inValue = new Desk.Service_Empresa.Eliminar_empresaRequest();
-            inValue.id = id;
-            return ((Desk.Service_Empresa.EmpresaService)(this)).Eliminar_empresaAsync(inValue);
+        public System.Threading.Tasks.Task<Desk.Service_Empresa.Modificar_empresaResponse> Modificar_empresaAsync(int idd, string rut, string nombre, string descripcion, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_estado) {
+            Desk.Service_Empresa.Modificar_empresaRequest inValue = new Desk.Service_Empresa.Modificar_empresaRequest();
+            inValue.idd = idd;
+            inValue.rut = rut;
+            inValue.nombre = nombre;
+            inValue.descripcion = descripcion;
+            inValue.fecha_inicio = fecha_inicio;
+            inValue.fecha_actualizacion = fecha_actualizacion;
+            inValue.id_estado = id_estado;
+            return ((Desk.Service_Empresa.EmpresaService)(this)).Modificar_empresaAsync(inValue);
         }
     }
 }

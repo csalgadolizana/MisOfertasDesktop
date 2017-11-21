@@ -9,19 +9,8 @@
   <xs:element name="categoria" type="tns:categoria" />
   <xs:element name="detalleOferta" type="tns:detalleOferta" />
   <xs:element name="estado" type="tns:estado" />
-  <xs:element name="informativo" type="tns:informativo" />
   <xs:element name="oferta" type="tns:oferta" />
   <xs:element name="producto" type="tns:producto" />
-  <xs:complexType name="Eliminar_detalle_oferta">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Eliminar_detalle_ofertaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="Crear_detalle_oferta">
     <xs:sequence>
       <xs:element name="id_detalle_oferta" type="xs:int" />
@@ -30,6 +19,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Crear_detalle_ofertaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_detalle_oferta">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_detalle_ofertaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -62,7 +61,6 @@
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
       <xs:element minOccurs="0" name="idOferta" type="xs:decimal" />
-      <xs:element minOccurs="0" name="informativo" type="tns:informativo" />
       <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
       <xs:element minOccurs="0" name="maximoCompra" type="xs:integer" />
       <xs:element minOccurs="0" name="minimoCompra" type="xs:integer" />
@@ -76,12 +74,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="idEstado" type="xs:decimal" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="informativo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idInformativo" type="xs:decimal" />
-      <xs:element minOccurs="0" name="ofertaIdOferta" type="tns:oferta" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="producto">

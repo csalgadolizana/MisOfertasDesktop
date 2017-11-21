@@ -11,23 +11,11 @@
   <message name="AutenticarTrabajadorResponse">
     <part name="parameters" element="tns:AutenticarTrabajadorResponse" />
   </message>
-  <message name="Eliminar_usuario">
-    <part name="parameters" element="tns:Eliminar_usuario" />
+  <message name="Autenticacion">
+    <part name="parameters" element="tns:Autenticacion" />
   </message>
-  <message name="Eliminar_usuarioResponse">
-    <part name="parameters" element="tns:Eliminar_usuarioResponse" />
-  </message>
-  <message name="Modificar_USUARIO">
-    <part name="parameters" element="tns:Modificar_USUARIO" />
-  </message>
-  <message name="Modificar_USUARIOResponse">
-    <part name="parameters" element="tns:Modificar_USUARIOResponse" />
-  </message>
-  <message name="Listado_usuarios">
-    <part name="parameters" element="tns:Listado_usuarios" />
-  </message>
-  <message name="Listado_usuariosResponse">
-    <part name="parameters" element="tns:Listado_usuariosResponse" />
+  <message name="AutenticacionResponse">
+    <part name="parameters" element="tns:AutenticacionResponse" />
   </message>
   <message name="CREAR_USUARIO">
     <part name="parameters" element="tns:CREAR_USUARIO" />
@@ -35,36 +23,48 @@
   <message name="CREAR_USUARIOResponse">
     <part name="parameters" element="tns:CREAR_USUARIOResponse" />
   </message>
-  <message name="Autenticacion">
-    <part name="parameters" element="tns:Autenticacion" />
+  <message name="Eliminar_usuario">
+    <part name="parameters" element="tns:Eliminar_usuario" />
   </message>
-  <message name="AutenticacionResponse">
-    <part name="parameters" element="tns:AutenticacionResponse" />
+  <message name="Eliminar_usuarioResponse">
+    <part name="parameters" element="tns:Eliminar_usuarioResponse" />
+  </message>
+  <message name="Listado_usuarios">
+    <part name="parameters" element="tns:Listado_usuarios" />
+  </message>
+  <message name="Listado_usuariosResponse">
+    <part name="parameters" element="tns:Listado_usuariosResponse" />
+  </message>
+  <message name="Modificar_USUARIO">
+    <part name="parameters" element="tns:Modificar_USUARIO" />
+  </message>
+  <message name="Modificar_USUARIOResponse">
+    <part name="parameters" element="tns:Modificar_USUARIOResponse" />
   </message>
   <portType name="UsuarioService">
     <operation name="AutenticarTrabajador">
       <input wsam:Action="http://Servicios/UsuarioService/AutenticarTrabajadorRequest" message="tns:AutenticarTrabajador" />
       <output wsam:Action="http://Servicios/UsuarioService/AutenticarTrabajadorResponse" message="tns:AutenticarTrabajadorResponse" />
     </operation>
-    <operation name="Eliminar_usuario">
-      <input wsam:Action="http://Servicios/UsuarioService/Eliminar_usuarioRequest" message="tns:Eliminar_usuario" />
-      <output wsam:Action="http://Servicios/UsuarioService/Eliminar_usuarioResponse" message="tns:Eliminar_usuarioResponse" />
-    </operation>
-    <operation name="Modificar_USUARIO">
-      <input wsam:Action="http://Servicios/UsuarioService/Modificar_USUARIORequest" message="tns:Modificar_USUARIO" />
-      <output wsam:Action="http://Servicios/UsuarioService/Modificar_USUARIOResponse" message="tns:Modificar_USUARIOResponse" />
-    </operation>
-    <operation name="Listado_usuarios">
-      <input wsam:Action="http://Servicios/UsuarioService/Listado_usuariosRequest" message="tns:Listado_usuarios" />
-      <output wsam:Action="http://Servicios/UsuarioService/Listado_usuariosResponse" message="tns:Listado_usuariosResponse" />
+    <operation name="Autenticacion">
+      <input wsam:Action="http://Servicios/UsuarioService/AutenticacionRequest" message="tns:Autenticacion" />
+      <output wsam:Action="http://Servicios/UsuarioService/AutenticacionResponse" message="tns:AutenticacionResponse" />
     </operation>
     <operation name="CREAR_USUARIO">
       <input wsam:Action="http://Servicios/UsuarioService/CREAR_USUARIORequest" message="tns:CREAR_USUARIO" />
       <output wsam:Action="http://Servicios/UsuarioService/CREAR_USUARIOResponse" message="tns:CREAR_USUARIOResponse" />
     </operation>
-    <operation name="Autenticacion">
-      <input wsam:Action="http://Servicios/UsuarioService/AutenticacionRequest" message="tns:Autenticacion" />
-      <output wsam:Action="http://Servicios/UsuarioService/AutenticacionResponse" message="tns:AutenticacionResponse" />
+    <operation name="Eliminar_usuario">
+      <input wsam:Action="http://Servicios/UsuarioService/Eliminar_usuarioRequest" message="tns:Eliminar_usuario" />
+      <output wsam:Action="http://Servicios/UsuarioService/Eliminar_usuarioResponse" message="tns:Eliminar_usuarioResponse" />
+    </operation>
+    <operation name="Listado_usuarios">
+      <input wsam:Action="http://Servicios/UsuarioService/Listado_usuariosRequest" message="tns:Listado_usuarios" />
+      <output wsam:Action="http://Servicios/UsuarioService/Listado_usuariosResponse" message="tns:Listado_usuariosResponse" />
+    </operation>
+    <operation name="Modificar_USUARIO">
+      <input wsam:Action="http://Servicios/UsuarioService/Modificar_USUARIORequest" message="tns:Modificar_USUARIO" />
+      <output wsam:Action="http://Servicios/UsuarioService/Modificar_USUARIOResponse" message="tns:Modificar_USUARIOResponse" />
     </operation>
   </portType>
   <binding name="UsuarioServicePortBinding" type="tns:UsuarioService">
@@ -78,25 +78,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Eliminar_usuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="Modificar_USUARIO">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="Listado_usuarios">
+    <operation name="Autenticacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -114,7 +96,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Autenticacion">
+    <operation name="Eliminar_usuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Listado_usuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Modificar_USUARIO">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -16,15 +16,6 @@ namespace Desk.Service_CargarPuntos {
     public interface CargarPuntosService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosRequest", ReplyAction="http://Servicios/CargarPuntosService/Crear_cargar_puntosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_CargarPuntos.Crear_cargar_puntosResponse Crear_cargar_puntos(Desk.Service_CargarPuntos.Crear_cargar_puntosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosRequest", ReplyAction="http://Servicios/CargarPuntosService/Crear_cargar_puntosResponse")]
-        System.Threading.Tasks.Task<Desk.Service_CargarPuntos.Crear_cargar_puntosResponse> Crear_cargar_puntosAsync(Desk.Service_CargarPuntos.Crear_cargar_puntosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CargarPuntosService/Eliminar_cargar_puntosRequest", ReplyAction="http://Servicios/CargarPuntosService/Eliminar_cargar_puntosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,57 +32,15 @@ namespace Desk.Service_CargarPuntos {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CargarPuntosService/Listado_cargar_puntosRequest", ReplyAction="http://Servicios/CargarPuntosService/Listado_cargar_puntosResponse")]
         System.Threading.Tasks.Task<Desk.Service_CargarPuntos.Listado_cargar_puntosResponse> Listado_cargar_puntosAsync(Desk.Service_CargarPuntos.Listado_cargar_puntosRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_cargar_puntos", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_cargar_puntosRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosRequest", ReplyAction="http://Servicios/CargarPuntosService/Crear_cargar_puntosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_CargarPuntos.Crear_cargar_puntosResponse Crear_cargar_puntos(Desk.Service_CargarPuntos.Crear_cargar_puntosRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int puntos;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_punto;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_desc;
-        
-        public Crear_cargar_puntosRequest() {
-        }
-        
-        public Crear_cargar_puntosRequest(int id, int puntos, int id_punto, int id_desc) {
-            this.id = id;
-            this.puntos = puntos;
-            this.id_punto = id_punto;
-            this.id_desc = id_desc;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_cargar_puntosResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_cargar_puntosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Crear_cargar_puntosResponse() {
-        }
-        
-        public Crear_cargar_puntosResponse(string @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosRequest", ReplyAction="http://Servicios/CargarPuntosService/Crear_cargar_puntosResponse")]
+        System.Threading.Tasks.Task<Desk.Service_CargarPuntos.Crear_cargar_puntosResponse> Crear_cargar_puntosAsync(Desk.Service_CargarPuntos.Crear_cargar_puntosRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1340,6 +1289,57 @@ namespace Desk.Service_CargarPuntos {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_cargar_puntos", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_cargar_puntosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int puntos;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_punto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_desc;
+        
+        public Crear_cargar_puntosRequest() {
+        }
+        
+        public Crear_cargar_puntosRequest(int id, int puntos, int id_punto, int id_desc) {
+            this.id = id;
+            this.puntos = puntos;
+            this.id_punto = id_punto;
+            this.id_desc = id_desc;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_cargar_puntosResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_cargar_puntosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Crear_cargar_puntosResponse() {
+        }
+        
+        public Crear_cargar_puntosResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CargarPuntosServiceChannel : Desk.Service_CargarPuntos.CargarPuntosService, System.ServiceModel.IClientChannel {
     }
@@ -1365,35 +1365,6 @@ namespace Desk.Service_CargarPuntos {
         
         public CargarPuntosServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_CargarPuntos.Crear_cargar_puntosResponse Desk.Service_CargarPuntos.CargarPuntosService.Crear_cargar_puntos(Desk.Service_CargarPuntos.Crear_cargar_puntosRequest request) {
-            return base.Channel.Crear_cargar_puntos(request);
-        }
-        
-        public string Crear_cargar_puntos(int id, int puntos, int id_punto, int id_desc) {
-            Desk.Service_CargarPuntos.Crear_cargar_puntosRequest inValue = new Desk.Service_CargarPuntos.Crear_cargar_puntosRequest();
-            inValue.id = id;
-            inValue.puntos = puntos;
-            inValue.id_punto = id_punto;
-            inValue.id_desc = id_desc;
-            Desk.Service_CargarPuntos.Crear_cargar_puntosResponse retVal = ((Desk.Service_CargarPuntos.CargarPuntosService)(this)).Crear_cargar_puntos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_CargarPuntos.Crear_cargar_puntosResponse> Desk.Service_CargarPuntos.CargarPuntosService.Crear_cargar_puntosAsync(Desk.Service_CargarPuntos.Crear_cargar_puntosRequest request) {
-            return base.Channel.Crear_cargar_puntosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_CargarPuntos.Crear_cargar_puntosResponse> Crear_cargar_puntosAsync(int id, int puntos, int id_punto, int id_desc) {
-            Desk.Service_CargarPuntos.Crear_cargar_puntosRequest inValue = new Desk.Service_CargarPuntos.Crear_cargar_puntosRequest();
-            inValue.id = id;
-            inValue.puntos = puntos;
-            inValue.id_punto = id_punto;
-            inValue.id_desc = id_desc;
-            return ((Desk.Service_CargarPuntos.CargarPuntosService)(this)).Crear_cargar_puntosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1438,6 +1409,35 @@ namespace Desk.Service_CargarPuntos {
         public System.Threading.Tasks.Task<Desk.Service_CargarPuntos.Listado_cargar_puntosResponse> Listado_cargar_puntosAsync() {
             Desk.Service_CargarPuntos.Listado_cargar_puntosRequest inValue = new Desk.Service_CargarPuntos.Listado_cargar_puntosRequest();
             return ((Desk.Service_CargarPuntos.CargarPuntosService)(this)).Listado_cargar_puntosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_CargarPuntos.Crear_cargar_puntosResponse Desk.Service_CargarPuntos.CargarPuntosService.Crear_cargar_puntos(Desk.Service_CargarPuntos.Crear_cargar_puntosRequest request) {
+            return base.Channel.Crear_cargar_puntos(request);
+        }
+        
+        public string Crear_cargar_puntos(int id, int puntos, int id_punto, int id_desc) {
+            Desk.Service_CargarPuntos.Crear_cargar_puntosRequest inValue = new Desk.Service_CargarPuntos.Crear_cargar_puntosRequest();
+            inValue.id = id;
+            inValue.puntos = puntos;
+            inValue.id_punto = id_punto;
+            inValue.id_desc = id_desc;
+            Desk.Service_CargarPuntos.Crear_cargar_puntosResponse retVal = ((Desk.Service_CargarPuntos.CargarPuntosService)(this)).Crear_cargar_puntos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_CargarPuntos.Crear_cargar_puntosResponse> Desk.Service_CargarPuntos.CargarPuntosService.Crear_cargar_puntosAsync(Desk.Service_CargarPuntos.Crear_cargar_puntosRequest request) {
+            return base.Channel.Crear_cargar_puntosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_CargarPuntos.Crear_cargar_puntosResponse> Crear_cargar_puntosAsync(int id, int puntos, int id_punto, int id_desc) {
+            Desk.Service_CargarPuntos.Crear_cargar_puntosRequest inValue = new Desk.Service_CargarPuntos.Crear_cargar_puntosRequest();
+            inValue.id = id;
+            inValue.puntos = puntos;
+            inValue.id_punto = id_punto;
+            inValue.id_desc = id_desc;
+            return ((Desk.Service_CargarPuntos.CargarPuntosService)(this)).Crear_cargar_puntosAsync(inValue);
         }
     }
 }

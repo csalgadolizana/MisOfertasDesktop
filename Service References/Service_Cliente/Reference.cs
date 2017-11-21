@@ -16,6 +16,15 @@ namespace Desk.Service_Cliente {
     public interface ClienteService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ClienteService/Crear_clienteRequest", ReplyAction="http://Servicios/ClienteService/Crear_clienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_Cliente.Crear_clienteResponse Crear_cliente(Desk.Service_Cliente.Crear_clienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ClienteService/Crear_clienteRequest", ReplyAction="http://Servicios/ClienteService/Crear_clienteResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Cliente.Crear_clienteResponse> Crear_clienteAsync(Desk.Service_Cliente.Crear_clienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ClienteService/Modificar_clienteRequest", ReplyAction="http://Servicios/ClienteService/Modificar_clienteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -50,15 +59,92 @@ namespace Desk.Service_Cliente {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ClienteService/Listado_clientesRequest", ReplyAction="http://Servicios/ClienteService/Listado_clientesResponse")]
         System.Threading.Tasks.Task<Desk.Service_Cliente.Listado_clientesResponse> Listado_clientesAsync(Desk.Service_Cliente.Listado_clientesRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_cliente", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_clienteRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ClienteService/Crear_clienteRequest", ReplyAction="http://Servicios/ClienteService/Crear_clienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Cliente.Crear_clienteResponse Crear_cliente(Desk.Service_Cliente.Crear_clienteRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ClienteService/Crear_clienteRequest", ReplyAction="http://Servicios/ClienteService/Crear_clienteResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Cliente.Crear_clienteResponse> Crear_clienteAsync(Desk.Service_Cliente.Crear_clienteRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_nacimiento;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string correo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string password;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int telefono;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string acepta_informativo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_inicio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_actualizacion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_ciudad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_estado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_persona;
+        
+        public Crear_clienteRequest() {
+        }
+        
+        public Crear_clienteRequest(int id, System.DateTime fecha_nacimiento, string correo, string password, int telefono, string acepta_informativo, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_ciudad, int id_estado, int id_persona) {
+            this.id = id;
+            this.fecha_nacimiento = fecha_nacimiento;
+            this.correo = correo;
+            this.password = password;
+            this.telefono = telefono;
+            this.acepta_informativo = acepta_informativo;
+            this.fecha_inicio = fecha_inicio;
+            this.fecha_actualizacion = fecha_actualizacion;
+            this.id_ciudad = id_ciudad;
+            this.id_estado = id_estado;
+            this.id_persona = id_persona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_clienteResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_clienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Crear_clienteResponse() {
+        }
+        
+        public Crear_clienteResponse(string @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -864,92 +950,6 @@ namespace Desk.Service_Cliente {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_cliente", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_clienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_nacimiento;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string correo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string password;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int telefono;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string acepta_informativo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_inicio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_actualizacion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_ciudad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_estado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=10)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_persona;
-        
-        public Crear_clienteRequest() {
-        }
-        
-        public Crear_clienteRequest(int id, System.DateTime fecha_nacimiento, string correo, string password, int telefono, string acepta_informativo, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_ciudad, int id_estado, int id_persona) {
-            this.id = id;
-            this.fecha_nacimiento = fecha_nacimiento;
-            this.correo = correo;
-            this.password = password;
-            this.telefono = telefono;
-            this.acepta_informativo = acepta_informativo;
-            this.fecha_inicio = fecha_inicio;
-            this.fecha_actualizacion = fecha_actualizacion;
-            this.id_ciudad = id_ciudad;
-            this.id_estado = id_estado;
-            this.id_persona = id_persona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_clienteResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_clienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Crear_clienteResponse() {
-        }
-        
-        public Crear_clienteResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ClienteServiceChannel : Desk.Service_Cliente.ClienteService, System.ServiceModel.IClientChannel {
     }
@@ -975,6 +975,49 @@ namespace Desk.Service_Cliente {
         
         public ClienteServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Cliente.Crear_clienteResponse Desk.Service_Cliente.ClienteService.Crear_cliente(Desk.Service_Cliente.Crear_clienteRequest request) {
+            return base.Channel.Crear_cliente(request);
+        }
+        
+        public string Crear_cliente(int id, System.DateTime fecha_nacimiento, string correo, string password, int telefono, string acepta_informativo, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_ciudad, int id_estado, int id_persona) {
+            Desk.Service_Cliente.Crear_clienteRequest inValue = new Desk.Service_Cliente.Crear_clienteRequest();
+            inValue.id = id;
+            inValue.fecha_nacimiento = fecha_nacimiento;
+            inValue.correo = correo;
+            inValue.password = password;
+            inValue.telefono = telefono;
+            inValue.acepta_informativo = acepta_informativo;
+            inValue.fecha_inicio = fecha_inicio;
+            inValue.fecha_actualizacion = fecha_actualizacion;
+            inValue.id_ciudad = id_ciudad;
+            inValue.id_estado = id_estado;
+            inValue.id_persona = id_persona;
+            Desk.Service_Cliente.Crear_clienteResponse retVal = ((Desk.Service_Cliente.ClienteService)(this)).Crear_cliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Cliente.Crear_clienteResponse> Desk.Service_Cliente.ClienteService.Crear_clienteAsync(Desk.Service_Cliente.Crear_clienteRequest request) {
+            return base.Channel.Crear_clienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Cliente.Crear_clienteResponse> Crear_clienteAsync(int id, System.DateTime fecha_nacimiento, string correo, string password, int telefono, string acepta_informativo, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_ciudad, int id_estado, int id_persona) {
+            Desk.Service_Cliente.Crear_clienteRequest inValue = new Desk.Service_Cliente.Crear_clienteRequest();
+            inValue.id = id;
+            inValue.fecha_nacimiento = fecha_nacimiento;
+            inValue.correo = correo;
+            inValue.password = password;
+            inValue.telefono = telefono;
+            inValue.acepta_informativo = acepta_informativo;
+            inValue.fecha_inicio = fecha_inicio;
+            inValue.fecha_actualizacion = fecha_actualizacion;
+            inValue.id_ciudad = id_ciudad;
+            inValue.id_estado = id_estado;
+            inValue.id_persona = id_persona;
+            return ((Desk.Service_Cliente.ClienteService)(this)).Crear_clienteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1087,49 +1130,6 @@ namespace Desk.Service_Cliente {
         public System.Threading.Tasks.Task<Desk.Service_Cliente.Listado_clientesResponse> Listado_clientesAsync() {
             Desk.Service_Cliente.Listado_clientesRequest inValue = new Desk.Service_Cliente.Listado_clientesRequest();
             return ((Desk.Service_Cliente.ClienteService)(this)).Listado_clientesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Cliente.Crear_clienteResponse Desk.Service_Cliente.ClienteService.Crear_cliente(Desk.Service_Cliente.Crear_clienteRequest request) {
-            return base.Channel.Crear_cliente(request);
-        }
-        
-        public string Crear_cliente(int id, System.DateTime fecha_nacimiento, string correo, string password, int telefono, string acepta_informativo, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_ciudad, int id_estado, int id_persona) {
-            Desk.Service_Cliente.Crear_clienteRequest inValue = new Desk.Service_Cliente.Crear_clienteRequest();
-            inValue.id = id;
-            inValue.fecha_nacimiento = fecha_nacimiento;
-            inValue.correo = correo;
-            inValue.password = password;
-            inValue.telefono = telefono;
-            inValue.acepta_informativo = acepta_informativo;
-            inValue.fecha_inicio = fecha_inicio;
-            inValue.fecha_actualizacion = fecha_actualizacion;
-            inValue.id_ciudad = id_ciudad;
-            inValue.id_estado = id_estado;
-            inValue.id_persona = id_persona;
-            Desk.Service_Cliente.Crear_clienteResponse retVal = ((Desk.Service_Cliente.ClienteService)(this)).Crear_cliente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Cliente.Crear_clienteResponse> Desk.Service_Cliente.ClienteService.Crear_clienteAsync(Desk.Service_Cliente.Crear_clienteRequest request) {
-            return base.Channel.Crear_clienteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Cliente.Crear_clienteResponse> Crear_clienteAsync(int id, System.DateTime fecha_nacimiento, string correo, string password, int telefono, string acepta_informativo, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_ciudad, int id_estado, int id_persona) {
-            Desk.Service_Cliente.Crear_clienteRequest inValue = new Desk.Service_Cliente.Crear_clienteRequest();
-            inValue.id = id;
-            inValue.fecha_nacimiento = fecha_nacimiento;
-            inValue.correo = correo;
-            inValue.password = password;
-            inValue.telefono = telefono;
-            inValue.acepta_informativo = acepta_informativo;
-            inValue.fecha_inicio = fecha_inicio;
-            inValue.fecha_actualizacion = fecha_actualizacion;
-            inValue.id_ciudad = id_ciudad;
-            inValue.id_estado = id_estado;
-            inValue.id_persona = id_persona;
-            return ((Desk.Service_Cliente.ClienteService)(this)).Crear_clienteAsync(inValue);
         }
     }
 }

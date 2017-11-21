@@ -9,7 +9,6 @@
   <xs:element name="ciudad" type="tns:ciudad" />
   <xs:element name="empresa" type="tns:empresa" />
   <xs:element name="estado" type="tns:estado" />
-  <xs:element name="informativo" type="tns:informativo" />
   <xs:element name="local" type="tns:local" />
   <xs:element name="oferta" type="tns:oferta" />
   <xs:element name="ofertalocal" type="tns:ofertalocal" />
@@ -86,7 +85,6 @@
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
       <xs:element minOccurs="0" name="idOferta" type="xs:decimal" />
-      <xs:element minOccurs="0" name="informativo" type="tns:informativo" />
       <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
       <xs:element minOccurs="0" name="maximoCompra" type="xs:integer" />
       <xs:element minOccurs="0" name="minimoCompra" type="xs:integer" />
@@ -94,12 +92,6 @@
       <xs:element minOccurs="0" name="numeroVisitas" type="xs:integer" />
       <xs:element minOccurs="0" name="precioNormal" type="xs:integer" />
       <xs:element minOccurs="0" name="precioOferta" type="xs:integer" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="informativo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idInformativo" type="xs:decimal" />
-      <xs:element minOccurs="0" name="ofertaIdOferta" type="tns:oferta" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ofertalocalPK">

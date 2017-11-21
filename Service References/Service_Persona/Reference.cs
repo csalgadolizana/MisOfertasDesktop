@@ -16,13 +16,13 @@ namespace Desk.Service_Persona {
     public interface PersonaService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PersonaService/Listado_personasRequest", ReplyAction="http://Servicios/PersonaService/Listado_personasResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PersonaService/Modificar_personaRequest", ReplyAction="http://Servicios/PersonaService/Modificar_personaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Persona.Listado_personasResponse Listado_personas(Desk.Service_Persona.Listado_personasRequest request);
+        Desk.Service_Persona.Modificar_personaResponse Modificar_persona(Desk.Service_Persona.Modificar_personaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PersonaService/Listado_personasRequest", ReplyAction="http://Servicios/PersonaService/Listado_personasResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Persona.Listado_personasResponse> Listado_personasAsync(Desk.Service_Persona.Listado_personasRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PersonaService/Modificar_personaRequest", ReplyAction="http://Servicios/PersonaService/Modificar_personaResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Persona.Modificar_personaResponse> Modificar_personaAsync(Desk.Service_Persona.Modificar_personaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PersonaService/Eliminar_personaRequest", ReplyAction="http://Servicios/PersonaService/Eliminar_personaResponse")]
@@ -43,13 +43,161 @@ namespace Desk.Service_Persona {
         System.Threading.Tasks.Task<Desk.Service_Persona.Crear_personaResponse> Crear_personaAsync(Desk.Service_Persona.Crear_personaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PersonaService/Modificar_personaRequest", ReplyAction="http://Servicios/PersonaService/Modificar_personaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PersonaService/Listado_personasRequest", ReplyAction="http://Servicios/PersonaService/Listado_personasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Persona.Modificar_personaResponse Modificar_persona(Desk.Service_Persona.Modificar_personaRequest request);
+        Desk.Service_Persona.Listado_personasResponse Listado_personas(Desk.Service_Persona.Listado_personasRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PersonaService/Modificar_personaRequest", ReplyAction="http://Servicios/PersonaService/Modificar_personaResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Persona.Modificar_personaResponse> Modificar_personaAsync(Desk.Service_Persona.Modificar_personaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PersonaService/Listado_personasRequest", ReplyAction="http://Servicios/PersonaService/Listado_personasResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Persona.Listado_personasResponse> Listado_personasAsync(Desk.Service_Persona.Listado_personasRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_persona", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_personaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellido;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int sexo;
+        
+        public Modificar_personaRequest() {
+        }
+        
+        public Modificar_personaRequest(int id, string nombre, string apellido, string rut, int sexo) {
+            this.id = id;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.rut = rut;
+            this.sexo = sexo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_personaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_personaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Modificar_personaResponse() {
+        }
+        
+        public Modificar_personaResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_persona", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_personaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public Eliminar_personaRequest() {
+        }
+        
+        public Eliminar_personaRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_personaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_personaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Eliminar_personaResponse() {
+        }
+        
+        public Eliminar_personaResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_persona", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_personaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellido;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int sexo;
+        
+        public Crear_personaRequest() {
+        }
+        
+        public Crear_personaRequest(int id, string nombre, string apellido, string rut, int sexo) {
+            this.id = id;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.rut = rut;
+            this.sexo = sexo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_personaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_personaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Crear_personaResponse() {
+        }
+        
+        public Crear_personaResponse(string @return) {
+            this.@return = @return;
+        }
     }
     
     /// <comentarios/>
@@ -242,154 +390,6 @@ namespace Desk.Service_Persona {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_persona", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_personaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public Eliminar_personaRequest() {
-        }
-        
-        public Eliminar_personaRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_personaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_personaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Eliminar_personaResponse() {
-        }
-        
-        public Eliminar_personaResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_persona", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_personaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellido;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string rut;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int sexo;
-        
-        public Crear_personaRequest() {
-        }
-        
-        public Crear_personaRequest(int id, string nombre, string apellido, string rut, int sexo) {
-            this.id = id;
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.rut = rut;
-            this.sexo = sexo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_personaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_personaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Crear_personaResponse() {
-        }
-        
-        public Crear_personaResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_persona", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_personaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellido;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string rut;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int sexo;
-        
-        public Modificar_personaRequest() {
-        }
-        
-        public Modificar_personaRequest(int id, string nombre, string apellido, string rut, int sexo) {
-            this.id = id;
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.rut = rut;
-            this.sexo = sexo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_personaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_personaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Modificar_personaResponse() {
-        }
-        
-        public Modificar_personaResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PersonaServiceChannel : Desk.Service_Persona.PersonaService, System.ServiceModel.IClientChannel {
     }
@@ -418,24 +418,34 @@ namespace Desk.Service_Persona {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Persona.Listado_personasResponse Desk.Service_Persona.PersonaService.Listado_personas(Desk.Service_Persona.Listado_personasRequest request) {
-            return base.Channel.Listado_personas(request);
+        Desk.Service_Persona.Modificar_personaResponse Desk.Service_Persona.PersonaService.Modificar_persona(Desk.Service_Persona.Modificar_personaRequest request) {
+            return base.Channel.Modificar_persona(request);
         }
         
-        public Desk.Service_Persona.persona[] Listado_personas() {
-            Desk.Service_Persona.Listado_personasRequest inValue = new Desk.Service_Persona.Listado_personasRequest();
-            Desk.Service_Persona.Listado_personasResponse retVal = ((Desk.Service_Persona.PersonaService)(this)).Listado_personas(inValue);
+        public string Modificar_persona(int id, string nombre, string apellido, string rut, int sexo) {
+            Desk.Service_Persona.Modificar_personaRequest inValue = new Desk.Service_Persona.Modificar_personaRequest();
+            inValue.id = id;
+            inValue.nombre = nombre;
+            inValue.apellido = apellido;
+            inValue.rut = rut;
+            inValue.sexo = sexo;
+            Desk.Service_Persona.Modificar_personaResponse retVal = ((Desk.Service_Persona.PersonaService)(this)).Modificar_persona(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Persona.Listado_personasResponse> Desk.Service_Persona.PersonaService.Listado_personasAsync(Desk.Service_Persona.Listado_personasRequest request) {
-            return base.Channel.Listado_personasAsync(request);
+        System.Threading.Tasks.Task<Desk.Service_Persona.Modificar_personaResponse> Desk.Service_Persona.PersonaService.Modificar_personaAsync(Desk.Service_Persona.Modificar_personaRequest request) {
+            return base.Channel.Modificar_personaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Desk.Service_Persona.Listado_personasResponse> Listado_personasAsync() {
-            Desk.Service_Persona.Listado_personasRequest inValue = new Desk.Service_Persona.Listado_personasRequest();
-            return ((Desk.Service_Persona.PersonaService)(this)).Listado_personasAsync(inValue);
+        public System.Threading.Tasks.Task<Desk.Service_Persona.Modificar_personaResponse> Modificar_personaAsync(int id, string nombre, string apellido, string rut, int sexo) {
+            Desk.Service_Persona.Modificar_personaRequest inValue = new Desk.Service_Persona.Modificar_personaRequest();
+            inValue.id = id;
+            inValue.nombre = nombre;
+            inValue.apellido = apellido;
+            inValue.rut = rut;
+            inValue.sexo = sexo;
+            return ((Desk.Service_Persona.PersonaService)(this)).Modificar_personaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -493,34 +503,24 @@ namespace Desk.Service_Persona {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Persona.Modificar_personaResponse Desk.Service_Persona.PersonaService.Modificar_persona(Desk.Service_Persona.Modificar_personaRequest request) {
-            return base.Channel.Modificar_persona(request);
+        Desk.Service_Persona.Listado_personasResponse Desk.Service_Persona.PersonaService.Listado_personas(Desk.Service_Persona.Listado_personasRequest request) {
+            return base.Channel.Listado_personas(request);
         }
         
-        public string Modificar_persona(int id, string nombre, string apellido, string rut, int sexo) {
-            Desk.Service_Persona.Modificar_personaRequest inValue = new Desk.Service_Persona.Modificar_personaRequest();
-            inValue.id = id;
-            inValue.nombre = nombre;
-            inValue.apellido = apellido;
-            inValue.rut = rut;
-            inValue.sexo = sexo;
-            Desk.Service_Persona.Modificar_personaResponse retVal = ((Desk.Service_Persona.PersonaService)(this)).Modificar_persona(inValue);
+        public Desk.Service_Persona.persona[] Listado_personas() {
+            Desk.Service_Persona.Listado_personasRequest inValue = new Desk.Service_Persona.Listado_personasRequest();
+            Desk.Service_Persona.Listado_personasResponse retVal = ((Desk.Service_Persona.PersonaService)(this)).Listado_personas(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Persona.Modificar_personaResponse> Desk.Service_Persona.PersonaService.Modificar_personaAsync(Desk.Service_Persona.Modificar_personaRequest request) {
-            return base.Channel.Modificar_personaAsync(request);
+        System.Threading.Tasks.Task<Desk.Service_Persona.Listado_personasResponse> Desk.Service_Persona.PersonaService.Listado_personasAsync(Desk.Service_Persona.Listado_personasRequest request) {
+            return base.Channel.Listado_personasAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Desk.Service_Persona.Modificar_personaResponse> Modificar_personaAsync(int id, string nombre, string apellido, string rut, int sexo) {
-            Desk.Service_Persona.Modificar_personaRequest inValue = new Desk.Service_Persona.Modificar_personaRequest();
-            inValue.id = id;
-            inValue.nombre = nombre;
-            inValue.apellido = apellido;
-            inValue.rut = rut;
-            inValue.sexo = sexo;
-            return ((Desk.Service_Persona.PersonaService)(this)).Modificar_personaAsync(inValue);
+        public System.Threading.Tasks.Task<Desk.Service_Persona.Listado_personasResponse> Listado_personasAsync() {
+            Desk.Service_Persona.Listado_personasRequest inValue = new Desk.Service_Persona.Listado_personasRequest();
+            return ((Desk.Service_Persona.PersonaService)(this)).Listado_personasAsync(inValue);
         }
     }
 }

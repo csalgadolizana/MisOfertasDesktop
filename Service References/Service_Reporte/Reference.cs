@@ -25,15 +25,6 @@ namespace Desk.Service_Reporte {
         System.Threading.Tasks.Task<Desk.Service_Reporte.Listado_reportesResponse> Listado_reportesAsync(Desk.Service_Reporte.Listado_reportesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Eliminar_reporteRequest", ReplyAction="http://Servicios/ReporteService/Eliminar_reporteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Reporte.Eliminar_reporteResponse Eliminar_reporte(Desk.Service_Reporte.Eliminar_reporteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Eliminar_reporteRequest", ReplyAction="http://Servicios/ReporteService/Eliminar_reporteResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Reporte.Eliminar_reporteResponse> Eliminar_reporteAsync(Desk.Service_Reporte.Eliminar_reporteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Modificar_reporteRequest", ReplyAction="http://Servicios/ReporteService/Modificar_reporteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -50,6 +41,15 @@ namespace Desk.Service_Reporte {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Crear_reporteRequest", ReplyAction="http://Servicios/ReporteService/Crear_reporteResponse")]
         System.Threading.Tasks.Task<Desk.Service_Reporte.Crear_reporteResponse> Crear_reporteAsync(Desk.Service_Reporte.Crear_reporteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Eliminar_reporteRequest", ReplyAction="http://Servicios/ReporteService/Eliminar_reporteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_Reporte.Eliminar_reporteResponse Eliminar_reporte(Desk.Service_Reporte.Eliminar_reporteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Eliminar_reporteRequest", ReplyAction="http://Servicios/ReporteService/Eliminar_reporteResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Reporte.Eliminar_reporteResponse> Eliminar_reporteAsync(Desk.Service_Reporte.Eliminar_reporteRequest request);
     }
     
     /// <comentarios/>
@@ -611,42 +611,6 @@ namespace Desk.Service_Reporte {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_reporte", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_reporteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public Eliminar_reporteRequest() {
-        }
-        
-        public Eliminar_reporteRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_reporteResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_reporteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Eliminar_reporteResponse() {
-        }
-        
-        public Eliminar_reporteResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_reporte", WrapperNamespace="http://Servicios/", IsWrapped=true)]
     public partial class Modificar_reporteRequest {
         
@@ -726,6 +690,42 @@ namespace Desk.Service_Reporte {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_reporte", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_reporteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public Eliminar_reporteRequest() {
+        }
+        
+        public Eliminar_reporteRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_reporteResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_reporteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Eliminar_reporteResponse() {
+        }
+        
+        public Eliminar_reporteResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ReporteServiceChannel : Desk.Service_Reporte.ReporteService, System.ServiceModel.IClientChannel {
     }
@@ -772,29 +772,6 @@ namespace Desk.Service_Reporte {
         public System.Threading.Tasks.Task<Desk.Service_Reporte.Listado_reportesResponse> Listado_reportesAsync() {
             Desk.Service_Reporte.Listado_reportesRequest inValue = new Desk.Service_Reporte.Listado_reportesRequest();
             return ((Desk.Service_Reporte.ReporteService)(this)).Listado_reportesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Reporte.Eliminar_reporteResponse Desk.Service_Reporte.ReporteService.Eliminar_reporte(Desk.Service_Reporte.Eliminar_reporteRequest request) {
-            return base.Channel.Eliminar_reporte(request);
-        }
-        
-        public string Eliminar_reporte(int id) {
-            Desk.Service_Reporte.Eliminar_reporteRequest inValue = new Desk.Service_Reporte.Eliminar_reporteRequest();
-            inValue.id = id;
-            Desk.Service_Reporte.Eliminar_reporteResponse retVal = ((Desk.Service_Reporte.ReporteService)(this)).Eliminar_reporte(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Reporte.Eliminar_reporteResponse> Desk.Service_Reporte.ReporteService.Eliminar_reporteAsync(Desk.Service_Reporte.Eliminar_reporteRequest request) {
-            return base.Channel.Eliminar_reporteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Reporte.Eliminar_reporteResponse> Eliminar_reporteAsync(int id) {
-            Desk.Service_Reporte.Eliminar_reporteRequest inValue = new Desk.Service_Reporte.Eliminar_reporteRequest();
-            inValue.id = id;
-            return ((Desk.Service_Reporte.ReporteService)(this)).Eliminar_reporteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -845,6 +822,29 @@ namespace Desk.Service_Reporte {
             inValue.id = id;
             inValue.local_id = local_id;
             return ((Desk.Service_Reporte.ReporteService)(this)).Crear_reporteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Reporte.Eliminar_reporteResponse Desk.Service_Reporte.ReporteService.Eliminar_reporte(Desk.Service_Reporte.Eliminar_reporteRequest request) {
+            return base.Channel.Eliminar_reporte(request);
+        }
+        
+        public string Eliminar_reporte(int id) {
+            Desk.Service_Reporte.Eliminar_reporteRequest inValue = new Desk.Service_Reporte.Eliminar_reporteRequest();
+            inValue.id = id;
+            Desk.Service_Reporte.Eliminar_reporteResponse retVal = ((Desk.Service_Reporte.ReporteService)(this)).Eliminar_reporte(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Reporte.Eliminar_reporteResponse> Desk.Service_Reporte.ReporteService.Eliminar_reporteAsync(Desk.Service_Reporte.Eliminar_reporteRequest request) {
+            return base.Channel.Eliminar_reporteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Reporte.Eliminar_reporteResponse> Eliminar_reporteAsync(int id) {
+            Desk.Service_Reporte.Eliminar_reporteRequest inValue = new Desk.Service_Reporte.Eliminar_reporteRequest();
+            inValue.id = id;
+            return ((Desk.Service_Reporte.ReporteService)(this)).Eliminar_reporteAsync(inValue);
         }
     }
 }

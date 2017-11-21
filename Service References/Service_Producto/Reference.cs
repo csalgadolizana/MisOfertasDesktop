@@ -25,13 +25,13 @@ namespace Desk.Service_Producto {
         System.Threading.Tasks.Task<Desk.Service_Producto.Modificar_productoResponse> Modificar_productoAsync(Desk.Service_Producto.Modificar_productoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Crear_productoRequest", ReplyAction="http://Servicios/ProductoService/Crear_productoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Eliminar_productoRequest", ReplyAction="http://Servicios/ProductoService/Eliminar_productoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Producto.Crear_productoResponse Crear_producto(Desk.Service_Producto.Crear_productoRequest request);
+        Desk.Service_Producto.Eliminar_productoResponse Eliminar_producto(Desk.Service_Producto.Eliminar_productoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Crear_productoRequest", ReplyAction="http://Servicios/ProductoService/Crear_productoResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Producto.Crear_productoResponse> Crear_productoAsync(Desk.Service_Producto.Crear_productoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Eliminar_productoRequest", ReplyAction="http://Servicios/ProductoService/Eliminar_productoResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Producto.Eliminar_productoResponse> Eliminar_productoAsync(Desk.Service_Producto.Eliminar_productoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Listado_productosRequest", ReplyAction="http://Servicios/ProductoService/Listado_productosResponse")]
@@ -43,13 +43,13 @@ namespace Desk.Service_Producto {
         System.Threading.Tasks.Task<Desk.Service_Producto.Listado_productosResponse> Listado_productosAsync(Desk.Service_Producto.Listado_productosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Eliminar_productoRequest", ReplyAction="http://Servicios/ProductoService/Eliminar_productoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Crear_productoRequest", ReplyAction="http://Servicios/ProductoService/Crear_productoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Producto.Eliminar_productoResponse Eliminar_producto(Desk.Service_Producto.Eliminar_productoRequest request);
+        Desk.Service_Producto.Crear_productoResponse Crear_producto(Desk.Service_Producto.Crear_productoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Eliminar_productoRequest", ReplyAction="http://Servicios/ProductoService/Eliminar_productoResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Producto.Eliminar_productoResponse> Eliminar_productoAsync(Desk.Service_Producto.Eliminar_productoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Crear_productoRequest", ReplyAction="http://Servicios/ProductoService/Crear_productoResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Producto.Crear_productoResponse> Crear_productoAsync(Desk.Service_Producto.Crear_productoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -126,70 +126,35 @@ namespace Desk.Service_Producto {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_producto", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_productoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_producto", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_productoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int id;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string descripcion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int precio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_inicio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_actualizacion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ruta_imagen;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_cagegoria;
-        
-        public Crear_productoRequest() {
+        public Eliminar_productoRequest() {
         }
         
-        public Crear_productoRequest(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
+        public Eliminar_productoRequest(int id) {
             this.id = id;
-            this.nombre = nombre;
-            this.descripcion = descripcion;
-            this.precio = precio;
-            this.fecha_inicio = fecha_inicio;
-            this.fecha_actualizacion = fecha_actualizacion;
-            this.ruta_imagen = ruta_imagen;
-            this.id_cagegoria = id_cagegoria;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_productoResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_productoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_productoResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_productoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public Crear_productoResponse() {
+        public Eliminar_productoResponse() {
         }
         
-        public Crear_productoResponse(string @return) {
+        public Eliminar_productoResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -457,35 +422,70 @@ namespace Desk.Service_Producto {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_producto", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_productoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_producto", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_productoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int id;
         
-        public Eliminar_productoRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string descripcion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int precio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_inicio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_actualizacion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string ruta_imagen;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_cagegoria;
+        
+        public Crear_productoRequest() {
         }
         
-        public Eliminar_productoRequest(int id) {
+        public Crear_productoRequest(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
             this.id = id;
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.precio = precio;
+            this.fecha_inicio = fecha_inicio;
+            this.fecha_actualizacion = fecha_actualizacion;
+            this.ruta_imagen = ruta_imagen;
+            this.id_cagegoria = id_cagegoria;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_productoResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_productoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_productoResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_productoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public Eliminar_productoResponse() {
+        public Crear_productoResponse() {
         }
         
-        public Eliminar_productoResponse(string @return) {
+        public Crear_productoResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -555,6 +555,50 @@ namespace Desk.Service_Producto {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Producto.Eliminar_productoResponse Desk.Service_Producto.ProductoService.Eliminar_producto(Desk.Service_Producto.Eliminar_productoRequest request) {
+            return base.Channel.Eliminar_producto(request);
+        }
+        
+        public string Eliminar_producto(int id) {
+            Desk.Service_Producto.Eliminar_productoRequest inValue = new Desk.Service_Producto.Eliminar_productoRequest();
+            inValue.id = id;
+            Desk.Service_Producto.Eliminar_productoResponse retVal = ((Desk.Service_Producto.ProductoService)(this)).Eliminar_producto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Producto.Eliminar_productoResponse> Desk.Service_Producto.ProductoService.Eliminar_productoAsync(Desk.Service_Producto.Eliminar_productoRequest request) {
+            return base.Channel.Eliminar_productoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Producto.Eliminar_productoResponse> Eliminar_productoAsync(int id) {
+            Desk.Service_Producto.Eliminar_productoRequest inValue = new Desk.Service_Producto.Eliminar_productoRequest();
+            inValue.id = id;
+            return ((Desk.Service_Producto.ProductoService)(this)).Eliminar_productoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Producto.Listado_productosResponse Desk.Service_Producto.ProductoService.Listado_productos(Desk.Service_Producto.Listado_productosRequest request) {
+            return base.Channel.Listado_productos(request);
+        }
+        
+        public Desk.Service_Producto.producto[] Listado_productos() {
+            Desk.Service_Producto.Listado_productosRequest inValue = new Desk.Service_Producto.Listado_productosRequest();
+            Desk.Service_Producto.Listado_productosResponse retVal = ((Desk.Service_Producto.ProductoService)(this)).Listado_productos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Producto.Listado_productosResponse> Desk.Service_Producto.ProductoService.Listado_productosAsync(Desk.Service_Producto.Listado_productosRequest request) {
+            return base.Channel.Listado_productosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Producto.Listado_productosResponse> Listado_productosAsync() {
+            Desk.Service_Producto.Listado_productosRequest inValue = new Desk.Service_Producto.Listado_productosRequest();
+            return ((Desk.Service_Producto.ProductoService)(this)).Listado_productosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Desk.Service_Producto.Crear_productoResponse Desk.Service_Producto.ProductoService.Crear_producto(Desk.Service_Producto.Crear_productoRequest request) {
             return base.Channel.Crear_producto(request);
         }
@@ -589,50 +633,6 @@ namespace Desk.Service_Producto {
             inValue.ruta_imagen = ruta_imagen;
             inValue.id_cagegoria = id_cagegoria;
             return ((Desk.Service_Producto.ProductoService)(this)).Crear_productoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Producto.Listado_productosResponse Desk.Service_Producto.ProductoService.Listado_productos(Desk.Service_Producto.Listado_productosRequest request) {
-            return base.Channel.Listado_productos(request);
-        }
-        
-        public Desk.Service_Producto.producto[] Listado_productos() {
-            Desk.Service_Producto.Listado_productosRequest inValue = new Desk.Service_Producto.Listado_productosRequest();
-            Desk.Service_Producto.Listado_productosResponse retVal = ((Desk.Service_Producto.ProductoService)(this)).Listado_productos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Producto.Listado_productosResponse> Desk.Service_Producto.ProductoService.Listado_productosAsync(Desk.Service_Producto.Listado_productosRequest request) {
-            return base.Channel.Listado_productosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Producto.Listado_productosResponse> Listado_productosAsync() {
-            Desk.Service_Producto.Listado_productosRequest inValue = new Desk.Service_Producto.Listado_productosRequest();
-            return ((Desk.Service_Producto.ProductoService)(this)).Listado_productosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Producto.Eliminar_productoResponse Desk.Service_Producto.ProductoService.Eliminar_producto(Desk.Service_Producto.Eliminar_productoRequest request) {
-            return base.Channel.Eliminar_producto(request);
-        }
-        
-        public string Eliminar_producto(int id) {
-            Desk.Service_Producto.Eliminar_productoRequest inValue = new Desk.Service_Producto.Eliminar_productoRequest();
-            inValue.id = id;
-            Desk.Service_Producto.Eliminar_productoResponse retVal = ((Desk.Service_Producto.ProductoService)(this)).Eliminar_producto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Producto.Eliminar_productoResponse> Desk.Service_Producto.ProductoService.Eliminar_productoAsync(Desk.Service_Producto.Eliminar_productoRequest request) {
-            return base.Channel.Eliminar_productoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Producto.Eliminar_productoResponse> Eliminar_productoAsync(int id) {
-            Desk.Service_Producto.Eliminar_productoRequest inValue = new Desk.Service_Producto.Eliminar_productoRequest();
-            inValue.id = id;
-            return ((Desk.Service_Producto.ProductoService)(this)).Eliminar_productoAsync(inValue);
         }
     }
 }

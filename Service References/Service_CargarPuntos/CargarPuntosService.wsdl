@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:17225/MisOfertasWebService/CargarPuntosService?xsd=1" namespace="http://Servicios/" />
     </xsd:schema>
   </types>
-  <message name="Crear_cargar_puntos">
-    <part name="parameters" element="tns:Crear_cargar_puntos" />
-  </message>
-  <message name="Crear_cargar_puntosResponse">
-    <part name="parameters" element="tns:Crear_cargar_puntosResponse" />
-  </message>
   <message name="Eliminar_cargar_puntos">
     <part name="parameters" element="tns:Eliminar_cargar_puntos" />
   </message>
@@ -23,11 +17,13 @@
   <message name="Listado_cargar_puntosResponse">
     <part name="parameters" element="tns:Listado_cargar_puntosResponse" />
   </message>
+  <message name="Crear_cargar_puntos">
+    <part name="parameters" element="tns:Crear_cargar_puntos" />
+  </message>
+  <message name="Crear_cargar_puntosResponse">
+    <part name="parameters" element="tns:Crear_cargar_puntosResponse" />
+  </message>
   <portType name="CargarPuntosService">
-    <operation name="Crear_cargar_puntos">
-      <input wsam:Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosRequest" message="tns:Crear_cargar_puntos" />
-      <output wsam:Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosResponse" message="tns:Crear_cargar_puntosResponse" />
-    </operation>
     <operation name="Eliminar_cargar_puntos">
       <input wsam:Action="http://Servicios/CargarPuntosService/Eliminar_cargar_puntosRequest" message="tns:Eliminar_cargar_puntos" />
       <output wsam:Action="http://Servicios/CargarPuntosService/Eliminar_cargar_puntosResponse" message="tns:Eliminar_cargar_puntosResponse" />
@@ -36,18 +32,13 @@
       <input wsam:Action="http://Servicios/CargarPuntosService/Listado_cargar_puntosRequest" message="tns:Listado_cargar_puntos" />
       <output wsam:Action="http://Servicios/CargarPuntosService/Listado_cargar_puntosResponse" message="tns:Listado_cargar_puntosResponse" />
     </operation>
+    <operation name="Crear_cargar_puntos">
+      <input wsam:Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosRequest" message="tns:Crear_cargar_puntos" />
+      <output wsam:Action="http://Servicios/CargarPuntosService/Crear_cargar_puntosResponse" message="tns:Crear_cargar_puntosResponse" />
+    </operation>
   </portType>
   <binding name="CargarPuntosServicePortBinding" type="tns:CargarPuntosService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="Crear_cargar_puntos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="Eliminar_cargar_puntos">
       <soap:operation soapAction="" />
       <input>
@@ -58,6 +49,15 @@
       </output>
     </operation>
     <operation name="Listado_cargar_puntos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Crear_cargar_puntos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

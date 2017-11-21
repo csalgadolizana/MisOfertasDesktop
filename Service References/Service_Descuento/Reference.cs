@@ -34,15 +34,6 @@ namespace Desk.Service_Descuento {
         System.Threading.Tasks.Task<Desk.Service_Descuento.Modificar_descuentoResponse> Modificar_descuentoAsync(Desk.Service_Descuento.Modificar_descuentoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/DescuentoService/Crear_descuentoRequest", ReplyAction="http://Servicios/DescuentoService/Crear_descuentoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Descuento.Crear_descuentoResponse Crear_descuento(Desk.Service_Descuento.Crear_descuentoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/DescuentoService/Crear_descuentoRequest", ReplyAction="http://Servicios/DescuentoService/Crear_descuentoResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Descuento.Crear_descuentoResponse> Crear_descuentoAsync(Desk.Service_Descuento.Crear_descuentoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/DescuentoService/Listado_descuentoRequest", ReplyAction="http://Servicios/DescuentoService/Listado_descuentoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -50,6 +41,15 @@ namespace Desk.Service_Descuento {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/DescuentoService/Listado_descuentoRequest", ReplyAction="http://Servicios/DescuentoService/Listado_descuentoResponse")]
         System.Threading.Tasks.Task<Desk.Service_Descuento.Listado_descuentoResponse> Listado_descuentoAsync(Desk.Service_Descuento.Listado_descuentoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/DescuentoService/Crear_descuentoRequest", ReplyAction="http://Servicios/DescuentoService/Crear_descuentoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_Descuento.Crear_descuentoResponse Crear_descuento(Desk.Service_Descuento.Crear_descuentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/DescuentoService/Crear_descuentoRequest", ReplyAction="http://Servicios/DescuentoService/Crear_descuentoResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Descuento.Crear_descuentoResponse> Crear_descuentoAsync(Desk.Service_Descuento.Crear_descuentoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -165,87 +165,6 @@ namespace Desk.Service_Descuento {
         }
         
         public Modificar_descuentoResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_descuento", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_descuentoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codigo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int tope;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int valor;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int puntos_usados;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_inicio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_actualizacion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_cliente;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int estado_id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int categoria_id;
-        
-        public Crear_descuentoRequest() {
-        }
-        
-        public Crear_descuentoRequest(int id, string codigo, int tope, int valor, int puntos_usados, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_cliente, int estado_id, int categoria_id) {
-            this.id = id;
-            this.codigo = codigo;
-            this.tope = tope;
-            this.valor = valor;
-            this.puntos_usados = puntos_usados;
-            this.fecha_inicio = fecha_inicio;
-            this.fecha_actualizacion = fecha_actualizacion;
-            this.id_cliente = id_cliente;
-            this.estado_id = estado_id;
-            this.categoria_id = categoria_id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_descuentoResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_descuentoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Crear_descuentoResponse() {
-        }
-        
-        public Crear_descuentoResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -1182,6 +1101,87 @@ namespace Desk.Service_Descuento {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_descuento", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_descuentoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int tope;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int valor;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int puntos_usados;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_inicio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_actualizacion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_cliente;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int estado_id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int categoria_id;
+        
+        public Crear_descuentoRequest() {
+        }
+        
+        public Crear_descuentoRequest(int id, string codigo, int tope, int valor, int puntos_usados, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, int id_cliente, int estado_id, int categoria_id) {
+            this.id = id;
+            this.codigo = codigo;
+            this.tope = tope;
+            this.valor = valor;
+            this.puntos_usados = puntos_usados;
+            this.fecha_inicio = fecha_inicio;
+            this.fecha_actualizacion = fecha_actualizacion;
+            this.id_cliente = id_cliente;
+            this.estado_id = estado_id;
+            this.categoria_id = categoria_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_descuentoResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_descuentoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Crear_descuentoResponse() {
+        }
+        
+        public Crear_descuentoResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface DescuentoServiceChannel : Desk.Service_Descuento.DescuentoService, System.ServiceModel.IClientChannel {
     }
@@ -1274,6 +1274,27 @@ namespace Desk.Service_Descuento {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Descuento.Listado_descuentoResponse Desk.Service_Descuento.DescuentoService.Listado_descuento(Desk.Service_Descuento.Listado_descuentoRequest request) {
+            return base.Channel.Listado_descuento(request);
+        }
+        
+        public Desk.Service_Descuento.descuento[] Listado_descuento() {
+            Desk.Service_Descuento.Listado_descuentoRequest inValue = new Desk.Service_Descuento.Listado_descuentoRequest();
+            Desk.Service_Descuento.Listado_descuentoResponse retVal = ((Desk.Service_Descuento.DescuentoService)(this)).Listado_descuento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Descuento.Listado_descuentoResponse> Desk.Service_Descuento.DescuentoService.Listado_descuentoAsync(Desk.Service_Descuento.Listado_descuentoRequest request) {
+            return base.Channel.Listado_descuentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Descuento.Listado_descuentoResponse> Listado_descuentoAsync() {
+            Desk.Service_Descuento.Listado_descuentoRequest inValue = new Desk.Service_Descuento.Listado_descuentoRequest();
+            return ((Desk.Service_Descuento.DescuentoService)(this)).Listado_descuentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Desk.Service_Descuento.Crear_descuentoResponse Desk.Service_Descuento.DescuentoService.Crear_descuento(Desk.Service_Descuento.Crear_descuentoRequest request) {
             return base.Channel.Crear_descuento(request);
         }
@@ -1312,27 +1333,6 @@ namespace Desk.Service_Descuento {
             inValue.estado_id = estado_id;
             inValue.categoria_id = categoria_id;
             return ((Desk.Service_Descuento.DescuentoService)(this)).Crear_descuentoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Descuento.Listado_descuentoResponse Desk.Service_Descuento.DescuentoService.Listado_descuento(Desk.Service_Descuento.Listado_descuentoRequest request) {
-            return base.Channel.Listado_descuento(request);
-        }
-        
-        public Desk.Service_Descuento.descuento[] Listado_descuento() {
-            Desk.Service_Descuento.Listado_descuentoRequest inValue = new Desk.Service_Descuento.Listado_descuentoRequest();
-            Desk.Service_Descuento.Listado_descuentoResponse retVal = ((Desk.Service_Descuento.DescuentoService)(this)).Listado_descuento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Descuento.Listado_descuentoResponse> Desk.Service_Descuento.DescuentoService.Listado_descuentoAsync(Desk.Service_Descuento.Listado_descuentoRequest request) {
-            return base.Channel.Listado_descuentoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Descuento.Listado_descuentoResponse> Listado_descuentoAsync() {
-            Desk.Service_Descuento.Listado_descuentoRequest inValue = new Desk.Service_Descuento.Listado_descuentoRequest();
-            return ((Desk.Service_Descuento.DescuentoService)(this)).Listado_descuentoAsync(inValue);
         }
     }
 }

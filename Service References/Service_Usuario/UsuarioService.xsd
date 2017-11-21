@@ -13,8 +13,11 @@
   <xs:element name="Modificar_USUARIO" type="tns:Modificar_USUARIO" />
   <xs:element name="Modificar_USUARIOResponse" type="tns:Modificar_USUARIOResponse" />
   <xs:element name="cargo" type="tns:cargo" />
+  <xs:element name="ciudad" type="tns:ciudad" />
+  <xs:element name="cliente" type="tns:cliente" />
   <xs:element name="estado" type="tns:estado" />
   <xs:element name="persona" type="tns:persona" />
+  <xs:element name="region" type="tns:region" />
   <xs:element name="sexo" type="tns:sexo" />
   <xs:element name="usuario" type="tns:usuario" />
   <xs:complexType name="Eliminar_usuario">
@@ -112,7 +115,36 @@
   </xs:complexType>
   <xs:complexType name="AutenticacionResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:anyType" />
+      <xs:element minOccurs="0" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aceptaInformativo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ciudadIdCiudad" type="tns:ciudad" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idCliente" type="xs:decimal" />
+      <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="personaIdpersona" type="tns:persona" />
+      <xs:element minOccurs="0" name="telefono" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ciudad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idCiudad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="regionIdRegion" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idRegion" type="xs:long" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Modificar_USUARIO">
@@ -123,9 +155,6 @@
       <xs:element name="telefono" type="xs:int" />
       <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fecha_actualizacion" type="xs:dateTime" />
-      <xs:element name="id_estado" type="xs:int" />
-      <xs:element name="id_persona" type="xs:int" />
-      <xs:element name="id_cargo" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Modificar_USUARIOResponse">

@@ -8,7 +8,6 @@
   <xs:element name="Listado_usuario_ofertaResponse" type="tns:Listado_usuario_ofertaResponse" />
   <xs:element name="cargo" type="tns:cargo" />
   <xs:element name="estado" type="tns:estado" />
-  <xs:element name="informativo" type="tns:informativo" />
   <xs:element name="oferta" type="tns:oferta" />
   <xs:element name="persona" type="tns:persona" />
   <xs:element name="sexo" type="tns:sexo" />
@@ -59,7 +58,6 @@
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
       <xs:element minOccurs="0" name="idOferta" type="xs:decimal" />
-      <xs:element minOccurs="0" name="informativo" type="tns:informativo" />
       <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
       <xs:element minOccurs="0" name="maximoCompra" type="xs:integer" />
       <xs:element minOccurs="0" name="minimoCompra" type="xs:integer" />
@@ -73,12 +71,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="idEstado" type="xs:decimal" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="informativo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idInformativo" type="xs:decimal" />
-      <xs:element minOccurs="0" name="ofertaIdOferta" type="tns:oferta" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="usuario">
