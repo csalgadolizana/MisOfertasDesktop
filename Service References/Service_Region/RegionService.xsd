@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Listado_regiones" type="tns:Listado_regiones" />
+  <xs:element name="Listado_regionesResponse" type="tns:Listado_regionesResponse" />
+  <xs:element name="region" type="tns:region" />
+  <xs:complexType name="Listado_regiones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Listado_regionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idRegion" type="xs:long" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -28,51 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrHomeGerenteAsociacion));
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.localBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TPUsuario = new System.Windows.Forms.TabControl();
             this.tHome = new System.Windows.Forms.TabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tDDocumentos = new System.Windows.Forms.TabPage();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnDescargarBI = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tdocumentos = new System.Windows.Forms.TabPage();
+            this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.reporteLocalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosRegistradosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descuentosEntregadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.valoracionesRealizadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label40 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.valoracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.descuentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.topDeOfertasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localBindingSource)).BeginInit();
             this.TPUsuario.SuspendLayout();
             this.tHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tDDocumentos.SuspendLayout();
+            this.tdocumentos.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valoracionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descuentoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Desk.Service_Usuario.usuario);
+            // 
+            // localBindingSource
+            // 
+            this.localBindingSource.DataSource = typeof(Desk.Service_Local.local);
             // 
             // TPUsuario
             // 
             this.TPUsuario.Controls.Add(this.tHome);
-            this.TPUsuario.Controls.Add(this.tDDocumentos);
+            this.TPUsuario.Controls.Add(this.tdocumentos);
             this.TPUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TPUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.TPUsuario.Location = new System.Drawing.Point(35, 88);
             this.TPUsuario.Multiline = true;
             this.TPUsuario.Name = "TPUsuario";
             this.TPUsuario.SelectedIndex = 0;
-            this.TPUsuario.Size = new System.Drawing.Size(714, 392);
+            this.TPUsuario.Size = new System.Drawing.Size(714, 393);
             this.TPUsuario.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TPUsuario.TabIndex = 4;
             // 
             // tHome
             // 
             this.tHome.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tHome.CausesValidation = false;
             this.tHome.Controls.Add(this.pictureBox4);
             this.tHome.Controls.Add(this.pictureBox3);
             this.tHome.Controls.Add(this.pictureBox2);
@@ -80,7 +100,7 @@
             this.tHome.Location = new System.Drawing.Point(4, 25);
             this.tHome.Name = "tHome";
             this.tHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tHome.Size = new System.Drawing.Size(706, 363);
+            this.tHome.Size = new System.Drawing.Size(706, 364);
             this.tHome.TabIndex = 0;
             this.tHome.Text = "Home";
             // 
@@ -124,112 +144,67 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // tDDocumentos
+            // tdocumentos
             // 
-            this.tDDocumentos.BackColor = System.Drawing.Color.Red;
-            this.tDDocumentos.Controls.Add(this.comboBox3);
-            this.tDDocumentos.Controls.Add(this.label7);
-            this.tDDocumentos.Controls.Add(this.btnDescargarBI);
-            this.tDDocumentos.Controls.Add(this.label3);
-            this.tDDocumentos.Controls.Add(this.dateTimePicker2);
-            this.tDDocumentos.Controls.Add(this.dateTimePicker1);
-            this.tDDocumentos.Controls.Add(this.label1);
-            this.tDDocumentos.Controls.Add(this.label2);
-            this.tDDocumentos.ForeColor = System.Drawing.Color.White;
-            this.tDDocumentos.Location = new System.Drawing.Point(4, 25);
-            this.tDDocumentos.Name = "tDDocumentos";
-            this.tDDocumentos.Padding = new System.Windows.Forms.Padding(3);
-            this.tDDocumentos.Size = new System.Drawing.Size(706, 363);
-            this.tDDocumentos.TabIndex = 2;
-            this.tDDocumentos.Text = "Obtener Reportes";
-            this.tDDocumentos.Click += new System.EventHandler(this.tDDocumentos_Click);
+            this.tdocumentos.BackColor = System.Drawing.Color.Red;
+            this.tdocumentos.Controls.Add(this.PanelPrincipal);
+            this.tdocumentos.Controls.Add(this.menuStrip1);
+            this.tdocumentos.Location = new System.Drawing.Point(4, 25);
+            this.tdocumentos.Name = "tdocumentos";
+            this.tdocumentos.Padding = new System.Windows.Forms.Padding(3);
+            this.tdocumentos.Size = new System.Drawing.Size(706, 364);
+            this.tdocumentos.TabIndex = 3;
+            this.tdocumentos.Text = "Reportes";
             // 
-            // comboBox3
+            // PanelPrincipal
             // 
-            this.comboBox3.FormatString = "  ";
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Seleccione ...",
-            "Reporte Locales",
-            "Usuarios Registrados",
-            "Correos Enviados",
-            "Valoraciones Realizadas",
-            "Descuento Entregados"});
-            this.comboBox3.Location = new System.Drawing.Point(307, 73);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(157, 24);
-            this.comboBox3.TabIndex = 13;
+            this.PanelPrincipal.Location = new System.Drawing.Point(3, 30);
+            this.PanelPrincipal.Name = "PanelPrincipal";
+            this.PanelPrincipal.Size = new System.Drawing.Size(703, 334);
+            this.PanelPrincipal.TabIndex = 0;
+            this.PanelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelPrincipal_Paint);
             // 
-            // label7
+            // menuStrip1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(197, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 20);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Documentos:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteLocalesToolStripMenuItem,
+            this.usuariosRegistradosToolStripMenuItem,
+            this.descuentosEntregadosToolStripMenuItem,
+            this.valoracionesRealizadasToolStripMenuItem,
+            this.topDeOfertasToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(3, 3);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(700, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnDescargarBI
+            // reporteLocalesToolStripMenuItem
             // 
-            this.btnDescargarBI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDescargarBI.ForeColor = System.Drawing.Color.Maroon;
-            this.btnDescargarBI.Location = new System.Drawing.Point(86, 245);
-            this.btnDescargarBI.Name = "btnDescargarBI";
-            this.btnDescargarBI.Size = new System.Drawing.Size(539, 71);
-            this.btnDescargarBI.TabIndex = 6;
-            this.btnDescargarBI.Text = "Descargar";
-            this.btnDescargarBI.UseVisualStyleBackColor = true;
+            this.reporteLocalesToolStripMenuItem.Name = "reporteLocalesToolStripMenuItem";
+            this.reporteLocalesToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.reporteLocalesToolStripMenuItem.Text = "Reporte Locales";
+            this.reporteLocalesToolStripMenuItem.Click += new System.EventHandler(this.reporteLocalesToolStripMenuItem_Click);
             // 
-            // label3
+            // usuariosRegistradosToolStripMenuItem
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(328, 120);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Hasta:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.usuariosRegistradosToolStripMenuItem.Name = "usuariosRegistradosToolStripMenuItem";
+            this.usuariosRegistradosToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
+            this.usuariosRegistradosToolStripMenuItem.Text = "Usuarios Registrados";
+            this.usuariosRegistradosToolStripMenuItem.Click += new System.EventHandler(this.usuariosRegistradosToolStripMenuItem_Click);
             // 
-            // dateTimePicker2
+            // descuentosEntregadosToolStripMenuItem
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(381, 113);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 4;
+            this.descuentosEntregadosToolStripMenuItem.Name = "descuentosEntregadosToolStripMenuItem";
+            this.descuentosEntregadosToolStripMenuItem.Size = new System.Drawing.Size(142, 20);
+            this.descuentosEntregadosToolStripMenuItem.Text = "Descuentos Entregados";
+            this.descuentosEntregadosToolStripMenuItem.Click += new System.EventHandler(this.descuentosEntregadosToolStripMenuItem_Click);
             // 
-            // dateTimePicker1
+            // valoracionesRealizadasToolStripMenuItem
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(76, 114);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(29, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Desde:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(233, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ingrese Datos";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.valoracionesRealizadasToolStripMenuItem.Name = "valoracionesRealizadasToolStripMenuItem";
+            this.valoracionesRealizadasToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
+            this.valoracionesRealizadasToolStripMenuItem.Text = "Valoraciones Realizadas";
+            this.valoracionesRealizadasToolStripMenuItem.Click += new System.EventHandler(this.valoracionesRealizadasToolStripMenuItem_Click);
             // 
             // linkLabel1
             // 
@@ -265,6 +240,30 @@
             this.panel1.Size = new System.Drawing.Size(101, 42);
             this.panel1.TabIndex = 7;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(-1, 23);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(780, 495);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
+            // 
+            // valoracionBindingSource
+            // 
+            this.valoracionBindingSource.DataSource = typeof(Desk.Service_Valoracion.valoracion);
+            // 
+            // descuentoBindingSource
+            // 
+            this.descuentoBindingSource.DataSource = typeof(Desk.Service_Descuento.descuento);
+            // 
+            // topDeOfertasToolStripMenuItem
+            // 
+            this.topDeOfertasToolStripMenuItem.Name = "topDeOfertasToolStripMenuItem";
+            this.topDeOfertasToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.topDeOfertasToolStripMenuItem.Text = "Top de Ofertas";
+            // 
             // FrHomeGerenteAsociacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,18 +274,28 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.TPUsuario);
+            this.Controls.Add(this.pictureBox5);
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrHomeGerenteAsociacion";
             this.Text = "FrHomeGerenteAsociacion";
+            this.Load += new System.EventHandler(this.FrHomeGerenteAsociacion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localBindingSource)).EndInit();
             this.TPUsuario.ResumeLayout(false);
             this.tHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tDDocumentos.ResumeLayout(false);
-            this.tDDocumentos.PerformLayout();
+            this.tdocumentos.ResumeLayout(false);
+            this.tdocumentos.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valoracionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descuentoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,15 +304,6 @@
         #endregion
         private System.Windows.Forms.TabControl TPUsuario;
         private System.Windows.Forms.TabPage tHome;
-        private System.Windows.Forms.TabPage tDDocumentos;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnDescargarBI;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Panel panel1;
@@ -311,5 +311,18 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.BindingSource valoracionBindingSource;
+        private System.Windows.Forms.BindingSource localBindingSource;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private System.Windows.Forms.BindingSource descuentoBindingSource;
+        private System.Windows.Forms.TabPage tdocumentos;
+        private System.Windows.Forms.Panel PanelPrincipal;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem reporteLocalesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosRegistradosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem descuentosEntregadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem valoracionesRealizadasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem topDeOfertasToolStripMenuItem;
     }
 }

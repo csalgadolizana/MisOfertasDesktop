@@ -16,13 +16,13 @@ namespace Desk.Service_Producto {
     public interface ProductoService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Modificar_productoRequest", ReplyAction="http://Servicios/ProductoService/Modificar_productoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Crear_productoRequest", ReplyAction="http://Servicios/ProductoService/Crear_productoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Producto.Modificar_productoResponse Modificar_producto(Desk.Service_Producto.Modificar_productoRequest request);
+        Desk.Service_Producto.Crear_productoResponse Crear_producto(Desk.Service_Producto.Crear_productoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Modificar_productoRequest", ReplyAction="http://Servicios/ProductoService/Modificar_productoResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Producto.Modificar_productoResponse> Modificar_productoAsync(Desk.Service_Producto.Modificar_productoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Crear_productoRequest", ReplyAction="http://Servicios/ProductoService/Crear_productoResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Producto.Crear_productoResponse> Crear_productoAsync(Desk.Service_Producto.Crear_productoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Eliminar_productoRequest", ReplyAction="http://Servicios/ProductoService/Eliminar_productoResponse")]
@@ -43,20 +43,20 @@ namespace Desk.Service_Producto {
         System.Threading.Tasks.Task<Desk.Service_Producto.Listado_productosResponse> Listado_productosAsync(Desk.Service_Producto.Listado_productosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Crear_productoRequest", ReplyAction="http://Servicios/ProductoService/Crear_productoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Modificar_productoRequest", ReplyAction="http://Servicios/ProductoService/Modificar_productoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Producto.Crear_productoResponse Crear_producto(Desk.Service_Producto.Crear_productoRequest request);
+        Desk.Service_Producto.Modificar_productoResponse Modificar_producto(Desk.Service_Producto.Modificar_productoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Crear_productoRequest", ReplyAction="http://Servicios/ProductoService/Crear_productoResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Producto.Crear_productoResponse> Crear_productoAsync(Desk.Service_Producto.Crear_productoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ProductoService/Modificar_productoRequest", ReplyAction="http://Servicios/ProductoService/Modificar_productoResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Producto.Modificar_productoResponse> Modificar_productoAsync(Desk.Service_Producto.Modificar_productoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_producto", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_productoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_producto", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_productoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -90,10 +90,10 @@ namespace Desk.Service_Producto {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int id_cagegoria;
         
-        public Modificar_productoRequest() {
+        public Crear_productoRequest() {
         }
         
-        public Modificar_productoRequest(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
+        public Crear_productoRequest(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
             this.id = id;
             this.nombre = nombre;
             this.descripcion = descripcion;
@@ -108,17 +108,17 @@ namespace Desk.Service_Producto {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_productoResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_productoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_productoResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_productoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public Modificar_productoResponse() {
+        public Crear_productoResponse() {
         }
         
-        public Modificar_productoResponse(string @return) {
+        public Crear_productoResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -160,7 +160,7 @@ namespace Desk.Service_Producto {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -332,7 +332,7 @@ namespace Desk.Service_Producto {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -422,8 +422,8 @@ namespace Desk.Service_Producto {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_producto", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_productoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_producto", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_productoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -457,10 +457,10 @@ namespace Desk.Service_Producto {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int id_cagegoria;
         
-        public Crear_productoRequest() {
+        public Modificar_productoRequest() {
         }
         
-        public Crear_productoRequest(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
+        public Modificar_productoRequest(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
             this.id = id;
             this.nombre = nombre;
             this.descripcion = descripcion;
@@ -475,17 +475,17 @@ namespace Desk.Service_Producto {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_productoResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_productoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_productoResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_productoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public Crear_productoResponse() {
+        public Modificar_productoResponse() {
         }
         
-        public Crear_productoResponse(string @return) {
+        public Modificar_productoResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -518,12 +518,12 @@ namespace Desk.Service_Producto {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Producto.Modificar_productoResponse Desk.Service_Producto.ProductoService.Modificar_producto(Desk.Service_Producto.Modificar_productoRequest request) {
-            return base.Channel.Modificar_producto(request);
+        Desk.Service_Producto.Crear_productoResponse Desk.Service_Producto.ProductoService.Crear_producto(Desk.Service_Producto.Crear_productoRequest request) {
+            return base.Channel.Crear_producto(request);
         }
         
-        public string Modificar_producto(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
-            Desk.Service_Producto.Modificar_productoRequest inValue = new Desk.Service_Producto.Modificar_productoRequest();
+        public string Crear_producto(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
+            Desk.Service_Producto.Crear_productoRequest inValue = new Desk.Service_Producto.Crear_productoRequest();
             inValue.id = id;
             inValue.nombre = nombre;
             inValue.descripcion = descripcion;
@@ -532,17 +532,17 @@ namespace Desk.Service_Producto {
             inValue.fecha_actualizacion = fecha_actualizacion;
             inValue.ruta_imagen = ruta_imagen;
             inValue.id_cagegoria = id_cagegoria;
-            Desk.Service_Producto.Modificar_productoResponse retVal = ((Desk.Service_Producto.ProductoService)(this)).Modificar_producto(inValue);
+            Desk.Service_Producto.Crear_productoResponse retVal = ((Desk.Service_Producto.ProductoService)(this)).Crear_producto(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Producto.Modificar_productoResponse> Desk.Service_Producto.ProductoService.Modificar_productoAsync(Desk.Service_Producto.Modificar_productoRequest request) {
-            return base.Channel.Modificar_productoAsync(request);
+        System.Threading.Tasks.Task<Desk.Service_Producto.Crear_productoResponse> Desk.Service_Producto.ProductoService.Crear_productoAsync(Desk.Service_Producto.Crear_productoRequest request) {
+            return base.Channel.Crear_productoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Desk.Service_Producto.Modificar_productoResponse> Modificar_productoAsync(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
-            Desk.Service_Producto.Modificar_productoRequest inValue = new Desk.Service_Producto.Modificar_productoRequest();
+        public System.Threading.Tasks.Task<Desk.Service_Producto.Crear_productoResponse> Crear_productoAsync(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
+            Desk.Service_Producto.Crear_productoRequest inValue = new Desk.Service_Producto.Crear_productoRequest();
             inValue.id = id;
             inValue.nombre = nombre;
             inValue.descripcion = descripcion;
@@ -551,7 +551,7 @@ namespace Desk.Service_Producto {
             inValue.fecha_actualizacion = fecha_actualizacion;
             inValue.ruta_imagen = ruta_imagen;
             inValue.id_cagegoria = id_cagegoria;
-            return ((Desk.Service_Producto.ProductoService)(this)).Modificar_productoAsync(inValue);
+            return ((Desk.Service_Producto.ProductoService)(this)).Crear_productoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -599,12 +599,12 @@ namespace Desk.Service_Producto {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Producto.Crear_productoResponse Desk.Service_Producto.ProductoService.Crear_producto(Desk.Service_Producto.Crear_productoRequest request) {
-            return base.Channel.Crear_producto(request);
+        Desk.Service_Producto.Modificar_productoResponse Desk.Service_Producto.ProductoService.Modificar_producto(Desk.Service_Producto.Modificar_productoRequest request) {
+            return base.Channel.Modificar_producto(request);
         }
         
-        public string Crear_producto(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
-            Desk.Service_Producto.Crear_productoRequest inValue = new Desk.Service_Producto.Crear_productoRequest();
+        public string Modificar_producto(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
+            Desk.Service_Producto.Modificar_productoRequest inValue = new Desk.Service_Producto.Modificar_productoRequest();
             inValue.id = id;
             inValue.nombre = nombre;
             inValue.descripcion = descripcion;
@@ -613,17 +613,17 @@ namespace Desk.Service_Producto {
             inValue.fecha_actualizacion = fecha_actualizacion;
             inValue.ruta_imagen = ruta_imagen;
             inValue.id_cagegoria = id_cagegoria;
-            Desk.Service_Producto.Crear_productoResponse retVal = ((Desk.Service_Producto.ProductoService)(this)).Crear_producto(inValue);
+            Desk.Service_Producto.Modificar_productoResponse retVal = ((Desk.Service_Producto.ProductoService)(this)).Modificar_producto(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Producto.Crear_productoResponse> Desk.Service_Producto.ProductoService.Crear_productoAsync(Desk.Service_Producto.Crear_productoRequest request) {
-            return base.Channel.Crear_productoAsync(request);
+        System.Threading.Tasks.Task<Desk.Service_Producto.Modificar_productoResponse> Desk.Service_Producto.ProductoService.Modificar_productoAsync(Desk.Service_Producto.Modificar_productoRequest request) {
+            return base.Channel.Modificar_productoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Desk.Service_Producto.Crear_productoResponse> Crear_productoAsync(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
-            Desk.Service_Producto.Crear_productoRequest inValue = new Desk.Service_Producto.Crear_productoRequest();
+        public System.Threading.Tasks.Task<Desk.Service_Producto.Modificar_productoResponse> Modificar_productoAsync(int id, string nombre, string descripcion, int precio, System.DateTime fecha_inicio, System.DateTime fecha_actualizacion, string ruta_imagen, int id_cagegoria) {
+            Desk.Service_Producto.Modificar_productoRequest inValue = new Desk.Service_Producto.Modificar_productoRequest();
             inValue.id = id;
             inValue.nombre = nombre;
             inValue.descripcion = descripcion;
@@ -632,7 +632,7 @@ namespace Desk.Service_Producto {
             inValue.fecha_actualizacion = fecha_actualizacion;
             inValue.ruta_imagen = ruta_imagen;
             inValue.id_cagegoria = id_cagegoria;
-            return ((Desk.Service_Producto.ProductoService)(this)).Crear_productoAsync(inValue);
+            return ((Desk.Service_Producto.ProductoService)(this)).Modificar_productoAsync(inValue);
         }
     }
 }

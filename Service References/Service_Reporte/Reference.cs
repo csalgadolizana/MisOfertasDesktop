@@ -25,15 +25,6 @@ namespace Desk.Service_Reporte {
         System.Threading.Tasks.Task<Desk.Service_Reporte.Listado_reportesResponse> Listado_reportesAsync(Desk.Service_Reporte.Listado_reportesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Modificar_reporteRequest", ReplyAction="http://Servicios/ReporteService/Modificar_reporteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Reporte.Modificar_reporteResponse Modificar_reporte(Desk.Service_Reporte.Modificar_reporteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Modificar_reporteRequest", ReplyAction="http://Servicios/ReporteService/Modificar_reporteResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Reporte.Modificar_reporteResponse> Modificar_reporteAsync(Desk.Service_Reporte.Modificar_reporteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Crear_reporteRequest", ReplyAction="http://Servicios/ReporteService/Crear_reporteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,6 +32,15 @@ namespace Desk.Service_Reporte {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Crear_reporteRequest", ReplyAction="http://Servicios/ReporteService/Crear_reporteResponse")]
         System.Threading.Tasks.Task<Desk.Service_Reporte.Crear_reporteResponse> Crear_reporteAsync(Desk.Service_Reporte.Crear_reporteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Modificar_reporteRequest", ReplyAction="http://Servicios/ReporteService/Modificar_reporteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_Reporte.Modificar_reporteResponse Modificar_reporte(Desk.Service_Reporte.Modificar_reporteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Modificar_reporteRequest", ReplyAction="http://Servicios/ReporteService/Modificar_reporteResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Reporte.Modificar_reporteResponse> Modificar_reporteAsync(Desk.Service_Reporte.Modificar_reporteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/ReporteService/Eliminar_reporteRequest", ReplyAction="http://Servicios/ReporteService/Eliminar_reporteResponse")]
@@ -53,7 +53,7 @@ namespace Desk.Service_Reporte {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -113,7 +113,7 @@ namespace Desk.Service_Reporte {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -215,7 +215,7 @@ namespace Desk.Service_Reporte {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -303,7 +303,7 @@ namespace Desk.Service_Reporte {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -363,7 +363,7 @@ namespace Desk.Service_Reporte {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -423,7 +423,7 @@ namespace Desk.Service_Reporte {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -611,47 +611,6 @@ namespace Desk.Service_Reporte {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_reporte", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_reporteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int local_id;
-        
-        public Modificar_reporteRequest() {
-        }
-        
-        public Modificar_reporteRequest(int id, int local_id) {
-            this.id = id;
-            this.local_id = local_id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_reporteResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_reporteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Modificar_reporteResponse() {
-        }
-        
-        public Modificar_reporteResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_reporte", WrapperNamespace="http://Servicios/", IsWrapped=true)]
     public partial class Crear_reporteRequest {
         
@@ -686,6 +645,47 @@ namespace Desk.Service_Reporte {
         }
         
         public Crear_reporteResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_reporte", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_reporteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int local_id;
+        
+        public Modificar_reporteRequest() {
+        }
+        
+        public Modificar_reporteRequest(int id, int local_id) {
+            this.id = id;
+            this.local_id = local_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_reporteResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_reporteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Modificar_reporteResponse() {
+        }
+        
+        public Modificar_reporteResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -775,31 +775,6 @@ namespace Desk.Service_Reporte {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Reporte.Modificar_reporteResponse Desk.Service_Reporte.ReporteService.Modificar_reporte(Desk.Service_Reporte.Modificar_reporteRequest request) {
-            return base.Channel.Modificar_reporte(request);
-        }
-        
-        public string Modificar_reporte(int id, int local_id) {
-            Desk.Service_Reporte.Modificar_reporteRequest inValue = new Desk.Service_Reporte.Modificar_reporteRequest();
-            inValue.id = id;
-            inValue.local_id = local_id;
-            Desk.Service_Reporte.Modificar_reporteResponse retVal = ((Desk.Service_Reporte.ReporteService)(this)).Modificar_reporte(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Reporte.Modificar_reporteResponse> Desk.Service_Reporte.ReporteService.Modificar_reporteAsync(Desk.Service_Reporte.Modificar_reporteRequest request) {
-            return base.Channel.Modificar_reporteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Reporte.Modificar_reporteResponse> Modificar_reporteAsync(int id, int local_id) {
-            Desk.Service_Reporte.Modificar_reporteRequest inValue = new Desk.Service_Reporte.Modificar_reporteRequest();
-            inValue.id = id;
-            inValue.local_id = local_id;
-            return ((Desk.Service_Reporte.ReporteService)(this)).Modificar_reporteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Desk.Service_Reporte.Crear_reporteResponse Desk.Service_Reporte.ReporteService.Crear_reporte(Desk.Service_Reporte.Crear_reporteRequest request) {
             return base.Channel.Crear_reporte(request);
         }
@@ -822,6 +797,31 @@ namespace Desk.Service_Reporte {
             inValue.id = id;
             inValue.local_id = local_id;
             return ((Desk.Service_Reporte.ReporteService)(this)).Crear_reporteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Reporte.Modificar_reporteResponse Desk.Service_Reporte.ReporteService.Modificar_reporte(Desk.Service_Reporte.Modificar_reporteRequest request) {
+            return base.Channel.Modificar_reporte(request);
+        }
+        
+        public string Modificar_reporte(int id, int local_id) {
+            Desk.Service_Reporte.Modificar_reporteRequest inValue = new Desk.Service_Reporte.Modificar_reporteRequest();
+            inValue.id = id;
+            inValue.local_id = local_id;
+            Desk.Service_Reporte.Modificar_reporteResponse retVal = ((Desk.Service_Reporte.ReporteService)(this)).Modificar_reporte(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Reporte.Modificar_reporteResponse> Desk.Service_Reporte.ReporteService.Modificar_reporteAsync(Desk.Service_Reporte.Modificar_reporteRequest request) {
+            return base.Channel.Modificar_reporteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Reporte.Modificar_reporteResponse> Modificar_reporteAsync(int id, int local_id) {
+            Desk.Service_Reporte.Modificar_reporteRequest inValue = new Desk.Service_Reporte.Modificar_reporteRequest();
+            inValue.id = id;
+            inValue.local_id = local_id;
+            return ((Desk.Service_Reporte.ReporteService)(this)).Modificar_reporteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

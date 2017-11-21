@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Crear_puntos" type="tns:Crear_puntos" />
+  <xs:element name="Crear_puntosResponse" type="tns:Crear_puntosResponse" />
+  <xs:element name="Eliminar_puntos" type="tns:Eliminar_puntos" />
+  <xs:element name="Eliminar_puntosResponse" type="tns:Eliminar_puntosResponse" />
+  <xs:element name="Listado_puntos" type="tns:Listado_puntos" />
+  <xs:element name="Listado_puntosResponse" type="tns:Listado_puntosResponse" />
+  <xs:element name="Modificar_puntos" type="tns:Modificar_puntos" />
+  <xs:element name="Modificar_puntosResponse" type="tns:Modificar_puntosResponse" />
+  <xs:element name="ciudad" type="tns:ciudad" />
+  <xs:element name="cliente" type="tns:cliente" />
+  <xs:element name="estado" type="tns:estado" />
+  <xs:element name="persona" type="tns:persona" />
+  <xs:element name="puntos" type="tns:puntos" />
+  <xs:element name="region" type="tns:region" />
+  <xs:element name="sexo" type="tns:sexo" />
+  <xs:complexType name="Crear_puntos">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="total_puntos" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha_actulizacion" type="xs:dateTime" />
+      <xs:element name="puntos_canjeados" type="xs:int" />
+      <xs:element name="id_cliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_puntosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Listado_puntos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Listado_puntosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:puntos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="puntos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clienteIdCliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="fechaActualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPuntos" type="xs:decimal" />
+      <xs:element minOccurs="0" name="puntosCanjeados" type="xs:integer" />
+      <xs:element minOccurs="0" name="totalPuntos" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aceptaInformativo" type="xs:integer" />
+      <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ciudadIdCiudad" type="tns:ciudad" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idCliente" type="xs:decimal" />
+      <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="personaIdpersona" type="tns:persona" />
+      <xs:element minOccurs="0" name="telefono" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ciudad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idCiudad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="regionIdRegion" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idRegion" type="xs:long" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idEstado" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="idpersona" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="sexoIdSexo" type="tns:sexo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sexo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idSexo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Modificar_puntos">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="total_puntos" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha_actulizacion" type="xs:dateTime" />
+      <xs:element name="puntos_canjeados" type="xs:int" />
+      <xs:element name="id_cliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Modificar_puntosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_puntos">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_puntosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

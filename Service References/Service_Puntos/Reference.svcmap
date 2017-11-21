@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:17225/MisOfertasWebService/PuntosService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.20.65.11:8080/MisOfertasWebService/PuntosService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PuntosService.wsdl" MetadataType="Wsdl" ID="b004c722-c2b8-4d88-a61b-9f5842c92a54" SourceId="1" SourceUrl="http://localhost:17225/MisOfertasWebService/PuntosService?WSDL" />
-    <MetadataFile FileName="PuntosService.xsd" MetadataType="Schema" ID="8402c344-0518-49ad-ab0f-17c6a5087689" SourceId="1" SourceUrl="http://localhost:17225/MisOfertasWebService/PuntosService?xsd=1" />
+    <MetadataFile FileName="PuntosService1.xsd" MetadataType="Schema" ID="b00dba96-5991-4506-9dc3-a0fa3ee2637b" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/PuntosService?xsd=1" />
+    <MetadataFile FileName="PuntosService1.wsdl" MetadataType="Wsdl" ID="210449ac-954f-4323-bcc8-de23d267f8db" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/PuntosService?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

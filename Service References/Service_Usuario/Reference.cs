@@ -16,15 +16,6 @@ namespace Desk.Service_Usuario {
     public interface UsuarioService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/AutenticarTrabajadorRequest", ReplyAction="http://Servicios/UsuarioService/AutenticarTrabajadorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Usuario.AutenticarTrabajadorResponse AutenticarTrabajador(Desk.Service_Usuario.AutenticarTrabajadorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/AutenticarTrabajadorRequest", ReplyAction="http://Servicios/UsuarioService/AutenticarTrabajadorResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Usuario.AutenticarTrabajadorResponse> AutenticarTrabajadorAsync(Desk.Service_Usuario.AutenticarTrabajadorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/AutenticacionRequest", ReplyAction="http://Servicios/UsuarioService/AutenticacionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,15 +23,6 @@ namespace Desk.Service_Usuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/AutenticacionRequest", ReplyAction="http://Servicios/UsuarioService/AutenticacionResponse")]
         System.Threading.Tasks.Task<Desk.Service_Usuario.AutenticacionResponse> AutenticacionAsync(Desk.Service_Usuario.AutenticacionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/CREAR_USUARIORequest", ReplyAction="http://Servicios/UsuarioService/CREAR_USUARIOResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Usuario.CREAR_USUARIOResponse CREAR_USUARIO(Desk.Service_Usuario.CREAR_USUARIORequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/CREAR_USUARIORequest", ReplyAction="http://Servicios/UsuarioService/CREAR_USUARIOResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Usuario.CREAR_USUARIOResponse> CREAR_USUARIOAsync(Desk.Service_Usuario.CREAR_USUARIORequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/Eliminar_usuarioRequest", ReplyAction="http://Servicios/UsuarioService/Eliminar_usuarioResponse")]
@@ -52,13 +34,13 @@ namespace Desk.Service_Usuario {
         System.Threading.Tasks.Task<Desk.Service_Usuario.Eliminar_usuarioResponse> Eliminar_usuarioAsync(Desk.Service_Usuario.Eliminar_usuarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/Listado_usuariosRequest", ReplyAction="http://Servicios/UsuarioService/Listado_usuariosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/CREAR_USUARIORequest", ReplyAction="http://Servicios/UsuarioService/CREAR_USUARIOResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Usuario.Listado_usuariosResponse Listado_usuarios(Desk.Service_Usuario.Listado_usuariosRequest request);
+        Desk.Service_Usuario.CREAR_USUARIOResponse CREAR_USUARIO(Desk.Service_Usuario.CREAR_USUARIORequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/Listado_usuariosRequest", ReplyAction="http://Servicios/UsuarioService/Listado_usuariosResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Usuario.Listado_usuariosResponse> Listado_usuariosAsync(Desk.Service_Usuario.Listado_usuariosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/CREAR_USUARIORequest", ReplyAction="http://Servicios/UsuarioService/CREAR_USUARIOResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Usuario.CREAR_USUARIOResponse> CREAR_USUARIOAsync(Desk.Service_Usuario.CREAR_USUARIORequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/Modificar_USUARIORequest", ReplyAction="http://Servicios/UsuarioService/Modificar_USUARIOResponse")]
@@ -68,10 +50,464 @@ namespace Desk.Service_Usuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/Modificar_USUARIORequest", ReplyAction="http://Servicios/UsuarioService/Modificar_USUARIOResponse")]
         System.Threading.Tasks.Task<Desk.Service_Usuario.Modificar_USUARIOResponse> Modificar_USUARIOAsync(Desk.Service_Usuario.Modificar_USUARIORequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/Listado_usuariosRequest", ReplyAction="http://Servicios/UsuarioService/Listado_usuariosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_Usuario.Listado_usuariosResponse Listado_usuarios(Desk.Service_Usuario.Listado_usuariosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/Listado_usuariosRequest", ReplyAction="http://Servicios/UsuarioService/Listado_usuariosResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Usuario.Listado_usuariosResponse> Listado_usuariosAsync(Desk.Service_Usuario.Listado_usuariosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/AutenticarTrabajadorRequest", ReplyAction="http://Servicios/UsuarioService/AutenticarTrabajadorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_Usuario.AutenticarTrabajadorResponse AutenticarTrabajador(Desk.Service_Usuario.AutenticarTrabajadorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/UsuarioService/AutenticarTrabajadorRequest", ReplyAction="http://Servicios/UsuarioService/AutenticarTrabajadorResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Usuario.AutenticarTrabajadorResponse> AutenticarTrabajadorAsync(Desk.Service_Usuario.AutenticarTrabajadorRequest request);
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://Servicios/")]
+    public partial class cliente : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string aceptaInformativoField;
+        
+        private System.DateTime actualizacionField;
+        
+        private bool actualizacionFieldSpecified;
+        
+        private ciudad ciudadIdCiudadField;
+        
+        private string contrasenaField;
+        
+        private string correoField;
+        
+        private estado estadoIdEstadoField;
+        
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
+        
+        private decimal idClienteField;
+        
+        private bool idClienteFieldSpecified;
+        
+        private System.DateTime inicioField;
+        
+        private bool inicioFieldSpecified;
+        
+        private persona personaIdpersonaField;
+        
+        private string telefonoField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="integer", Order=0)]
+        public string aceptaInformativo {
+            get {
+                return this.aceptaInformativoField;
+            }
+            set {
+                this.aceptaInformativoField = value;
+                this.RaisePropertyChanged("aceptaInformativo");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime actualizacion {
+            get {
+                return this.actualizacionField;
+            }
+            set {
+                this.actualizacionField = value;
+                this.RaisePropertyChanged("actualizacion");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool actualizacionSpecified {
+            get {
+                return this.actualizacionFieldSpecified;
+            }
+            set {
+                this.actualizacionFieldSpecified = value;
+                this.RaisePropertyChanged("actualizacionSpecified");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public ciudad ciudadIdCiudad {
+            get {
+                return this.ciudadIdCiudadField;
+            }
+            set {
+                this.ciudadIdCiudadField = value;
+                this.RaisePropertyChanged("ciudadIdCiudad");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string contrasena {
+            get {
+                return this.contrasenaField;
+            }
+            set {
+                this.contrasenaField = value;
+                this.RaisePropertyChanged("contrasena");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public estado estadoIdEstado {
+            get {
+                return this.estadoIdEstadoField;
+            }
+            set {
+                this.estadoIdEstadoField = value;
+                this.RaisePropertyChanged("estadoIdEstado");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public decimal idCliente {
+            get {
+                return this.idClienteField;
+            }
+            set {
+                this.idClienteField = value;
+                this.RaisePropertyChanged("idCliente");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idClienteSpecified {
+            get {
+                return this.idClienteFieldSpecified;
+            }
+            set {
+                this.idClienteFieldSpecified = value;
+                this.RaisePropertyChanged("idClienteSpecified");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public System.DateTime inicio {
+            get {
+                return this.inicioField;
+            }
+            set {
+                this.inicioField = value;
+                this.RaisePropertyChanged("inicio");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool inicioSpecified {
+            get {
+                return this.inicioFieldSpecified;
+            }
+            set {
+                this.inicioFieldSpecified = value;
+                this.RaisePropertyChanged("inicioSpecified");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public persona personaIdpersona {
+            get {
+                return this.personaIdpersonaField;
+            }
+            set {
+                this.personaIdpersonaField = value;
+                this.RaisePropertyChanged("personaIdpersona");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="integer", Order=10)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://Servicios/")]
+    public partial class ciudad : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string descripcionField;
+        
+        private decimal idCiudadField;
+        
+        private bool idCiudadFieldSpecified;
+        
+        private string nombreField;
+        
+        private region regionIdRegionField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public decimal idCiudad {
+            get {
+                return this.idCiudadField;
+            }
+            set {
+                this.idCiudadField = value;
+                this.RaisePropertyChanged("idCiudad");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idCiudadSpecified {
+            get {
+                return this.idCiudadFieldSpecified;
+            }
+            set {
+                this.idCiudadFieldSpecified = value;
+                this.RaisePropertyChanged("idCiudadSpecified");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public region regionIdRegion {
+            get {
+                return this.regionIdRegionField;
+            }
+            set {
+                this.regionIdRegionField = value;
+                this.RaisePropertyChanged("regionIdRegion");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://Servicios/")]
+    public partial class region : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private long idRegionField;
+        
+        private bool idRegionFieldSpecified;
+        
+        private string nombreField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public long idRegion {
+            get {
+                return this.idRegionField;
+            }
+            set {
+                this.idRegionField = value;
+                this.RaisePropertyChanged("idRegion");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idRegionSpecified {
+            get {
+                return this.idRegionFieldSpecified;
+            }
+            set {
+                this.idRegionFieldSpecified = value;
+                this.RaisePropertyChanged("idRegionSpecified");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://Servicios/")]
+    public partial class cargo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string descripcionField;
+        
+        private decimal idcargoField;
+        
+        private bool idcargoFieldSpecified;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public decimal idcargo {
+            get {
+                return this.idcargoField;
+            }
+            set {
+                this.idcargoField = value;
+                this.RaisePropertyChanged("idcargo");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idcargoSpecified {
+            get {
+                return this.idcargoFieldSpecified;
+            }
+            set {
+                this.idcargoFieldSpecified = value;
+                this.RaisePropertyChanged("idcargoSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -257,457 +693,7 @@ namespace Desk.Service_Usuario {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://Servicios/")]
-    public partial class cargo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string descripcionField;
-        
-        private decimal idcargoField;
-        
-        private bool idcargoFieldSpecified;
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public decimal idcargo {
-            get {
-                return this.idcargoField;
-            }
-            set {
-                this.idcargoField = value;
-                this.RaisePropertyChanged("idcargo");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idcargoSpecified {
-            get {
-                return this.idcargoFieldSpecified;
-            }
-            set {
-                this.idcargoFieldSpecified = value;
-                this.RaisePropertyChanged("idcargoSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://Servicios/")]
-    public partial class region : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private long idRegionField;
-        
-        private bool idRegionFieldSpecified;
-        
-        private string nombreField;
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public long idRegion {
-            get {
-                return this.idRegionField;
-            }
-            set {
-                this.idRegionField = value;
-                this.RaisePropertyChanged("idRegion");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idRegionSpecified {
-            get {
-                return this.idRegionFieldSpecified;
-            }
-            set {
-                this.idRegionFieldSpecified = value;
-                this.RaisePropertyChanged("idRegionSpecified");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://Servicios/")]
-    public partial class ciudad : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string descripcionField;
-        
-        private decimal idCiudadField;
-        
-        private bool idCiudadFieldSpecified;
-        
-        private string nombreField;
-        
-        private region regionIdRegionField;
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public decimal idCiudad {
-            get {
-                return this.idCiudadField;
-            }
-            set {
-                this.idCiudadField = value;
-                this.RaisePropertyChanged("idCiudad");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idCiudadSpecified {
-            get {
-                return this.idCiudadFieldSpecified;
-            }
-            set {
-                this.idCiudadFieldSpecified = value;
-                this.RaisePropertyChanged("idCiudadSpecified");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public region regionIdRegion {
-            get {
-                return this.regionIdRegionField;
-            }
-            set {
-                this.regionIdRegionField = value;
-                this.RaisePropertyChanged("regionIdRegion");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://Servicios/")]
-    public partial class cliente : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private ushort aceptaInformativoField;
-        
-        private bool aceptaInformativoFieldSpecified;
-        
-        private System.DateTime actualizacionField;
-        
-        private bool actualizacionFieldSpecified;
-        
-        private ciudad ciudadIdCiudadField;
-        
-        private string contrasenaField;
-        
-        private string correoField;
-        
-        private estado estadoIdEstadoField;
-        
-        private System.DateTime fechaNacimientoField;
-        
-        private bool fechaNacimientoFieldSpecified;
-        
-        private decimal idClienteField;
-        
-        private bool idClienteFieldSpecified;
-        
-        private System.DateTime inicioField;
-        
-        private bool inicioFieldSpecified;
-        
-        private persona personaIdpersonaField;
-        
-        private string telefonoField;
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public ushort aceptaInformativo {
-            get {
-                return this.aceptaInformativoField;
-            }
-            set {
-                this.aceptaInformativoField = value;
-                this.RaisePropertyChanged("aceptaInformativo");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool aceptaInformativoSpecified {
-            get {
-                return this.aceptaInformativoFieldSpecified;
-            }
-            set {
-                this.aceptaInformativoFieldSpecified = value;
-                this.RaisePropertyChanged("aceptaInformativoSpecified");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime actualizacion {
-            get {
-                return this.actualizacionField;
-            }
-            set {
-                this.actualizacionField = value;
-                this.RaisePropertyChanged("actualizacion");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool actualizacionSpecified {
-            get {
-                return this.actualizacionFieldSpecified;
-            }
-            set {
-                this.actualizacionFieldSpecified = value;
-                this.RaisePropertyChanged("actualizacionSpecified");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public ciudad ciudadIdCiudad {
-            get {
-                return this.ciudadIdCiudadField;
-            }
-            set {
-                this.ciudadIdCiudadField = value;
-                this.RaisePropertyChanged("ciudadIdCiudad");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string contrasena {
-            get {
-                return this.contrasenaField;
-            }
-            set {
-                this.contrasenaField = value;
-                this.RaisePropertyChanged("contrasena");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public estado estadoIdEstado {
-            get {
-                return this.estadoIdEstadoField;
-            }
-            set {
-                this.estadoIdEstadoField = value;
-                this.RaisePropertyChanged("estadoIdEstado");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public System.DateTime fechaNacimiento {
-            get {
-                return this.fechaNacimientoField;
-            }
-            set {
-                this.fechaNacimientoField = value;
-                this.RaisePropertyChanged("fechaNacimiento");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaNacimientoSpecified {
-            get {
-                return this.fechaNacimientoFieldSpecified;
-            }
-            set {
-                this.fechaNacimientoFieldSpecified = value;
-                this.RaisePropertyChanged("fechaNacimientoSpecified");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public decimal idCliente {
-            get {
-                return this.idClienteField;
-            }
-            set {
-                this.idClienteField = value;
-                this.RaisePropertyChanged("idCliente");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idClienteSpecified {
-            get {
-                return this.idClienteFieldSpecified;
-            }
-            set {
-                this.idClienteFieldSpecified = value;
-                this.RaisePropertyChanged("idClienteSpecified");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public System.DateTime inicio {
-            get {
-                return this.inicioField;
-            }
-            set {
-                this.inicioField = value;
-                this.RaisePropertyChanged("inicio");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool inicioSpecified {
-            get {
-                return this.inicioFieldSpecified;
-            }
-            set {
-                this.inicioFieldSpecified = value;
-                this.RaisePropertyChanged("inicioSpecified");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public persona personaIdpersona {
-            get {
-                return this.personaIdpersonaField;
-            }
-            set {
-                this.personaIdpersonaField = value;
-                this.RaisePropertyChanged("personaIdpersona");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="integer", Order=10)]
-        public string telefono {
-            get {
-                return this.telefonoField;
-            }
-            set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -767,7 +753,7 @@ namespace Desk.Service_Usuario {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -869,7 +855,7 @@ namespace Desk.Service_Usuario {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -931,47 +917,6 @@ namespace Desk.Service_Usuario {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AutenticarTrabajador", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class AutenticarTrabajadorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string correo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string contrasena;
-        
-        public AutenticarTrabajadorRequest() {
-        }
-        
-        public AutenticarTrabajadorRequest(string correo, string contrasena) {
-            this.correo = correo;
-            this.contrasena = contrasena;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AutenticarTrabajadorResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class AutenticarTrabajadorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Desk.Service_Usuario.usuario @return;
-        
-        public AutenticarTrabajadorResponse() {
-        }
-        
-        public AutenticarTrabajadorResponse(Desk.Service_Usuario.usuario @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Autenticacion", WrapperNamespace="http://Servicios/", IsWrapped=true)]
     public partial class AutenticacionRequest {
         
@@ -1006,6 +951,42 @@ namespace Desk.Service_Usuario {
         }
         
         public AutenticacionResponse(Desk.Service_Usuario.cliente @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_usuario", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_usuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public Eliminar_usuarioRequest() {
+        }
+        
+        public Eliminar_usuarioRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_usuarioResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_usuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Eliminar_usuarioResponse() {
+        }
+        
+        public Eliminar_usuarioResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -1089,70 +1070,6 @@ namespace Desk.Service_Usuario {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_usuario", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_usuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public Eliminar_usuarioRequest() {
-        }
-        
-        public Eliminar_usuarioRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_usuarioResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_usuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Eliminar_usuarioResponse() {
-        }
-        
-        public Eliminar_usuarioResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Listado_usuarios", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Listado_usuariosRequest {
-        
-        public Listado_usuariosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Listado_usuariosResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Listado_usuariosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Desk.Service_Usuario.usuario[] @return;
-        
-        public Listado_usuariosResponse() {
-        }
-        
-        public Listado_usuariosResponse(Desk.Service_Usuario.usuario[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_USUARIO", WrapperNamespace="http://Servicios/", IsWrapped=true)]
     public partial class Modificar_USUARIORequest {
         
@@ -1211,6 +1128,75 @@ namespace Desk.Service_Usuario {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Listado_usuarios", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Listado_usuariosRequest {
+        
+        public Listado_usuariosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Listado_usuariosResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Listado_usuariosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Desk.Service_Usuario.usuario[] @return;
+        
+        public Listado_usuariosResponse() {
+        }
+        
+        public Listado_usuariosResponse(Desk.Service_Usuario.usuario[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AutenticarTrabajador", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class AutenticarTrabajadorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string correo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string contrasena;
+        
+        public AutenticarTrabajadorRequest() {
+        }
+        
+        public AutenticarTrabajadorRequest(string correo, string contrasena) {
+            this.correo = correo;
+            this.contrasena = contrasena;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AutenticarTrabajadorResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class AutenticarTrabajadorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Desk.Service_Usuario.usuario @return;
+        
+        public AutenticarTrabajadorResponse() {
+        }
+        
+        public AutenticarTrabajadorResponse(Desk.Service_Usuario.usuario @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuarioServiceChannel : Desk.Service_Usuario.UsuarioService, System.ServiceModel.IClientChannel {
     }
@@ -1239,31 +1225,6 @@ namespace Desk.Service_Usuario {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Usuario.AutenticarTrabajadorResponse Desk.Service_Usuario.UsuarioService.AutenticarTrabajador(Desk.Service_Usuario.AutenticarTrabajadorRequest request) {
-            return base.Channel.AutenticarTrabajador(request);
-        }
-        
-        public Desk.Service_Usuario.usuario AutenticarTrabajador(string correo, string contrasena) {
-            Desk.Service_Usuario.AutenticarTrabajadorRequest inValue = new Desk.Service_Usuario.AutenticarTrabajadorRequest();
-            inValue.correo = correo;
-            inValue.contrasena = contrasena;
-            Desk.Service_Usuario.AutenticarTrabajadorResponse retVal = ((Desk.Service_Usuario.UsuarioService)(this)).AutenticarTrabajador(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Usuario.AutenticarTrabajadorResponse> Desk.Service_Usuario.UsuarioService.AutenticarTrabajadorAsync(Desk.Service_Usuario.AutenticarTrabajadorRequest request) {
-            return base.Channel.AutenticarTrabajadorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Usuario.AutenticarTrabajadorResponse> AutenticarTrabajadorAsync(string correo, string contrasena) {
-            Desk.Service_Usuario.AutenticarTrabajadorRequest inValue = new Desk.Service_Usuario.AutenticarTrabajadorRequest();
-            inValue.correo = correo;
-            inValue.contrasena = contrasena;
-            return ((Desk.Service_Usuario.UsuarioService)(this)).AutenticarTrabajadorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Desk.Service_Usuario.AutenticacionResponse Desk.Service_Usuario.UsuarioService.Autenticacion(Desk.Service_Usuario.AutenticacionRequest request) {
             return base.Channel.Autenticacion(request);
         }
@@ -1286,6 +1247,29 @@ namespace Desk.Service_Usuario {
             inValue.correo = correo;
             inValue.contrasena = contrasena;
             return ((Desk.Service_Usuario.UsuarioService)(this)).AutenticacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Usuario.Eliminar_usuarioResponse Desk.Service_Usuario.UsuarioService.Eliminar_usuario(Desk.Service_Usuario.Eliminar_usuarioRequest request) {
+            return base.Channel.Eliminar_usuario(request);
+        }
+        
+        public string Eliminar_usuario(int id) {
+            Desk.Service_Usuario.Eliminar_usuarioRequest inValue = new Desk.Service_Usuario.Eliminar_usuarioRequest();
+            inValue.id = id;
+            Desk.Service_Usuario.Eliminar_usuarioResponse retVal = ((Desk.Service_Usuario.UsuarioService)(this)).Eliminar_usuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Usuario.Eliminar_usuarioResponse> Desk.Service_Usuario.UsuarioService.Eliminar_usuarioAsync(Desk.Service_Usuario.Eliminar_usuarioRequest request) {
+            return base.Channel.Eliminar_usuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Usuario.Eliminar_usuarioResponse> Eliminar_usuarioAsync(int id) {
+            Desk.Service_Usuario.Eliminar_usuarioRequest inValue = new Desk.Service_Usuario.Eliminar_usuarioRequest();
+            inValue.id = id;
+            return ((Desk.Service_Usuario.UsuarioService)(this)).Eliminar_usuarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1328,50 +1312,6 @@ namespace Desk.Service_Usuario {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Usuario.Eliminar_usuarioResponse Desk.Service_Usuario.UsuarioService.Eliminar_usuario(Desk.Service_Usuario.Eliminar_usuarioRequest request) {
-            return base.Channel.Eliminar_usuario(request);
-        }
-        
-        public string Eliminar_usuario(int id) {
-            Desk.Service_Usuario.Eliminar_usuarioRequest inValue = new Desk.Service_Usuario.Eliminar_usuarioRequest();
-            inValue.id = id;
-            Desk.Service_Usuario.Eliminar_usuarioResponse retVal = ((Desk.Service_Usuario.UsuarioService)(this)).Eliminar_usuario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Usuario.Eliminar_usuarioResponse> Desk.Service_Usuario.UsuarioService.Eliminar_usuarioAsync(Desk.Service_Usuario.Eliminar_usuarioRequest request) {
-            return base.Channel.Eliminar_usuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Usuario.Eliminar_usuarioResponse> Eliminar_usuarioAsync(int id) {
-            Desk.Service_Usuario.Eliminar_usuarioRequest inValue = new Desk.Service_Usuario.Eliminar_usuarioRequest();
-            inValue.id = id;
-            return ((Desk.Service_Usuario.UsuarioService)(this)).Eliminar_usuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Usuario.Listado_usuariosResponse Desk.Service_Usuario.UsuarioService.Listado_usuarios(Desk.Service_Usuario.Listado_usuariosRequest request) {
-            return base.Channel.Listado_usuarios(request);
-        }
-        
-        public Desk.Service_Usuario.usuario[] Listado_usuarios() {
-            Desk.Service_Usuario.Listado_usuariosRequest inValue = new Desk.Service_Usuario.Listado_usuariosRequest();
-            Desk.Service_Usuario.Listado_usuariosResponse retVal = ((Desk.Service_Usuario.UsuarioService)(this)).Listado_usuarios(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Usuario.Listado_usuariosResponse> Desk.Service_Usuario.UsuarioService.Listado_usuariosAsync(Desk.Service_Usuario.Listado_usuariosRequest request) {
-            return base.Channel.Listado_usuariosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Usuario.Listado_usuariosResponse> Listado_usuariosAsync() {
-            Desk.Service_Usuario.Listado_usuariosRequest inValue = new Desk.Service_Usuario.Listado_usuariosRequest();
-            return ((Desk.Service_Usuario.UsuarioService)(this)).Listado_usuariosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Desk.Service_Usuario.Modificar_USUARIOResponse Desk.Service_Usuario.UsuarioService.Modificar_USUARIO(Desk.Service_Usuario.Modificar_USUARIORequest request) {
             return base.Channel.Modificar_USUARIO(request);
         }
@@ -1402,6 +1342,52 @@ namespace Desk.Service_Usuario {
             inValue.fecha_inicio = fecha_inicio;
             inValue.fecha_actualizacion = fecha_actualizacion;
             return ((Desk.Service_Usuario.UsuarioService)(this)).Modificar_USUARIOAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Usuario.Listado_usuariosResponse Desk.Service_Usuario.UsuarioService.Listado_usuarios(Desk.Service_Usuario.Listado_usuariosRequest request) {
+            return base.Channel.Listado_usuarios(request);
+        }
+        
+        public Desk.Service_Usuario.usuario[] Listado_usuarios() {
+            Desk.Service_Usuario.Listado_usuariosRequest inValue = new Desk.Service_Usuario.Listado_usuariosRequest();
+            Desk.Service_Usuario.Listado_usuariosResponse retVal = ((Desk.Service_Usuario.UsuarioService)(this)).Listado_usuarios(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Usuario.Listado_usuariosResponse> Desk.Service_Usuario.UsuarioService.Listado_usuariosAsync(Desk.Service_Usuario.Listado_usuariosRequest request) {
+            return base.Channel.Listado_usuariosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Usuario.Listado_usuariosResponse> Listado_usuariosAsync() {
+            Desk.Service_Usuario.Listado_usuariosRequest inValue = new Desk.Service_Usuario.Listado_usuariosRequest();
+            return ((Desk.Service_Usuario.UsuarioService)(this)).Listado_usuariosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Usuario.AutenticarTrabajadorResponse Desk.Service_Usuario.UsuarioService.AutenticarTrabajador(Desk.Service_Usuario.AutenticarTrabajadorRequest request) {
+            return base.Channel.AutenticarTrabajador(request);
+        }
+        
+        public Desk.Service_Usuario.usuario AutenticarTrabajador(string correo, string contrasena) {
+            Desk.Service_Usuario.AutenticarTrabajadorRequest inValue = new Desk.Service_Usuario.AutenticarTrabajadorRequest();
+            inValue.correo = correo;
+            inValue.contrasena = contrasena;
+            Desk.Service_Usuario.AutenticarTrabajadorResponse retVal = ((Desk.Service_Usuario.UsuarioService)(this)).AutenticarTrabajador(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Usuario.AutenticarTrabajadorResponse> Desk.Service_Usuario.UsuarioService.AutenticarTrabajadorAsync(Desk.Service_Usuario.AutenticarTrabajadorRequest request) {
+            return base.Channel.AutenticarTrabajadorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Usuario.AutenticarTrabajadorResponse> AutenticarTrabajadorAsync(string correo, string contrasena) {
+            Desk.Service_Usuario.AutenticarTrabajadorRequest inValue = new Desk.Service_Usuario.AutenticarTrabajadorRequest();
+            inValue.correo = correo;
+            inValue.contrasena = contrasena;
+            return ((Desk.Service_Usuario.UsuarioService)(this)).AutenticarTrabajadorAsync(inValue);
         }
     }
 }

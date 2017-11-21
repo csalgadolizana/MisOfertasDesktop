@@ -16,6 +16,15 @@ namespace Desk.Service_Categoria {
     public interface CategoriaService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Modificar_categoriaRequest", ReplyAction="http://Servicios/CategoriaService/Modificar_categoriaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_Categoria.Modificar_categoriaResponse Modificar_categoria(Desk.Service_Categoria.Modificar_categoriaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Modificar_categoriaRequest", ReplyAction="http://Servicios/CategoriaService/Modificar_categoriaResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Categoria.Modificar_categoriaResponse> Modificar_categoriaAsync(Desk.Service_Categoria.Modificar_categoriaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Listado_categoriasRequest", ReplyAction="http://Servicios/CategoriaService/Listado_categoriasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -23,15 +32,6 @@ namespace Desk.Service_Categoria {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Listado_categoriasRequest", ReplyAction="http://Servicios/CategoriaService/Listado_categoriasResponse")]
         System.Threading.Tasks.Task<Desk.Service_Categoria.Listado_categoriasResponse> Listado_categoriasAsync(Desk.Service_Categoria.Listado_categoriasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Crear_categoriaRequest", ReplyAction="http://Servicios/CategoriaService/Crear_categoriaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Categoria.Crear_categoriaResponse Crear_categoria(Desk.Service_Categoria.Crear_categoriaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Crear_categoriaRequest", ReplyAction="http://Servicios/CategoriaService/Crear_categoriaResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Categoria.Crear_categoriaResponse> Crear_categoriaAsync(Desk.Service_Categoria.Crear_categoriaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Eliminar_categoriaRequest", ReplyAction="http://Servicios/CategoriaService/Eliminar_categoriaResponse")]
@@ -43,17 +43,58 @@ namespace Desk.Service_Categoria {
         System.Threading.Tasks.Task<Desk.Service_Categoria.Eliminar_categoriaResponse> Eliminar_categoriaAsync(Desk.Service_Categoria.Eliminar_categoriaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Modificar_categoriaRequest", ReplyAction="http://Servicios/CategoriaService/Modificar_categoriaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Crear_categoriaRequest", ReplyAction="http://Servicios/CategoriaService/Crear_categoriaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Categoria.Modificar_categoriaResponse Modificar_categoria(Desk.Service_Categoria.Modificar_categoriaRequest request);
+        Desk.Service_Categoria.Crear_categoriaResponse Crear_categoria(Desk.Service_Categoria.Crear_categoriaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Modificar_categoriaRequest", ReplyAction="http://Servicios/CategoriaService/Modificar_categoriaResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Categoria.Modificar_categoriaResponse> Modificar_categoriaAsync(Desk.Service_Categoria.Modificar_categoriaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/CategoriaService/Crear_categoriaRequest", ReplyAction="http://Servicios/CategoriaService/Crear_categoriaResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Categoria.Crear_categoriaResponse> Crear_categoriaAsync(Desk.Service_Categoria.Crear_categoriaRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_categoria", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_categoriaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string desc;
+        
+        public Modificar_categoriaRequest() {
+        }
+        
+        public Modificar_categoriaRequest(int id, string desc) {
+            this.id = id;
+            this.desc = desc;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_categoriaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Modificar_categoriaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Modificar_categoriaResponse() {
+        }
+        
+        public Modificar_categoriaResponse(string @return) {
+            this.@return = @return;
+        }
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -143,6 +184,42 @@ namespace Desk.Service_Categoria {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_categoria", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_categoriaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public Eliminar_categoriaRequest() {
+        }
+        
+        public Eliminar_categoriaRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_categoriaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_categoriaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Eliminar_categoriaResponse() {
+        }
+        
+        public Eliminar_categoriaResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_categoria", WrapperNamespace="http://Servicios/", IsWrapped=true)]
     public partial class Crear_categoriaRequest {
         
@@ -181,83 +258,6 @@ namespace Desk.Service_Categoria {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_categoria", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_categoriaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public Eliminar_categoriaRequest() {
-        }
-        
-        public Eliminar_categoriaRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_categoriaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_categoriaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Eliminar_categoriaResponse() {
-        }
-        
-        public Eliminar_categoriaResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_categoria", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_categoriaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string desc;
-        
-        public Modificar_categoriaRequest() {
-        }
-        
-        public Modificar_categoriaRequest(int id, string desc) {
-            this.id = id;
-            this.desc = desc;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Modificar_categoriaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Modificar_categoriaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Modificar_categoriaResponse() {
-        }
-        
-        public Modificar_categoriaResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CategoriaServiceChannel : Desk.Service_Categoria.CategoriaService, System.ServiceModel.IClientChannel {
     }
@@ -286,6 +286,31 @@ namespace Desk.Service_Categoria {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Categoria.Modificar_categoriaResponse Desk.Service_Categoria.CategoriaService.Modificar_categoria(Desk.Service_Categoria.Modificar_categoriaRequest request) {
+            return base.Channel.Modificar_categoria(request);
+        }
+        
+        public string Modificar_categoria(int id, string desc) {
+            Desk.Service_Categoria.Modificar_categoriaRequest inValue = new Desk.Service_Categoria.Modificar_categoriaRequest();
+            inValue.id = id;
+            inValue.desc = desc;
+            Desk.Service_Categoria.Modificar_categoriaResponse retVal = ((Desk.Service_Categoria.CategoriaService)(this)).Modificar_categoria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Categoria.Modificar_categoriaResponse> Desk.Service_Categoria.CategoriaService.Modificar_categoriaAsync(Desk.Service_Categoria.Modificar_categoriaRequest request) {
+            return base.Channel.Modificar_categoriaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Categoria.Modificar_categoriaResponse> Modificar_categoriaAsync(int id, string desc) {
+            Desk.Service_Categoria.Modificar_categoriaRequest inValue = new Desk.Service_Categoria.Modificar_categoriaRequest();
+            inValue.id = id;
+            inValue.desc = desc;
+            return ((Desk.Service_Categoria.CategoriaService)(this)).Modificar_categoriaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Desk.Service_Categoria.Listado_categoriasResponse Desk.Service_Categoria.CategoriaService.Listado_categorias(Desk.Service_Categoria.Listado_categoriasRequest request) {
             return base.Channel.Listado_categorias(request);
         }
@@ -304,31 +329,6 @@ namespace Desk.Service_Categoria {
         public System.Threading.Tasks.Task<Desk.Service_Categoria.Listado_categoriasResponse> Listado_categoriasAsync() {
             Desk.Service_Categoria.Listado_categoriasRequest inValue = new Desk.Service_Categoria.Listado_categoriasRequest();
             return ((Desk.Service_Categoria.CategoriaService)(this)).Listado_categoriasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Categoria.Crear_categoriaResponse Desk.Service_Categoria.CategoriaService.Crear_categoria(Desk.Service_Categoria.Crear_categoriaRequest request) {
-            return base.Channel.Crear_categoria(request);
-        }
-        
-        public string Crear_categoria(int id, string desc) {
-            Desk.Service_Categoria.Crear_categoriaRequest inValue = new Desk.Service_Categoria.Crear_categoriaRequest();
-            inValue.id = id;
-            inValue.desc = desc;
-            Desk.Service_Categoria.Crear_categoriaResponse retVal = ((Desk.Service_Categoria.CategoriaService)(this)).Crear_categoria(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Categoria.Crear_categoriaResponse> Desk.Service_Categoria.CategoriaService.Crear_categoriaAsync(Desk.Service_Categoria.Crear_categoriaRequest request) {
-            return base.Channel.Crear_categoriaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Categoria.Crear_categoriaResponse> Crear_categoriaAsync(int id, string desc) {
-            Desk.Service_Categoria.Crear_categoriaRequest inValue = new Desk.Service_Categoria.Crear_categoriaRequest();
-            inValue.id = id;
-            inValue.desc = desc;
-            return ((Desk.Service_Categoria.CategoriaService)(this)).Crear_categoriaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -355,28 +355,28 @@ namespace Desk.Service_Categoria {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Categoria.Modificar_categoriaResponse Desk.Service_Categoria.CategoriaService.Modificar_categoria(Desk.Service_Categoria.Modificar_categoriaRequest request) {
-            return base.Channel.Modificar_categoria(request);
+        Desk.Service_Categoria.Crear_categoriaResponse Desk.Service_Categoria.CategoriaService.Crear_categoria(Desk.Service_Categoria.Crear_categoriaRequest request) {
+            return base.Channel.Crear_categoria(request);
         }
         
-        public string Modificar_categoria(int id, string desc) {
-            Desk.Service_Categoria.Modificar_categoriaRequest inValue = new Desk.Service_Categoria.Modificar_categoriaRequest();
+        public string Crear_categoria(int id, string desc) {
+            Desk.Service_Categoria.Crear_categoriaRequest inValue = new Desk.Service_Categoria.Crear_categoriaRequest();
             inValue.id = id;
             inValue.desc = desc;
-            Desk.Service_Categoria.Modificar_categoriaResponse retVal = ((Desk.Service_Categoria.CategoriaService)(this)).Modificar_categoria(inValue);
+            Desk.Service_Categoria.Crear_categoriaResponse retVal = ((Desk.Service_Categoria.CategoriaService)(this)).Crear_categoria(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Categoria.Modificar_categoriaResponse> Desk.Service_Categoria.CategoriaService.Modificar_categoriaAsync(Desk.Service_Categoria.Modificar_categoriaRequest request) {
-            return base.Channel.Modificar_categoriaAsync(request);
+        System.Threading.Tasks.Task<Desk.Service_Categoria.Crear_categoriaResponse> Desk.Service_Categoria.CategoriaService.Crear_categoriaAsync(Desk.Service_Categoria.Crear_categoriaRequest request) {
+            return base.Channel.Crear_categoriaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Desk.Service_Categoria.Modificar_categoriaResponse> Modificar_categoriaAsync(int id, string desc) {
-            Desk.Service_Categoria.Modificar_categoriaRequest inValue = new Desk.Service_Categoria.Modificar_categoriaRequest();
+        public System.Threading.Tasks.Task<Desk.Service_Categoria.Crear_categoriaResponse> Crear_categoriaAsync(int id, string desc) {
+            Desk.Service_Categoria.Crear_categoriaRequest inValue = new Desk.Service_Categoria.Crear_categoriaRequest();
             inValue.id = id;
             inValue.desc = desc;
-            return ((Desk.Service_Categoria.CategoriaService)(this)).Modificar_categoriaAsync(inValue);
+            return ((Desk.Service_Categoria.CategoriaService)(this)).Crear_categoriaAsync(inValue);
         }
     }
 }

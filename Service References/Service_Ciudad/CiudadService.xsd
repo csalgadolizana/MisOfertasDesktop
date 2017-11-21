@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Listado_ciudades" type="tns:Listado_ciudades" />
+  <xs:element name="Listado_ciudadesResponse" type="tns:Listado_ciudadesResponse" />
+  <xs:element name="ciudad" type="tns:ciudad" />
+  <xs:element name="region" type="tns:region" />
+  <xs:complexType name="Listado_ciudades">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Listado_ciudadesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ciudad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ciudad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idCiudad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="regionIdRegion" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idRegion" type="xs:long" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

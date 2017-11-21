@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="gXlkBvjXPw7NFBL/SkMBPWoADUE=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="NCStOMyAgaPJqwOVB0WEzCy7GdU=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="OfertaLocalServicePortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="OfertaLocalServicePort" contract="Service_OfertaLocal.OfertaLocalService" bindingType="basicHttpBinding" address="http://localhost:17225/MisOfertasWebService/OfertaLocalService" bindingConfiguration="OfertaLocalServicePortBinding">
+    <endpoint name="OfertaLocalServicePort" contract="Service_OfertaLocal.OfertaLocalService" bindingType="basicHttpBinding" address="http://10.20.65.11:8080/MisOfertasWebService/OfertaLocalService" bindingConfiguration="OfertaLocalServicePortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:17225/MisOfertasWebService/OfertaLocalService</serializedValue>
+          <serializedValue>http://10.20.65.11:8080/MisOfertasWebService/OfertaLocalService</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

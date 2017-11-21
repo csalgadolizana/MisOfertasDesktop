@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:17225/MisOfertasWebService/CargarPuntosService?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.20.65.11:8080/MisOfertasWebService/CargarPuntosService?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CargarPuntosService.wsdl" MetadataType="Wsdl" ID="5591ec63-4289-4e83-a0a8-d00b5b8a51e5" SourceId="1" SourceUrl="http://localhost:17225/MisOfertasWebService/CargarPuntosService?wsdl" />
-    <MetadataFile FileName="CargarPuntosService.xsd" MetadataType="Schema" ID="86277acc-46f4-4dc5-a6f7-b57faa765f54" SourceId="1" SourceUrl="http://localhost:17225/MisOfertasWebService/CargarPuntosService?xsd=1" />
+    <MetadataFile FileName="CargarPuntosService1.xsd" MetadataType="Schema" ID="7e8a8790-da27-4060-8120-9cad69daadc1" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/CargarPuntosService?xsd=1" />
+    <MetadataFile FileName="CargarPuntosService1.wsdl" MetadataType="Wsdl" ID="79ed8554-284d-4331-82ed-be80e46ad088" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/CargarPuntosService?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

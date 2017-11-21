@@ -16,24 +16,6 @@ namespace Desk.Service_Puntos {
     public interface PuntosService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Modificar_puntosRequest", ReplyAction="http://Servicios/PuntosService/Modificar_puntosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Puntos.Modificar_puntosResponse Modificar_puntos(Desk.Service_Puntos.Modificar_puntosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Modificar_puntosRequest", ReplyAction="http://Servicios/PuntosService/Modificar_puntosResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Puntos.Modificar_puntosResponse> Modificar_puntosAsync(Desk.Service_Puntos.Modificar_puntosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Listado_puntosRequest", ReplyAction="http://Servicios/PuntosService/Listado_puntosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Puntos.Listado_puntosResponse Listado_puntos(Desk.Service_Puntos.Listado_puntosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Listado_puntosRequest", ReplyAction="http://Servicios/PuntosService/Listado_puntosResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Puntos.Listado_puntosResponse> Listado_puntosAsync(Desk.Service_Puntos.Listado_puntosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Crear_puntosRequest", ReplyAction="http://Servicios/PuntosService/Crear_puntosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -43,6 +25,15 @@ namespace Desk.Service_Puntos {
         System.Threading.Tasks.Task<Desk.Service_Puntos.Crear_puntosResponse> Crear_puntosAsync(Desk.Service_Puntos.Crear_puntosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Modificar_puntosRequest", ReplyAction="http://Servicios/PuntosService/Modificar_puntosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_Puntos.Modificar_puntosResponse Modificar_puntos(Desk.Service_Puntos.Modificar_puntosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Modificar_puntosRequest", ReplyAction="http://Servicios/PuntosService/Modificar_puntosResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Puntos.Modificar_puntosResponse> Modificar_puntosAsync(Desk.Service_Puntos.Modificar_puntosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Eliminar_puntosRequest", ReplyAction="http://Servicios/PuntosService/Eliminar_puntosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -50,6 +41,71 @@ namespace Desk.Service_Puntos {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Eliminar_puntosRequest", ReplyAction="http://Servicios/PuntosService/Eliminar_puntosResponse")]
         System.Threading.Tasks.Task<Desk.Service_Puntos.Eliminar_puntosResponse> Eliminar_puntosAsync(Desk.Service_Puntos.Eliminar_puntosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Listado_puntosRequest", ReplyAction="http://Servicios/PuntosService/Listado_puntosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_Puntos.Listado_puntosResponse Listado_puntos(Desk.Service_Puntos.Listado_puntosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/PuntosService/Listado_puntosRequest", ReplyAction="http://Servicios/PuntosService/Listado_puntosResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Puntos.Listado_puntosResponse> Listado_puntosAsync(Desk.Service_Puntos.Listado_puntosRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_puntos", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_puntosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int total_puntos;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha_actulizacion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int puntos_canjeados;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_cliente;
+        
+        public Crear_puntosRequest() {
+        }
+        
+        public Crear_puntosRequest(int id, int total_puntos, System.DateTime fecha_actulizacion, int puntos_canjeados, int id_cliente) {
+            this.id = id;
+            this.total_puntos = total_puntos;
+            this.fecha_actulizacion = fecha_actulizacion;
+            this.puntos_canjeados = puntos_canjeados;
+            this.id_cliente = id_cliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_puntosResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Crear_puntosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Crear_puntosResponse() {
+        }
+        
+        public Crear_puntosResponse(string @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -108,8 +164,44 @@ namespace Desk.Service_Puntos {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_puntos", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_puntosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public Eliminar_puntosRequest() {
+        }
+        
+        public Eliminar_puntosRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_puntosResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_puntosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Eliminar_puntosResponse() {
+        }
+        
+        public Eliminar_puntosResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -225,16 +317,14 @@ namespace Desk.Service_Puntos {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://Servicios/")]
     public partial class cliente : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private ushort aceptaInformativoField;
-        
-        private bool aceptaInformativoFieldSpecified;
+        private string aceptaInformativoField;
         
         private System.DateTime actualizacionField;
         
@@ -265,26 +355,14 @@ namespace Desk.Service_Puntos {
         private string telefonoField;
         
         /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public ushort aceptaInformativo {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="integer", Order=0)]
+        public string aceptaInformativo {
             get {
                 return this.aceptaInformativoField;
             }
             set {
                 this.aceptaInformativoField = value;
                 this.RaisePropertyChanged("aceptaInformativo");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool aceptaInformativoSpecified {
-            get {
-                return this.aceptaInformativoFieldSpecified;
-            }
-            set {
-                this.aceptaInformativoFieldSpecified = value;
-                this.RaisePropertyChanged("aceptaInformativoSpecified");
             }
         }
         
@@ -467,7 +545,7 @@ namespace Desk.Service_Puntos {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -555,7 +633,7 @@ namespace Desk.Service_Puntos {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -615,7 +693,7 @@ namespace Desk.Service_Puntos {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -675,7 +753,7 @@ namespace Desk.Service_Puntos {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -777,7 +855,7 @@ namespace Desk.Service_Puntos {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -864,98 +942,6 @@ namespace Desk.Service_Puntos {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_puntos", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_puntosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int total_puntos;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha_actulizacion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int puntos_canjeados;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_cliente;
-        
-        public Crear_puntosRequest() {
-        }
-        
-        public Crear_puntosRequest(int id, int total_puntos, System.DateTime fecha_actulizacion, int puntos_canjeados, int id_cliente) {
-            this.id = id;
-            this.total_puntos = total_puntos;
-            this.fecha_actulizacion = fecha_actulizacion;
-            this.puntos_canjeados = puntos_canjeados;
-            this.id_cliente = id_cliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_puntosResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Crear_puntosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Crear_puntosResponse() {
-        }
-        
-        public Crear_puntosResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_puntos", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_puntosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public Eliminar_puntosRequest() {
-        }
-        
-        public Eliminar_puntosRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_puntosResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_puntosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Eliminar_puntosResponse() {
-        }
-        
-        public Eliminar_puntosResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PuntosServiceChannel : Desk.Service_Puntos.PuntosService, System.ServiceModel.IClientChannel {
     }
@@ -981,58 +967,6 @@ namespace Desk.Service_Puntos {
         
         public PuntosServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Puntos.Modificar_puntosResponse Desk.Service_Puntos.PuntosService.Modificar_puntos(Desk.Service_Puntos.Modificar_puntosRequest request) {
-            return base.Channel.Modificar_puntos(request);
-        }
-        
-        public string Modificar_puntos(int id, int total_puntos, System.DateTime fecha_actulizacion, int puntos_canjeados, int id_cliente) {
-            Desk.Service_Puntos.Modificar_puntosRequest inValue = new Desk.Service_Puntos.Modificar_puntosRequest();
-            inValue.id = id;
-            inValue.total_puntos = total_puntos;
-            inValue.fecha_actulizacion = fecha_actulizacion;
-            inValue.puntos_canjeados = puntos_canjeados;
-            inValue.id_cliente = id_cliente;
-            Desk.Service_Puntos.Modificar_puntosResponse retVal = ((Desk.Service_Puntos.PuntosService)(this)).Modificar_puntos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Puntos.Modificar_puntosResponse> Desk.Service_Puntos.PuntosService.Modificar_puntosAsync(Desk.Service_Puntos.Modificar_puntosRequest request) {
-            return base.Channel.Modificar_puntosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Puntos.Modificar_puntosResponse> Modificar_puntosAsync(int id, int total_puntos, System.DateTime fecha_actulizacion, int puntos_canjeados, int id_cliente) {
-            Desk.Service_Puntos.Modificar_puntosRequest inValue = new Desk.Service_Puntos.Modificar_puntosRequest();
-            inValue.id = id;
-            inValue.total_puntos = total_puntos;
-            inValue.fecha_actulizacion = fecha_actulizacion;
-            inValue.puntos_canjeados = puntos_canjeados;
-            inValue.id_cliente = id_cliente;
-            return ((Desk.Service_Puntos.PuntosService)(this)).Modificar_puntosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Puntos.Listado_puntosResponse Desk.Service_Puntos.PuntosService.Listado_puntos(Desk.Service_Puntos.Listado_puntosRequest request) {
-            return base.Channel.Listado_puntos(request);
-        }
-        
-        public Desk.Service_Puntos.puntos[] Listado_puntos() {
-            Desk.Service_Puntos.Listado_puntosRequest inValue = new Desk.Service_Puntos.Listado_puntosRequest();
-            Desk.Service_Puntos.Listado_puntosResponse retVal = ((Desk.Service_Puntos.PuntosService)(this)).Listado_puntos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Puntos.Listado_puntosResponse> Desk.Service_Puntos.PuntosService.Listado_puntosAsync(Desk.Service_Puntos.Listado_puntosRequest request) {
-            return base.Channel.Listado_puntosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Puntos.Listado_puntosResponse> Listado_puntosAsync() {
-            Desk.Service_Puntos.Listado_puntosRequest inValue = new Desk.Service_Puntos.Listado_puntosRequest();
-            return ((Desk.Service_Puntos.PuntosService)(this)).Listado_puntosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1067,6 +1001,37 @@ namespace Desk.Service_Puntos {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Puntos.Modificar_puntosResponse Desk.Service_Puntos.PuntosService.Modificar_puntos(Desk.Service_Puntos.Modificar_puntosRequest request) {
+            return base.Channel.Modificar_puntos(request);
+        }
+        
+        public string Modificar_puntos(int id, int total_puntos, System.DateTime fecha_actulizacion, int puntos_canjeados, int id_cliente) {
+            Desk.Service_Puntos.Modificar_puntosRequest inValue = new Desk.Service_Puntos.Modificar_puntosRequest();
+            inValue.id = id;
+            inValue.total_puntos = total_puntos;
+            inValue.fecha_actulizacion = fecha_actulizacion;
+            inValue.puntos_canjeados = puntos_canjeados;
+            inValue.id_cliente = id_cliente;
+            Desk.Service_Puntos.Modificar_puntosResponse retVal = ((Desk.Service_Puntos.PuntosService)(this)).Modificar_puntos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Puntos.Modificar_puntosResponse> Desk.Service_Puntos.PuntosService.Modificar_puntosAsync(Desk.Service_Puntos.Modificar_puntosRequest request) {
+            return base.Channel.Modificar_puntosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Puntos.Modificar_puntosResponse> Modificar_puntosAsync(int id, int total_puntos, System.DateTime fecha_actulizacion, int puntos_canjeados, int id_cliente) {
+            Desk.Service_Puntos.Modificar_puntosRequest inValue = new Desk.Service_Puntos.Modificar_puntosRequest();
+            inValue.id = id;
+            inValue.total_puntos = total_puntos;
+            inValue.fecha_actulizacion = fecha_actulizacion;
+            inValue.puntos_canjeados = puntos_canjeados;
+            inValue.id_cliente = id_cliente;
+            return ((Desk.Service_Puntos.PuntosService)(this)).Modificar_puntosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Desk.Service_Puntos.Eliminar_puntosResponse Desk.Service_Puntos.PuntosService.Eliminar_puntos(Desk.Service_Puntos.Eliminar_puntosRequest request) {
             return base.Channel.Eliminar_puntos(request);
         }
@@ -1087,6 +1052,27 @@ namespace Desk.Service_Puntos {
             Desk.Service_Puntos.Eliminar_puntosRequest inValue = new Desk.Service_Puntos.Eliminar_puntosRequest();
             inValue.id = id;
             return ((Desk.Service_Puntos.PuntosService)(this)).Eliminar_puntosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Puntos.Listado_puntosResponse Desk.Service_Puntos.PuntosService.Listado_puntos(Desk.Service_Puntos.Listado_puntosRequest request) {
+            return base.Channel.Listado_puntos(request);
+        }
+        
+        public Desk.Service_Puntos.puntos[] Listado_puntos() {
+            Desk.Service_Puntos.Listado_puntosRequest inValue = new Desk.Service_Puntos.Listado_puntosRequest();
+            Desk.Service_Puntos.Listado_puntosResponse retVal = ((Desk.Service_Puntos.PuntosService)(this)).Listado_puntos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Puntos.Listado_puntosResponse> Desk.Service_Puntos.PuntosService.Listado_puntosAsync(Desk.Service_Puntos.Listado_puntosRequest request) {
+            return base.Channel.Listado_puntosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Puntos.Listado_puntosResponse> Listado_puntosAsync() {
+            Desk.Service_Puntos.Listado_puntosRequest inValue = new Desk.Service_Puntos.Listado_puntosRequest();
+            return ((Desk.Service_Puntos.PuntosService)(this)).Listado_puntosAsync(inValue);
         }
     }
 }

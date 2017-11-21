@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Crear_valoracion" type="tns:Crear_valoracion" />
+  <xs:element name="Crear_valoracionResponse" type="tns:Crear_valoracionResponse" />
+  <xs:element name="Eliminar_valoracion" type="tns:Eliminar_valoracion" />
+  <xs:element name="Eliminar_valoracionResponse" type="tns:Eliminar_valoracionResponse" />
+  <xs:element name="Listado_valoraciones" type="tns:Listado_valoraciones" />
+  <xs:element name="Listado_valoracionesResponse" type="tns:Listado_valoracionesResponse" />
+  <xs:element name="Modificar_valoracion" type="tns:Modificar_valoracion" />
+  <xs:element name="Modificar_valoracionResponse" type="tns:Modificar_valoracionResponse" />
+  <xs:element name="categoria" type="tns:categoria" />
+  <xs:element name="ciudad" type="tns:ciudad" />
+  <xs:element name="cliente" type="tns:cliente" />
+  <xs:element name="estado" type="tns:estado" />
+  <xs:element name="oferta" type="tns:oferta" />
+  <xs:element name="persona" type="tns:persona" />
+  <xs:element name="region" type="tns:region" />
+  <xs:element name="sexo" type="tns:sexo" />
+  <xs:element name="valoracion" type="tns:valoracion" />
+  <xs:complexType name="Modificar_valoracion">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="nota" type="xs:int" />
+      <xs:element minOccurs="0" name="boleta_adjunta" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_valoracion" type="xs:dateTime" />
+      <xs:element name="id_cliente" type="xs:int" />
+      <xs:element name="id_oferta" type="xs:int" />
+      <xs:element name="id_categoria" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Modificar_valoracionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_valoracion">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="nota" type="xs:int" />
+      <xs:element minOccurs="0" name="boleta_adjunta" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_valoracion" type="xs:dateTime" />
+      <xs:element name="id_cliente" type="xs:int" />
+      <xs:element name="id_oferta" type="xs:int" />
+      <xs:element name="id_categoria" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_valoracionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Listado_valoraciones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Listado_valoracionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:valoracion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="valoracion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="boletaAdjunta" type="xs:string" />
+      <xs:element minOccurs="0" name="categoriaIdCategoria" type="tns:categoria" />
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="fechavaloracion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nota" type="xs:integer" />
+      <xs:element minOccurs="0" name="oferta" type="tns:oferta" />
+      <xs:element minOccurs="0" name="valoracionPK" type="tns:valoracionPK" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="categoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idCategoria" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aceptaInformativo" type="xs:integer" />
+      <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ciudadIdCiudad" type="tns:ciudad" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idCliente" type="xs:decimal" />
+      <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="personaIdpersona" type="tns:persona" />
+      <xs:element minOccurs="0" name="telefono" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ciudad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idCiudad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="regionIdRegion" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idRegion" type="xs:long" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idEstado" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="idpersona" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="sexoIdSexo" type="tns:sexo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sexo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idSexo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="oferta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoIdEstado" type="tns:estado" />
+      <xs:element minOccurs="0" name="idOferta" type="xs:decimal" />
+      <xs:element minOccurs="0" name="inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="maximoCompra" type="xs:integer" />
+      <xs:element minOccurs="0" name="minimoCompra" type="xs:integer" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroVisitas" type="xs:integer" />
+      <xs:element minOccurs="0" name="precioNormal" type="xs:integer" />
+      <xs:element minOccurs="0" name="precioOferta" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="valoracionPK">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clienteIdCliente" type="xs:integer" />
+      <xs:element minOccurs="0" name="idValoracion" type="xs:integer" />
+      <xs:element minOccurs="0" name="ofertaIdOferta" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_valoracion">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_valoracionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

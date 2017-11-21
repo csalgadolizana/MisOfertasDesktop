@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:17225/MisOfertasWebService/OfertaService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.20.65.11:8080/MisOfertasWebService/OfertaService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="OfertaService.xsd" MetadataType="Schema" ID="ba129825-936d-4113-a449-480b6c02e940" SourceId="1" SourceUrl="http://localhost:17225/MisOfertasWebService/OfertaService?xsd=1" />
-    <MetadataFile FileName="OfertaService.wsdl" MetadataType="Wsdl" ID="96b17534-15ee-4431-9128-4756ddaf2d27" SourceId="1" SourceUrl="http://localhost:17225/MisOfertasWebService/OfertaService?WSDL" />
+    <MetadataFile FileName="OfertaService1.xsd" MetadataType="Schema" ID="4a2f5320-51bf-4c91-8805-d9cd9d1e14b9" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/OfertaService?xsd=1" />
+    <MetadataFile FileName="OfertaService1.wsdl" MetadataType="Wsdl" ID="2001ad2f-a549-4fc1-b9d1-597d36e9fa8f" SourceId="1" SourceUrl="http://10.20.65.11:8080/MisOfertasWebService/OfertaService?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
