@@ -128,3 +128,4 @@ C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\bin\Debug\Desk.pdb
 C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.exe
 C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.pdb
+C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Mis_Ofertas.csprojResolveAssemblyReference.cache
