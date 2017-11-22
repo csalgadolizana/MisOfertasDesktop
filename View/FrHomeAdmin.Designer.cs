@@ -2085,8 +2085,9 @@
             this.btnEliminarEmpre.Name = "btnEliminarEmpre";
             this.btnEliminarEmpre.Size = new System.Drawing.Size(123, 23);
             this.btnEliminarEmpre.TabIndex = 13;
-            this.btnEliminarEmpre.Text = "Eliminar";
+            this.btnEliminarEmpre.Text = "Desactivar";
             this.btnEliminarEmpre.UseVisualStyleBackColor = true;
+            this.btnEliminarEmpre.Click += new System.EventHandler(this.btnEliminarEmpre_Click);
             // 
             // btnModificarEmpre
             // 

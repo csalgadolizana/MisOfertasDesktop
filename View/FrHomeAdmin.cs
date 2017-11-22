@@ -222,7 +222,7 @@ namespace Desk.View
                     item.descripcion.ToString(),
                     item.inicio.ToString(),
                     item.actualizacion.ToString(),
-                    item.estadoIdEstado.ToString()
+                    item.estadoIdEstado.idEstado.ToString()
                 };
                 dtgEmpresa.Rows.Add(row);
             }
@@ -893,17 +893,6 @@ namespace Desk.View
             initLisEmpresa();
         }
 
-        /* private void btnEliminarEmpre_Click(object sender, EventArgs e)
-         {
-             try
-             {
-                 txtIdEmpresaModificar.Enabled = true;
-
-                 int empresa = int.Parse(txtIdEmpresaModificar.Text.Trim());
-                 empresaService.Modificar_empresa(empresa, txx)
-
-             }*/
-
         private void btnBuscarEmpre_Click(object sender, EventArgs e)
         {
             List<Service_Empresa.empresa> empresa = empresaService.Listado_empresa().ToList();
@@ -911,6 +900,7 @@ namespace Desk.View
             {
                 if (item.idEmpresa.ToString() == txtIdEmpresaModificar.Text.Trim())
                 {
+                    //item.estadoIdEstado.idEstado
                     txtRutEM.Text = item.rut;
                     txtNombreEM.Text = item.nombre;
                     txtDescripcionEM.Text = item.descripcion;
@@ -927,6 +917,59 @@ namespace Desk.View
 
                 }
             }
+        }
+
+        private void btnEliminarEmpre_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Service_Empresa.empresa em = empresaService.Listado_empresa().First(cc => cc.idEmpresa.ToString() == txtIdEmpresaModificar.Text.Trim());
+                int idd = int.Parse(em.idEmpresa + "");
+                empresaService.Modificar_empresa(idd, em.rut, em.nombre, em.descripcion, 2);
+                MessageBox.Show("Elimino desactivo");
+                txtIdEmpresaModificar.Enabled = true;
+
+                txtRutEM.Text = "";
+                txtIdEmpresaModificar.Text = "";
+                txtNombreEM.Text = "";
+                txtDescripcionEM.Text = "";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error ->" + ex.Message);
+            }
+
+
+            /*try
+            {
+                txtRutEM.Enabled = false;
+                txtNombreEM.Enabled = true;
+                txtDescripcionEM.Enabled = true;
+
+                //Actualizar empresa
+
+                DateTime date = DateTime.Now;
+                //int idempre = int.Parse(txtIdEmpresa.Text.Trim());
+
+                string nomEmpre = txtNombreEM.Text;
+                string desEmpre = txtDescripcionEM.Text;
+                int idempre = int.Parse(txtIdEmpresaModificar.Text.Trim());
+
+                //empresaService.Modificar_empresa(0, txtRutEmpresa.Text, txtNombreEmpresa.Text, txtDescripcionEmpresa.Text,new DateTime(), new DateTime(), 0);
+                empresaService.Modificar_empresa(idempre, txtRutEM.Text, txtNombreEM.Text, txtDescripcionEM.Text, 1);
+                txtIdEmpresaModificar.Enabled = true;
+                txtNombreEM.Text = "";
+                txtDescripcionEM.Text = "";
+                btnModificarEmpre.Enabled = true;
+
+                MessageBox.Show("Se Elimino Correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error -> " + ex.Message);
+            }*/
+            initLisEmpresa();
         }
     }
 }
