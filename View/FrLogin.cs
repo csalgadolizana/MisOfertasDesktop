@@ -29,7 +29,7 @@ namespace Desk.View
             //aqui estoy guardandolo en string pass para luego usar pass en el servicio
             //holaa bebe
             string pass = SHA1Util.encriptarSHA1(txtPassword.Text.Trim());
-            MessageBox.Show("pass "+pass);
+            //MessageBox.Show("pass "+pass);
             var usuario = serviceclient.AutenticarTrabajador(txtUsuario.Text.Trim(), pass);            
             if (int.Parse(usuario.idUsuario.ToString()) != 0)
             {                

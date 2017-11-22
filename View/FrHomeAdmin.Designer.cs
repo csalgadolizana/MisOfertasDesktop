@@ -193,7 +193,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TModificar = new System.Windows.Forms.TabPage();
+            this.btnActivar = new System.Windows.Forms.TabPage();
             this.label31 = new System.Windows.Forms.Label();
             this.btnBuscarEmpre = new System.Windows.Forms.Button();
             this.btnEliminarEmpre = new System.Windows.Forms.Button();
@@ -213,6 +213,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.btnActiva = new System.Windows.Forms.Button();
             this.TPUsuario.SuspendLayout();
             this.tHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -249,7 +250,7 @@
             this.tListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmpresa)).BeginInit();
             this.tAgregar.SuspendLayout();
-            this.TModificar.SuspendLayout();
+            this.btnActivar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1872,7 +1873,7 @@
             // 
             this.tabControl1.Controls.Add(this.tListar);
             this.tabControl1.Controls.Add(this.tAgregar);
-            this.tabControl1.Controls.Add(this.TModificar);
+            this.tabControl1.Controls.Add(this.btnActivar);
             this.tabControl1.Location = new System.Drawing.Point(0, 31);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -2033,27 +2034,28 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Rut :";
             // 
-            // TModificar
+            // btnActivar
             // 
-            this.TModificar.BackColor = System.Drawing.Color.Red;
-            this.TModificar.Controls.Add(this.label31);
-            this.TModificar.Controls.Add(this.btnBuscarEmpre);
-            this.TModificar.Controls.Add(this.btnEliminarEmpre);
-            this.TModificar.Controls.Add(this.btnModificarEmpre);
-            this.TModificar.Controls.Add(this.txtDescripcionEM);
-            this.TModificar.Controls.Add(this.txtNombreEM);
-            this.TModificar.Controls.Add(this.txtRutEM);
-            this.TModificar.Controls.Add(this.txtIdEmpresaModificar);
-            this.TModificar.Controls.Add(this.label33);
-            this.TModificar.Controls.Add(this.label30);
-            this.TModificar.Controls.Add(this.label28);
-            this.TModificar.Controls.Add(this.label6);
-            this.TModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TModificar.Location = new System.Drawing.Point(4, 25);
-            this.TModificar.Name = "TModificar";
-            this.TModificar.Size = new System.Drawing.Size(699, 319);
-            this.TModificar.TabIndex = 2;
-            this.TModificar.Text = "Modificar Empresa";
+            this.btnActivar.BackColor = System.Drawing.Color.Red;
+            this.btnActivar.Controls.Add(this.btnActiva);
+            this.btnActivar.Controls.Add(this.label31);
+            this.btnActivar.Controls.Add(this.btnBuscarEmpre);
+            this.btnActivar.Controls.Add(this.btnEliminarEmpre);
+            this.btnActivar.Controls.Add(this.btnModificarEmpre);
+            this.btnActivar.Controls.Add(this.txtDescripcionEM);
+            this.btnActivar.Controls.Add(this.txtNombreEM);
+            this.btnActivar.Controls.Add(this.txtRutEM);
+            this.btnActivar.Controls.Add(this.txtIdEmpresaModificar);
+            this.btnActivar.Controls.Add(this.label33);
+            this.btnActivar.Controls.Add(this.label30);
+            this.btnActivar.Controls.Add(this.label28);
+            this.btnActivar.Controls.Add(this.label6);
+            this.btnActivar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActivar.Location = new System.Drawing.Point(4, 25);
+            this.btnActivar.Name = "btnActivar";
+            this.btnActivar.Size = new System.Drawing.Size(699, 319);
+            this.btnActivar.TabIndex = 2;
+            this.btnActivar.Text = "Modificar Empresa";
             // 
             // label31
             // 
@@ -2124,7 +2126,7 @@
             // 
             // txtIdEmpresaModificar
             // 
-            this.txtIdEmpresaModificar.Location = new System.Drawing.Point(263, 66);
+            this.txtIdEmpresaModificar.Location = new System.Drawing.Point(270, 65);
             this.txtIdEmpresaModificar.Name = "txtIdEmpresaModificar";
             this.txtIdEmpresaModificar.Size = new System.Drawing.Size(161, 22);
             this.txtIdEmpresaModificar.TabIndex = 6;
@@ -2218,6 +2220,19 @@
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
             // 
+            // btnActiva
+            // 
+            this.btnActiva.BackColor = System.Drawing.Color.Transparent;
+            this.btnActiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActiva.ForeColor = System.Drawing.Color.Black;
+            this.btnActiva.Location = new System.Drawing.Point(495, 233);
+            this.btnActiva.Name = "btnActiva";
+            this.btnActiva.Size = new System.Drawing.Size(123, 23);
+            this.btnActiva.TabIndex = 16;
+            this.btnActiva.Text = "Activar";
+            this.btnActiva.UseVisualStyleBackColor = false;
+            this.btnActiva.Click += new System.EventHandler(this.btnActiva_Click);
+            // 
             // FrHomeAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2288,8 +2303,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmpresa)).EndInit();
             this.tAgregar.ResumeLayout(false);
             this.tAgregar.PerformLayout();
-            this.TModificar.ResumeLayout(false);
-            this.TModificar.PerformLayout();
+            this.btnActivar.ResumeLayout(false);
+            this.btnActivar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2453,7 +2468,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tListar;
         private System.Windows.Forms.TabPage tAgregar;
-        private System.Windows.Forms.TabPage TModificar;
+        private System.Windows.Forms.TabPage btnActivar;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.DataGridView dtgEmpresa;
         private System.Windows.Forms.Label label3;
@@ -2480,5 +2495,6 @@
         private System.Windows.Forms.Button btnBuscarEmpre;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button btnActiva;
     }
 }

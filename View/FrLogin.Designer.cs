@@ -55,6 +55,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(168, 24);
             this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.Text = "admin@correo.cl";
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPassword
@@ -65,6 +66,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(168, 25);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.Text = "admin";
             // 
             // btnLogin
             // 

@@ -34,6 +34,17 @@ namespace Desk.View
         {
             InitializeComponent();
 
+            txtNombreEM.Hide();
+            txtDescripcionEM.Hide();
+            btnEliminarEmpre.Hide();
+            btnModificarEmpre.Hide();
+            txtRutEM.Hide();
+            label30.Hide();
+            label28.Hide();
+            label6.Hide();
+            btnActiva.Hide();
+
+
 
             //habilitar campos para agregar categoria
             labelCategoria.Hide();
@@ -896,27 +907,71 @@ namespace Desk.View
         private void btnBuscarEmpre_Click(object sender, EventArgs e)
         {
             List<Service_Empresa.empresa> empresa = empresaService.Listado_empresa().ToList();
+            Service_Empresa.empresa emp=null;
             foreach (var item in empresa)
             {
                 if (item.idEmpresa.ToString() == txtIdEmpresaModificar.Text.Trim())
                 {
-                    //item.estadoIdEstado.idEstado
-                    txtRutEM.Text = item.rut;
-                    txtNombreEM.Text = item.nombre;
-                    txtDescripcionEM.Text = item.descripcion;
-                    txtRutEmpresa.Text = item.rut;
-                    FechaInicioEmpresa = item.inicio;
+                    emp = item;
+                }
 
-                    //actualizacion Empresa
+            }
+            if (emp != null)
+            {
+
+                if (emp.estadoIdEstado.idEstado == 2)
+                {
+
+                    txtRutEM.Enabled = false;
+                    txtNombreEM.Enabled = false;
+                    txtDescripcionEM.Enabled = false;
+                    btnModificarEmpre.Enabled = false;
+                    btnEliminarEmpre.Enabled = false;
+                    MessageBox.Show("La Empresa se encuentra desactivada");
+                    btnActiva.Visible = true;
+                    txtRutEM.Visible = true;
+                    txtNombreEM.Visible = true;
+                    txtDescripcionEM.Visible = true;
+                    label30.Visible=true;
+                    label28.Visible = true;
+                    label6.Visible = true;
+                    btnModificarEmpre.Visible = false;
+                    btnEliminarEmpre.Visible = false;
+                    
+
+                }
+                else
+                {
+
+                    txtNombreEM.Show();
+                    txtDescripcionEM.Show();
+                    btnEliminarEmpre.Show();
+                    btnModificarEmpre.Show();
+                    txtRutEM.Show();
+                    label6.Show();
+                    label28.Show();
+                    label30.Show();
                     txtNombreEM.Enabled = true;
                     txtDescripcionEM.Enabled = true;
                     btnEliminarEmpre.Enabled = true;
                     btnModificarEmpre.Enabled = true;
                     txtIdEmpresaModificar.Enabled = true;
-                    break;
+                    btnActiva.Visible = false;
 
+                    //item.estadoIdEstado.idEstado
+                    txtRutEM.Text = emp.rut;
+                    txtNombreEM.Text = emp.nombre;
+                    txtDescripcionEM.Text = emp.descripcion;
+                    txtRutEmpresa.Text = emp.rut;
+                    FechaInicioEmpresa = emp.inicio;
+                    MessageBox.Show("Empresa encontrada");
                 }
             }
+            else
+            {
+                MessageBox.Show("Empresa no se encontro");
+            }
+            
         }
 
         private void btnEliminarEmpre_Click(object sender, EventArgs e)
@@ -926,7 +981,7 @@ namespace Desk.View
                 Service_Empresa.empresa em = empresaService.Listado_empresa().First(cc => cc.idEmpresa.ToString() == txtIdEmpresaModificar.Text.Trim());
                 int idd = int.Parse(em.idEmpresa + "");
                 empresaService.Modificar_empresa(idd, em.rut, em.nombre, em.descripcion, 2);
-                MessageBox.Show("Elimino desactivo");
+                MessageBox.Show("Empresa se encuentra desactivada");
                 txtIdEmpresaModificar.Enabled = true;
 
                 txtRutEM.Text = "";
@@ -970,6 +1025,40 @@ namespace Desk.View
                 MessageBox.Show("Error -> " + ex.Message);
             }*/
             initLisEmpresa();
+        }
+
+        private void btnActiva_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Service_Empresa.empresa em = empresaService.Listado_empresa().First(cc => cc.idEmpresa.ToString() == txtIdEmpresaModificar.Text.Trim());
+                int idd = int.Parse(em.idEmpresa + "");
+                empresaService.Modificar_empresa(idd, em.rut, em.nombre, em.descripcion, 1);
+                MessageBox.Show("Empresa se encuentra activada");
+                txtIdEmpresaModificar.Enabled = true;
+                
+                txtRutEM.Text = em.rut;
+                txtNombreEM.Text = em.nombre;
+                txtDescripcionEM.Text = em.descripcion;
+                txtRutEmpresa.Text = em.rut;
+                FechaInicioEmpresa = em.inicio;
+
+                txtRutEM.Enabled = true;
+                txtNombreEM.Enabled = true;
+                txtDescripcionEM.Enabled = true;
+                btnModificarEmpre.Enabled = true;
+                btnEliminarEmpre.Enabled = true;
+                btnModificarEmpre.Show(); ;
+                btnEliminarEmpre.Show();
+                btnActiva.Hide();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error ->" + ex.Message);
+            };
         }
     }
 }
