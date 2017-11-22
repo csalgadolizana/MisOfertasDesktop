@@ -27,6 +27,7 @@ namespace Desk.View
             //y escribiendo SHA1Util. puedes llamar al metodo encriptarSHA1(string)
             //que recive un string por parametros y eso lo puedes guardar en una varible
             //aqui estoy guardandolo en string pass para luego usar pass en el servicio
+            //holaa bebe
             string pass = SHA1Util.encriptarSHA1(txtPassword.Text.Trim());
             MessageBox.Show("pass "+pass);
             var usuario = serviceclient.AutenticarTrabajador(txtUsuario.Text.Trim(), pass);

@@ -129,3 +129,6 @@ C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\bin\Debug\es\Microso
 C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.exe
 C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.pdb
 C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Mis_Ofertas.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\Desk.exe.config
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.exe
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.pdb
