@@ -18,16 +18,7 @@ namespace Desk.View
             InitializeComponent();
             
         }
-        private void FrHomeGerenteAsociacion_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tDDocumentos_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+        
         private void btnSalir_Click(object sender, EventArgs e)
         {
             FrLogin logi = new FrLogin();
@@ -42,47 +33,7 @@ namespace Desk.View
             lo.ShowDialog();
             this.Close();
         }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDescargarBI_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-            
-
-        }
-
         
-        
-        private void PanelPrincipal_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
         private void reporteLocalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Reporte_Locales local = new Reporte_Locales();

@@ -107,10 +107,6 @@
             this.label41 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.dtFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dtFechaActualizacion = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.btnLimpiarAgregar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
@@ -998,10 +994,6 @@
             this.tpAgregarUsuario.Controls.Add(this.label41);
             this.tpAgregarUsuario.Controls.Add(this.label15);
             this.tpAgregarUsuario.Controls.Add(this.label14);
-            this.tpAgregarUsuario.Controls.Add(this.dtFechaInicio);
-            this.tpAgregarUsuario.Controls.Add(this.label13);
-            this.tpAgregarUsuario.Controls.Add(this.dtFechaActualizacion);
-            this.tpAgregarUsuario.Controls.Add(this.label12);
             this.tpAgregarUsuario.Controls.Add(this.label20);
             this.tpAgregarUsuario.Controls.Add(this.btnLimpiarAgregar);
             this.tpAgregarUsuario.Controls.Add(this.btnCrear);
@@ -1027,14 +1019,14 @@
             "MUJER"});
             this.cboSexo.Location = new System.Drawing.Point(433, 82);
             this.cboSexo.Name = "cboSexo";
-            this.cboSexo.Size = new System.Drawing.Size(121, 27);
+            this.cboSexo.Size = new System.Drawing.Size(146, 27);
             this.cboSexo.TabIndex = 34;
             // 
             // txtRutPersona
             // 
             this.txtRutPersona.Location = new System.Drawing.Point(433, 45);
             this.txtRutPersona.Name = "txtRutPersona";
-            this.txtRutPersona.Size = new System.Drawing.Size(121, 27);
+            this.txtRutPersona.Size = new System.Drawing.Size(146, 27);
             this.txtRutPersona.TabIndex = 33;
             // 
             // txtApellidoPersona
@@ -1112,40 +1104,6 @@
             this.label14.TabIndex = 27;
             this.label14.Text = "Nombre:";
             // 
-            // dtFechaInicio
-            // 
-            this.dtFechaInicio.Location = new System.Drawing.Point(433, 122);
-            this.dtFechaInicio.Name = "dtFechaInicio";
-            this.dtFechaInicio.Size = new System.Drawing.Size(220, 27);
-            this.dtFechaInicio.TabIndex = 26;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(332, 128);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 19);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Fecha Inicio:";
-            // 
-            // dtFechaActualizacion
-            // 
-            this.dtFechaActualizacion.Location = new System.Drawing.Point(433, 161);
-            this.dtFechaActualizacion.Name = "dtFechaActualizacion";
-            this.dtFechaActualizacion.Size = new System.Drawing.Size(220, 27);
-            this.dtFechaActualizacion.TabIndex = 24;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(296, 167);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(147, 19);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Fecha Actualizacion:";
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -1189,7 +1147,7 @@
             "Administrador",
             "Consumidor",
             "Usuario"});
-            this.cbbCargoUsuario.Location = new System.Drawing.Point(433, 201);
+            this.cbbCargoUsuario.Location = new System.Drawing.Point(433, 124);
             this.cbbCargoUsuario.Name = "cbbCargoUsuario";
             this.cbbCargoUsuario.Size = new System.Drawing.Size(146, 27);
             this.cbbCargoUsuario.TabIndex = 19;
@@ -1198,7 +1156,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(332, 209);
+            this.label5.Location = new System.Drawing.Point(332, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 19);
             this.label5.TabIndex = 15;
@@ -1301,11 +1259,11 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(152, 105);
+            this.label17.Location = new System.Drawing.Point(126, 105);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(90, 19);
+            this.label17.Size = new System.Drawing.Size(138, 19);
             this.label17.TabIndex = 20;
-            this.label17.Text = "Contraseña:";
+            this.label17.Text = "Nueva Contraseña:";
             // 
             // label27
             // 
@@ -2129,7 +2087,6 @@
             this.btnEliminarEmpre.TabIndex = 13;
             this.btnEliminarEmpre.Text = "Eliminar";
             this.btnEliminarEmpre.UseVisualStyleBackColor = true;
-            this.btnEliminarEmpre.Click += new System.EventHandler(this.btnEliminarEmpre_Click);
             // 
             // btnModificarEmpre
             // 
@@ -2419,10 +2376,6 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dtFechaInicio;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dtFechaActualizacion;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnLimpiarAgregar;
         private System.Windows.Forms.Button btnCrear;

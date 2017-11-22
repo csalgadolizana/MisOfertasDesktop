@@ -163,6 +163,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\Service_Persona\Reference1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\Service_Producto\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -198,7 +203,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Utils\SHA1Util.cs" />
+    <Compile Include="Util\SHA1Util.cs" />
     <Compile Include="View\FrHomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,8 +238,9 @@
     <EmbeddedResource Include="Reportes\Ofertas.resx">
       <DependentUpon>Ofertas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Report1.rdlc" />
-    <EmbeddedResource Include="Reportes\Report2.rdlc" />
+    <EmbeddedResource Include="Reportes\Registro_Usuarios.rdlc" />
+    <EmbeddedResource Include="Reportes\Listado_Ofertas.rdlc" />
+    <EmbeddedResource Include="Reportes\Descuentos_Entregados.rdlc" />
     <EmbeddedResource Include="Reportes\Reporte_Locales.resx">
       <DependentUpon>Reporte_Locales.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,7 +259,6 @@
     <EmbeddedResource Include="View\FrLogin.resx">
       <DependentUpon>FrLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Descuentos_entregados.rdlc" />
     <EmbeddedResource Include="View\Valoraciones_Realizadas.rdlc" />
     <EmbeddedResource Include="View\Reporte_Locales.rdlc" />
     <None Include="Properties\DataSources\Desk.Service_Local.ciudad.datasource" />
@@ -575,23 +580,26 @@
     <None Include="Service References\Service_Usuario\Desk.Service_Usuario.AutenticarTrabajadorResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.CREAR_USUARIOResponse1.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.crear_usuarioResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Eliminar_usuarioResponse1.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.crear_usuario_2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Eliminar_usuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Listado_usuariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Modificar_USUARIOResponse1.datasource">
+    <None Include="Service References\Service_Usuario\Desk.Service_Usuario.Modificar_USUARIOResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Service_Usuario\Desk.Service_Usuario.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service_Usuario\UsuarioService.wsdl" />
-    <None Include="Service References\Service_Usuario\UsuarioService.xsd">
+    <None Include="Service References\Service_Usuario\WebServiceAuthUser.wsdl" />
+    <None Include="Service References\Service_Usuario\WebServiceAuthUser.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Valoracion\Desk.Service_Valoracion.Crear_valoracionResponse.datasource">
@@ -758,19 +766,7 @@
   <ItemGroup>
     <None Include="Service References\Service_Persona\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service_Producto\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service_Producto\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Service_Producto\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
+      <LastGenOutput>Reference1.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -892,6 +888,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\depositphotos_24232127-stock-photo-padlock-red-web-glossy-icon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Producto\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Producto\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_Producto\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

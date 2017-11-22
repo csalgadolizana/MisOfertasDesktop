@@ -16,11 +16,11 @@ namespace Desk.View
         public FrLogin()
         {
             InitializeComponent();
-        }
+        }        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Service_Usuario.UsuarioServiceClient serviceclient = new Service_Usuario.UsuarioServiceClient();
+            Service_Usuario.WebServiceAuthUserClient serviceclient = new Service_Usuario.WebServiceAuthUserClient();
             //www.sha1-online.com conversor
             //Tienes que hacer el using Desk.Utils; arriba
             //luego llamas directamente a la clase estatica(no se le puede hacer un new ...)
@@ -30,9 +30,9 @@ namespace Desk.View
             //holaa bebe
             string pass = SHA1Util.encriptarSHA1(txtPassword.Text.Trim());
             MessageBox.Show("pass "+pass);
-            var usuario = serviceclient.AutenticarTrabajador(txtUsuario.Text.Trim(), pass);
+            var usuario = serviceclient.AutenticarTrabajador(txtUsuario.Text.Trim(), pass);            
             if (int.Parse(usuario.idUsuario.ToString()) != 0)
-            {
+            {                
                 switch (int.Parse(usuario.cargoIdcargo.idcargo.ToString()))
                 {
                     case 1:
@@ -44,20 +44,20 @@ namespace Desk.View
                         FrHomeAdmin admin = new FrHomeAdmin();
                         admin.Show();
                         this.Hide();
-                        break;
+                        break;                    
                     default:
                         MessageBox.Show("Ha ocurrido un error /n" +
-                        "contacte al administrador");
+                            "contacte al administrador");
                         break;
                 }
             }
             else
             {
                 MessageBox.Show("el correo electronico o la contraseña que ingresaste no coinciden con ninguna cuenta. ");
-            }
+            }    
 
         }
 
-
+        
     }
 }

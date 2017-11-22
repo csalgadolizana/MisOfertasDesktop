@@ -319,7 +319,7 @@
                   <ChartDataPointValues />
                 </ChartDataPoint>
               </ChartDataPoints>
-              <Type>Shape</Type>
+              <Subtype>PercentStacked</Subtype>
               <Style />
             </ChartSeries>
           </ChartSeriesCollection>
@@ -474,9 +474,6 @@
                 </ChartAxisScaleBreak>
               </ChartAxis>
             </ChartValueAxes>
-            <ChartThreeDProperties>
-              <Enabled>true</Enabled>
-            </ChartThreeDProperties>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
@@ -601,9 +598,8 @@
           <Value>LogoMisOfertas2</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.26458cm</Top>
-          <Left>0.98391cm</Left>
           <Height>3.32563cm</Height>
-          <Width>3.24626cm</Width>
+          <Width>4.23017cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -638,7 +634,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>1.53521cm</Top>
+          <Top>1.5352cm</Top>
           <Left>11.24572cm</Left>
           <Height>0.6cm</Height>
           <Width>3.42604cm</Width>
@@ -656,7 +652,7 @@
           <Source>Embedded</Source>
           <Value>LogoMisOfertas</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>1.42896cm</Top>
+          <Top>1.42895cm</Top>
           <Left>15.05162cm</Left>
           <Height>0.70625cm</Height>
           <Width>1.12827cm</Width>

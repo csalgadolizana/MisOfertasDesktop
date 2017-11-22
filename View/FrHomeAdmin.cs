@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Desk.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace Desk.View
         Service_Categoria.CategoriaServiceClient categoriaService = new Service_Categoria.CategoriaServiceClient();
         Service_Cargo.CargoServiceClient cargo = new Service_Cargo.CargoServiceClient();
         Service_Producto.ProductoServiceClient productoService = new Service_Producto.ProductoServiceClient();
-        Service_Usuario.UsuarioServiceClient usuarioService = new Service_Usuario.UsuarioServiceClient();
+        Service_Usuario.WebServiceAuthUserClient usuarioService = new Service_Usuario.WebServiceAuthUserClient();
         Service_Empresa.EmpresaServiceClient empresaService = new Service_Empresa.EmpresaServiceClient();
         Service_Local.LocalServiceClient localService = new Service_Local.LocalServiceClient();
         Service_Region.RegionServiceClient regionService = new Service_Region.RegionServiceClient();
@@ -33,7 +34,7 @@ namespace Desk.View
         {
             InitializeComponent();
 
-            
+
             //habilitar campos para agregar categoria
             labelCategoria.Hide();
             btnNoAgregarCat.Hide();
@@ -55,14 +56,14 @@ namespace Desk.View
             btnCrearCategoria2.Enabled = false;
             btnModificarProducto.Enabled = false;
             btnCancelarModificar.Enabled = false;
-            
+
             //desabilitar los campos hasta que busque el id local
             txtNombreLocalBuscar.Enabled = false;
             txtDireccionLocalBuscar.Enabled = false;
             cboIdEmpresaBuscar.Enabled = false;
             cboComunaLocalBuscar.Enabled = false;
 
-            
+
 
             //desabilitar los campos hasta que busque el id           
             txtTelefono.Enabled = false;
@@ -85,14 +86,14 @@ namespace Desk.View
 
             //inicializar lista de productos
             initLisProductos();
-            
+
 
             //iniciar lista de locales
             initLisLocal();
 
             //inicializar lista de usuarios
             initLisUsuario();
-            
+
             //inicializar lista de empresa
             initLisEmpresa();
 
@@ -100,7 +101,7 @@ namespace Desk.View
             initcboIdEmpresaBuscar();
 
 
-        }       
+        }
 
         private void initLisProductos()
         {
@@ -113,7 +114,7 @@ namespace Desk.View
             dtgvListaProductos.Columns[3].Name = "Precio";
             dtgvListaProductos.Columns[4].Name = "Nombre de Categoria";
             string[] row = new string[] { "id", "nombre", "desc", "precio", "categoria" };
-            List<Service_Producto.producto> listado = productoService.Listado_productos().ToList();            
+            List<Service_Producto.producto> listado = productoService.Listado_productos().ToList();
             foreach (var item in listado)
             {
                 row = new string[] {
@@ -131,44 +132,45 @@ namespace Desk.View
         {
             datagridviewUsuario.Columns.Clear();
             datagridviewUsuario.DefaultCellStyle.ForeColor = Color.Black;
-            datagridviewUsuario.ColumnCount =8;
+            datagridviewUsuario.ColumnCount = 8;
             datagridviewUsuario.Columns[0].Name = "ID";
             datagridviewUsuario.Columns[1].Name = "rut";
             datagridviewUsuario.Columns[2].Name = "nombre";
             datagridviewUsuario.Columns[3].Name = "apellido";
-            datagridviewUsuario.Columns[4].Name = "sexo";            
+            datagridviewUsuario.Columns[4].Name = "sexo";
             datagridviewUsuario.Columns[5].Name = "Telefono";
             datagridviewUsuario.Columns[6].Name = "cargo";
             datagridviewUsuario.Columns[7].Name = "correo";
             //datagridviewUsuario.Columns[4].Name = "contraseña";
 
-            string[] row = new string[] { "id", "rut" ,"nombre", "apellido", "sexo", "telefono", "cargo", "correo", };
-            List<Service_Usuario.usuario> listado = usuarioService.Listado_usuarios().ToList();            
-            foreach (var item in listado )                
+            string[] row = new string[] { "id", "rut", "nombre", "apellido", "sexo", "telefono", "cargo", "correo", };
+            List<Service_Usuario.usuario> listado = usuarioService.Listado_usuarios().ToList();
+            foreach (var item in listado)
             {
                 string sex = "";
                 if (item.personaIdpersona.sexoIdSexo.idSexo == 1)
                 {
                     sex = "Masculino";
                 }
-                else {
+                else
+                {
                     sex = "Femenino";
                 }
                 row = new string[] {
                     item.idUsuario.ToString(),
-                    item.personaIdpersona.rut,  
+                    item.personaIdpersona.rut,
                     item.personaIdpersona.nombre,
                     item.personaIdpersona.apellidos,
-                    sex,                                      
+                    sex,
                     item.telefono.ToString(),
                     item.cargoIdcargo.descripcion,
                     item.correo,
-                    
+
                 };
                 datagridviewUsuario.Rows.Add(row);
             }
         }
-            
+
         private void initLisLocal()
         {
             dtgListadoLocales.Columns.Clear();
@@ -179,7 +181,7 @@ namespace Desk.View
             dtgListadoLocales.Columns[2].Name = "Nombre";
             dtgListadoLocales.Columns[3].Name = "Empresa";
             dtgListadoLocales.Columns[4].Name = "Region";
-            string[] row = new string[] { "id", "direccion", "nombre", "Empresa" , "Region"};
+            string[] row = new string[] { "id", "direccion", "nombre", "Empresa", "Region" };
             List<Service_Local.local> listadoLoc = localService.Listado_local().ToList();
             foreach (var item in listadoLoc)
             {
@@ -189,7 +191,7 @@ namespace Desk.View
                     item.nombre,
                     item.empresaIdEmpresa.nombre.ToString(),
                     item.ciudadIdCiudad.nombre.ToString()
-                    
+
                 };
                 dtgListadoLocales.Rows.Add(row);
             }
@@ -258,7 +260,7 @@ namespace Desk.View
             }
             cboCategorias2.SelectedIndex = 0;
         }
-                         
+
         private void btnLimpiarAgregar_Click(object sender, EventArgs e)
         {
             txtNombrePersona.Text = "";
@@ -268,8 +270,6 @@ namespace Desk.View
             txtTelefonoUsuario.Text = "";
             txtRutPersona.Text = "";
             cboSexo.Text = "";
-            dtFechaInicio.Value = DateTime.Now;
-            dtFechaActualizacion.Value = DateTime.Now;
             cbbCargoUsuario.Text = "";
         }
 
@@ -278,40 +278,51 @@ namespace Desk.View
             txtCorreoUsuario.Text = "";
             txtContrasenaUsuario.Text = "";
             txtTelefonoUsuario.Text = "";
-            dtFechaInicio.Value = DateTime.Now;
-            dtFechaActualizacion.Value = DateTime.Now;
-
         }
-        
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             FrLogin lo = new FrLogin();
             lo.ShowDialog();
-            this.Close();            
+            this.Close();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
+
+            Service_Usuario.WebServiceAuthUserClient serviceclient = new Service_Usuario.WebServiceAuthUserClient();
             try
             {
-                Service_Persona.PersonaServiceClient perso = new Service_Persona.PersonaServiceClient();
-                perso.Crear_persona(0, txtNombrePersona.Text, txtApellidoPersona.Text, txtRutPersona.Text, cboSexo.SelectedIndex + 1);
-                //perso.Listado_personas();
-                Service_Persona.persona persona1 = perso.Listado_personas().OrderByDescending(x => x.idpersona).First();
-                MessageBox.Show("Persona Creada Correctamente");
-
-                Service_Usuario.UsuarioServiceClient usu = new Service_Usuario.UsuarioServiceClient();
-                usu.CREAR_USUARIO(0, txtCorreoUsuario.Text, txtContrasenaUsuario.Text, int.Parse(txtTelefonoUsuario.Text), DateTime.Parse(dtFechaInicio.Value.ToShortDateString()), DateTime.Parse(dtFechaActualizacion.Value.ToShortDateString()), 1, int.Parse(persona1.idpersona.ToString()), cbbCargoUsuario.SelectedIndex + 1);
-
+                Service_Usuario.usuario us = serviceclient.Listado_usuarios().First(x => x.correo == txtCorreoUsuario.Text.Trim());
+                MessageBox.Show("Error!! \nEl correo " + us.correo + " ya existe");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                try
+                {
+                    string pass = SHA1Util.encriptarSHA1(txtContrasenaUsuario.Text.Trim());
+                    MessageBox.Show("pass " + pass);
 
-                MessageBox.Show("Persona No se a Creado");
+                    Service_Persona.PersonaServiceClient perso = new Service_Persona.PersonaServiceClient();
+                    perso.Crear_persona(0, txtNombrePersona.Text, txtApellidoPersona.Text, txtRutPersona.Text, cboSexo.SelectedIndex + 1);
+                    //perso.Listado_personas();
+                    Service_Persona.persona persona1 = perso.Listado_personas().OrderByDescending(x => x.idpersona).First();
+                    MessageBox.Show("Persona Creada Correctamente");
+
+                    Service_Usuario.WebServiceAuthUserClient usu = new Service_Usuario.WebServiceAuthUserClient();
+                    usu.crear_usuario_2(0, txtCorreoUsuario.Text, pass, int.Parse(txtTelefonoUsuario.Text), 1, int.Parse(persona1.idpersona.ToString()), cbbCargoUsuario.SelectedIndex + 1);
+                }
+                catch (Exception exx)
+                {
+                    MessageBox.Show("Error " + exx.Message);
+                    MessageBox.Show("Persona No se a Creado");
+                }
             }
+
+
         }
-        
+
 
         private void btnCrearCategoria_Click(object sender, EventArgs e)
         {
@@ -327,8 +338,8 @@ namespace Desk.View
             cboCategorias.Enabled = false;
             btnCrearCategoria.Enabled = false;
             btnCrearProducto.Enabled = false;
-        }        
-         
+        }
+
         private void btnNoAgregarCat_Click(object sender, EventArgs e)
         {
             btnNoAgregarCat.Hide();
@@ -370,7 +381,7 @@ namespace Desk.View
             btnCrearProducto.Enabled = true;
             initCboCategoria();
             initCboCategoria2();
-        }       
+        }
 
         private void btnCrearProducto_Click(object sender, EventArgs e)
         {
@@ -390,11 +401,11 @@ namespace Desk.View
             cboCategorias.SelectedIndex = 0;
             initLisProductos();
         }
-        
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             List<Service_Producto.producto> listado = productoService.Listado_productos().ToList();
-            
+
             foreach (var item in listado)
             {
                 if (item.idProducto.ToString() == txtIdProducto.Text.Trim())
@@ -498,8 +509,8 @@ namespace Desk.View
                 txtDescripcion2.Enabled = true;
                 txtPrecio2.Enabled = true;
                 cboCategorias2.Enabled = true;
-                
-               // cboCategorias2.Enabled = true;
+
+                // cboCategorias2.Enabled = true;
                 btnCrearCategoria2.Enabled = true;
                 btnModificarProducto.Enabled = false;
                 btnCancelarModificar.Enabled = false;
@@ -507,7 +518,7 @@ namespace Desk.View
 
                 DateTime date = DateTime.Now;
                 int idtemp = int.Parse(txtIdProducto.Text.Trim());
-                
+
                 //productoService.Crear_producto(0, txtNombreProducto.Text.Trim(), txtDescripcion.Text, int.Parse(txtPrecio.Text), date, date, "-", cboCategorias.SelectedIndex + 1);
                 productoService.Modificar_producto(idtemp, txtNombreProducto2.Text.Trim(), txtDescripcion2.Text, int.Parse(txtPrecio2.Text), FechaCreacion, date, "-", cboCategorias2.SelectedIndex + 1);
                 txtIdProducto.Text = "";
@@ -523,19 +534,31 @@ namespace Desk.View
                 MessageBox.Show("Error -> " + ex.Message);
             }
             initLisProductos();
-        }        
+        }
 
         private void btnModificarUsuario_Click(object sender, EventArgs e)
         {
             try
             {
+                Service_Usuario.WebServiceAuthUserClient serviceclient = new Service_Usuario.WebServiceAuthUserClient();
+                //www.sha1-online.com conversor
+                //Tienes que hacer el using Desk.Utils; arriba
+                //luego llamas directamente a la clase estatica(no se le puede hacer un new ...)
+                //y escribiendo SHA1Util. puedes llamar al metodo encriptarSHA1(string)
+                //que recive un string por parametros y eso lo puedes guardar en una varible
+                //aqui estoy guardandolo en string pass para luego usar pass en el servicio
+                //holaa bebe
+                string pass = SHA1Util.encriptarSHA1(txtContraseña.Text.Trim());
+                MessageBox.Show("pass " + pass);
+
+
                 txtTelefono.Enabled = true;
                 txtContraseña.Enabled = true;
                 txtCorreo.Enabled = true;
                 btnBuscarUsuario.Enabled = true;
 
                 DateTime date = DateTime.Now;
-                usuarioService.Modificar_USUARIO(IdUsuariotemp, txtCorreo.Text.Trim(), txtContraseña.Text.Trim(), int.Parse(txtTelefono.Text.Trim()), FechaCreacionUsuario, date);
+                usuarioService.Modificar_USUARIO(IdUsuariotemp, txtCorreo.Text.Trim(), pass, int.Parse(txtTelefono.Text.Trim()), FechaCreacionUsuario, date);
                 txtCorreo.Text = "";
                 txtContraseña.Text = "";
                 txtTelefono.Text = "";
@@ -547,7 +570,7 @@ namespace Desk.View
                 MessageBox.Show("Error -> " + ex.Message);
             }
             initLisProductos();
-        }       
+        }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -565,7 +588,7 @@ namespace Desk.View
                     IdUsuariotemp = int.Parse(item.idUsuario.ToString());
                     FechaCreacionUsuario = item.fechacreado;
                     txtCorreoUsuario.Text = item.correo.ToString();
-                    txtContraseña.Text = item.contrasena.ToString();
+                    //txtContraseña.Text = item.contrasena.ToString();
                     txtTelefono.Text = item.telefono.ToString();
 
                     txtContraseña.Enabled = true;
@@ -589,23 +612,23 @@ namespace Desk.View
             initLisProductos();
         }
 
-        
+
 
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
-            
-        }             
-        
+
+        }
+
         private void initcboIdEmpresa()
         {
             cboIdEmpresa.Items.Clear();
             List<Service_Empresa.empresa> listIdEmpresa = empresaService.Listado_empresa().ToList();
-            foreach(Service_Empresa.empresa item in listIdEmpresa)
+            foreach (Service_Empresa.empresa item in listIdEmpresa)
             {
                 cboIdEmpresa.Items.Insert(int.Parse(item.idEmpresa.ToString()) - 1, item.nombre);
             }
-            cboIdEmpresa.SelectedIndex = 0;              
-            
+            cboIdEmpresa.SelectedIndex = 0;
+
         }
 
         private void initcboComuna()
@@ -614,9 +637,9 @@ namespace Desk.View
             List<Service_Region.region> listRegion = regionService.Listado_regiones().ToList();
             foreach (Service_Region.region item in listRegion)
             {
-                cboComuna.Items.Insert(int.Parse(item.idRegion.ToString()) -1,item.nombre);
+                cboComuna.Items.Insert(int.Parse(item.idRegion.ToString()) - 1, item.nombre);
             }
-            cboComuna.SelectedIndex = 0;  
+            cboComuna.SelectedIndex = 0;
 
         }
 
@@ -625,7 +648,7 @@ namespace Desk.View
             cboIdEmpresaBuscar.Items.Clear();
             List<Service_Empresa.empresa> listaIdEmpresa = empresaService.Listado_empresa().ToList();
             foreach (Service_Empresa.empresa item in listaIdEmpresa)
-            {                
+            {
                 cboIdEmpresaBuscar.Items.Insert(int.Parse(item.idEmpresa.ToString()) - 1, item.nombre);
             }
             cboIdEmpresaBuscar.SelectedIndex = 0;
@@ -649,7 +672,7 @@ namespace Desk.View
             try
             {
                 DateTime date = DateTime.Now;
-                localService.Crear_local(0, txtDireccionLocal.Text.Trim(), txtNombreLocal.Text.Trim(), cboIdEmpresa.SelectedIndex +1, cboComuna.SelectedIndex +1);
+                localService.Crear_local(0, txtDireccionLocal.Text.Trim(), txtNombreLocal.Text.Trim(), cboIdEmpresa.SelectedIndex + 1, cboComuna.SelectedIndex + 1);
                 MessageBox.Show("Se Creo el Local Correctamente");
             }
             catch (Exception ex)
@@ -661,7 +684,7 @@ namespace Desk.View
             cboIdEmpresa.SelectedIndex = 0;
             cboComuna.SelectedIndex = 0;
             initLisLocal();
-            
+
         }
 
         private void btnMostrarLocales_Click(object sender, EventArgs e)
@@ -672,14 +695,14 @@ namespace Desk.View
         private void btnBuscarLocal_Click(object sender, EventArgs e)
         {
             List<Service_Local.local> ListaLocal = localService.Listado_local().ToList();
-            foreach(var item in ListaLocal)
+            foreach (var item in ListaLocal)
             {
-                if(item.idLocal.ToString() == txtIdLocalBuscar.Text.Trim())
+                if (item.idLocal.ToString() == txtIdLocalBuscar.Text.Trim())
                 {
                     txtDireccionLocalBuscar.Text = item.direccion;
-                    txtNombreLocalBuscar.Text = item.nombre;                    
-                    cboIdEmpresaBuscar.SelectedIndex = int.Parse(item.empresaIdEmpresa.idEmpresa.ToString())-1;
-                    cboComunaLocalBuscar.SelectedIndex = int.Parse(item.ciudadIdCiudad.idCiudad.ToString())-1;
+                    txtNombreLocalBuscar.Text = item.nombre;
+                    cboIdEmpresaBuscar.SelectedIndex = int.Parse(item.empresaIdEmpresa.idEmpresa.ToString()) - 1;
+                    cboComunaLocalBuscar.SelectedIndex = int.Parse(item.ciudadIdCiudad.idCiudad.ToString()) - 1;
 
                     txtDireccionLocalBuscar.Enabled = true;
                     txtNombreLocalBuscar.Enabled = true;
@@ -687,7 +710,7 @@ namespace Desk.View
                     cboComunaLocalBuscar.Enabled = true;
                     btnActualizarLocal.Enabled = true;
                     btnBuscarLocal.Enabled = true;
-                    txtIdLocalBuscar.Enabled = true;       
+                    txtIdLocalBuscar.Enabled = true;
                     break;
 
                 }
@@ -730,7 +753,7 @@ namespace Desk.View
                 MessageBox.Show("Error ->" + ex.Message);
             }
             initLisLocal();
-                
+
         }
 
         private void btnEliminarLocal_Click(object sender, EventArgs e)
@@ -744,7 +767,7 @@ namespace Desk.View
                 txtNombreLocalBuscar.Text = "";
                 cboIdEmpresaBuscar.Text = "";
                 cboComunaLocalBuscar.Text = "";
-                
+
             }
             catch (Exception ex)
             {
@@ -775,7 +798,7 @@ namespace Desk.View
             catch (Exception ex)
             {
                 MessageBox.Show("Error -> " + ex.Message);
-            }            
+            }
             return;
         }
 
@@ -797,14 +820,14 @@ namespace Desk.View
 
                     txtCUEliminar.Enabled = true;
                     txtTUEliminar.Enabled = true;
-                    btnUEliminar.Enabled = true;                      
+                    btnUEliminar.Enabled = true;
                     btnBuscarEliminar.Enabled = true;
                     txtIdUsuarioEliminar.Enabled = true;
                     break;
                 }
             }
         }
-            
+
         private void btnListarEmpresa_Click_1(object sender, EventArgs e)
         {
             initLisEmpresa();
@@ -815,7 +838,7 @@ namespace Desk.View
             try
             {
                 Service_Empresa.EmpresaServiceClient empre1 = new Service_Empresa.EmpresaServiceClient();
-                empre1.Crear_empresa( txtRutEmpresa.Text, txtNombreEmpresa.Text, txtDescipcionEmpresa.Text, 1);
+                empre1.Crear_empresa(txtRutEmpresa.Text, txtNombreEmpresa.Text, txtDescipcionEmpresa.Text, 1);
 
                 Service_Empresa.empresa empre11 = empre1.Listado_empresa().OrderByDescending(x => x.idEmpresa).First();
                 MessageBox.Show("Empresa Creada Correctamente");
@@ -834,14 +857,14 @@ namespace Desk.View
             txtRutEmpresa.Text = "";
             txtNombreEmpresa.Text = "";
             txtDescipcionEmpresa.Text = "";
-            
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             try
             {
-                txtRutEM.Enabled = false;                
+                txtRutEM.Enabled = false;
                 txtNombreEM.Enabled = true;
                 txtDescripcionEM.Enabled = true;
 
@@ -853,7 +876,7 @@ namespace Desk.View
                 string nomEmpre = txtNombreEM.Text;
                 string desEmpre = txtDescripcionEM.Text;
                 int idempre = int.Parse(txtIdEmpresaModificar.Text.Trim());
-                    
+
                 //empresaService.Modificar_empresa(0, txtRutEmpresa.Text, txtNombreEmpresa.Text, txtDescripcionEmpresa.Text,new DateTime(), new DateTime(), 0);
                 empresaService.Modificar_empresa(idempre, txtRutEM.Text, txtNombreEM.Text, txtDescripcionEM.Text, 1);
                 txtIdEmpresaModificar.Enabled = true;
@@ -870,16 +893,16 @@ namespace Desk.View
             initLisEmpresa();
         }
 
-       /* private void btnEliminarEmpre_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                txtIdEmpresaModificar.Enabled = true;
+        /* private void btnEliminarEmpre_Click(object sender, EventArgs e)
+         {
+             try
+             {
+                 txtIdEmpresaModificar.Enabled = true;
 
-                int empresa = int.Parse(txtIdEmpresaModificar.Text.Trim());
-                empresaService.Modificar_empresa(empresa, txx)
+                 int empresa = int.Parse(txtIdEmpresaModificar.Text.Trim());
+                 empresaService.Modificar_empresa(empresa, txx)
 
-            }*/
+             }*/
 
         private void btnBuscarEmpre_Click(object sender, EventArgs e)
         {
@@ -905,12 +928,7 @@ namespace Desk.View
                 }
             }
         }
-
-        private void btnEliminarEmpre_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
-    
+
 

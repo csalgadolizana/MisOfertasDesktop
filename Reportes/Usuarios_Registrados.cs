@@ -28,7 +28,7 @@ namespace Desk.Reportes
             try
             {            
 
-                Service_Usuario.UsuarioServiceClient usu = new Service_Usuario.UsuarioServiceClient();
+                Service_Usuario.WebServiceAuthUserClient usu = new Service_Usuario.WebServiceAuthUserClient();
                 List<Service_Usuario.usuario> lisUsurio = usu.Listado_usuarios().ToList();
                 usuarioBindingSource.DataSource = lisUsurio.ToList();
 
@@ -40,6 +40,11 @@ namespace Desk.Reportes
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void usuarioBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

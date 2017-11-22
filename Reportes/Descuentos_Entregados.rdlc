@@ -6,25 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.52104cm</Width>
+              <Width>3.38297cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.20703cm</Width>
+              <Width>3.38297cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.38297cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.17708cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.89146cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.38297cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -40,7 +31,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id Oferta</Value>
+                              <Value>ID</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -69,42 +60,6 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox3">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>nombre</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#7292cc</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#4c68a2</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
                     <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -112,7 +67,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>precio Normal</Value>
+                              <Value>codigo</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -148,7 +103,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>precio Oferta</Value>
+                              <Value>Puntos</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -184,7 +139,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>numero Visitas</Value>
+                              <Value>actualizacion</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -211,78 +166,6 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox11">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>minimo Compra</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox11</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#7292cc</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#4c68a2</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox13">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>maximo Compra</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox13</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#7292cc</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#4c68a2</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
@@ -290,14 +173,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="idOferta">
+                    <Textbox Name="clienteIdCliente">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!idOferta.Value)</Value>
+                              <Value>=Fields!clienteIdCliente.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -307,7 +190,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>idOferta</rd:DefaultName>
+                      <rd:DefaultName>clienteIdCliente</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -323,14 +206,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="nombre">
+                    <Textbox Name="codigo">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nombre.Value</Value>
+                              <Value>=Fields!codigo.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -340,7 +223,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>nombre</rd:DefaultName>
+                      <rd:DefaultName>codigo</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -356,14 +239,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="precioNormal">
+                    <Textbox Name="puntosUsados">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!precioNormal.Value</Value>
+                              <Value>=Fields!puntosUsados.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -373,7 +256,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>precioNormal</rd:DefaultName>
+                      <rd:DefaultName>puntosUsados</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -389,14 +272,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="precioOferta">
+                    <Textbox Name="actualizacion">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!precioOferta.Value</Value>
+                              <Value>=Fields!actualizacion.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -406,106 +289,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>precioOferta</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#e5e5e5</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="numeroVisitas">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!numeroVisitas.Value</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>numeroVisitas</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#e5e5e5</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="minimoCompra">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!minimoCompra.Value</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>minimoCompra</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#e5e5e5</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="maximoCompra">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!maximoCompra.Value</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>maximoCompra</rd:DefaultName>
+                      <rd:DefaultName>actualizacion</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -529,9 +313,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -544,101 +325,532 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DSOfertas</DataSetName>
-        <Top>1.82562cm</Top>
-        <Left>1.74307cm</Left>
+        <DataSetName>dsDescuento</DataSetName>
+        <Top>1.64042cm</Top>
+        <Left>1.40229cm</Left>
         <Height>1.2cm</Height>
-        <Width>14.29662cm</Width>
+        <Width>13.53188cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox16">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Listado de Ofertas</Value>
+      <Rectangle Name="Rectangle1">
+        <ReportItems>
+          <Textbox Name="Textbox12">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Listado de Descuentos</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
                 <Style />
-              </TextRun>
-            </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox12</rd:DefaultName>
+            <Top>0.02174cm</Top>
+            <Left>6.1087cm</Left>
+            <Height>0.80439cm</Height>
+            <Width>5.11938cm</Width>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
             </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>0.33486cm</Top>
-        <Left>6.22808cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.59021cm</Width>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>0.15465cm</Top>
+        <Height>0.82613cm</Height>
+        <Width>16.51cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
-      </Textbox>
+      </Rectangle>
+      <Chart Name="Chart2">
+        <ChartCategoryHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Group Name="Chart2_CategoryGroup">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!clienteIdCliente.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!clienteIdCliente.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <Label>=Fields!clienteIdCliente.Value</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartCategoryHierarchy>
+        <ChartSeriesHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Label>cliente Id Cliente</Label>
+            </ChartMember>
+            <ChartMember>
+              <Label>descuento PK</Label>
+            </ChartMember>
+            <ChartMember>
+              <Label>codigo</Label>
+            </ChartMember>
+            <ChartMember>
+              <Label>estado</Label>
+            </ChartMember>
+            <ChartMember>
+              <Label>actualizacion</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartSeriesHierarchy>
+        <ChartData>
+          <ChartSeriesCollection>
+            <ChartSeries Name="clienteIdCliente">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <X>=Fields!clienteIdCliente.Value</X>
+                    <Y>=Sum(Fields!clienteIdCliente.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <Color>Turquoise</Color>
+                    </Style>
+                    <UseValueAsLabel>true</UseValueAsLabel>
+                    <Visible>true</Visible>
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Shape</Type>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+            <ChartSeries Name="descuentoPK">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!descuentoPK.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Shape</Type>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+            <ChartSeries Name="codigo">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Count(Fields!codigo.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Shape</Type>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+            <ChartSeries Name="estado">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!estado.Value)
+50</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Shape</Type>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+            <ChartSeries Name="actualizacion">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Count(Fields!actualizacion.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Shape</Type>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+          </ChartSeriesCollection>
+        </ChartData>
+        <ChartAreas>
+          <ChartArea Name="Default">
+            <ChartCategoryAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Título del eje</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Título del eje</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+            </ChartCategoryAxes>
+            <ChartValueAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Título del eje</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Título del eje</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+            </ChartValueAxes>
+            <ChartThreeDProperties>
+              <Enabled>true</Enabled>
+            </ChartThreeDProperties>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </ChartArea>
+        </ChartAreas>
+        <ChartLegends>
+          <ChartLegend Name="Ofertas">
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontSize>8pt</FontSize>
+            </Style>
+            <Position>RightCenter</Position>
+            <Layout>Column</Layout>
+            <ChartLegendTitle>
+              <Caption />
+              <Style>
+                <FontSize>8pt</FontSize>
+                <FontWeight>Bold</FontWeight>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </ChartLegendTitle>
+            <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+            <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+          </ChartLegend>
+        </ChartLegends>
+        <ChartTitles>
+          <ChartTitle Name="Default">
+            <Caption>Grafico de Descuentos Entregados</Caption>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontWeight>Bold</FontWeight>
+              <TextAlign>General</TextAlign>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </ChartTitle>
+        </ChartTitles>
+        <Palette>BrightPastel</Palette>
+        <ChartBorderSkin>
+          <Style>
+            <BackgroundColor>Gray</BackgroundColor>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <Color>White</Color>
+          </Style>
+        </ChartBorderSkin>
+        <ChartNoDataMessage Name="NoDataMessage">
+          <Caption>Sin datos disponibles</Caption>
+          <Style>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <TextAlign>General</TextAlign>
+            <VerticalAlign>Top</VerticalAlign>
+          </Style>
+        </ChartNoDataMessage>
+        <DataSetName>dsDescuento</DataSetName>
+        <Top>3.63516cm</Top>
+        <Left>1.40229cm</Left>
+        <Height>5cm</Height>
+        <Width>13.53188cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <BackgroundGradientType>None</BackgroundGradientType>
+        </Style>
+      </Chart>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>3.5455in</Height>
     <Style />
   </Body>
-  <Width>6.88976in</Width>
+  <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>2.80514cm</Height>
+      <Height>2.52646cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox15">
+        <Textbox Name="Textbox11">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Ofertas</Value>
+                  <Value>Descuentos Entregados</Value>
                   <Style>
-                    <FontSize>22pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontSize>22pt</FontSize>
+                    <FontSize>20pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox15</rd:DefaultName>
-          <Top>0.3937cm</Top>
-          <Left>6.13516cm</Left>
-          <Height>1.28792cm</Height>
-          <Width>5.09292cm</Width>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>0.76412cm</Top>
+          <Left>4.44183cm</Left>
+          <Height>1.24672cm</Height>
+          <Width>9.35271cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -653,10 +865,8 @@
           <Source>Embedded</Source>
           <Value>LogoMisOfertas</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.3937cm</Top>
-          <Left>1.74307cm</Left>
-          <Height>1.87042cm</Height>
-          <Width>3.60088cm</Width>
+          <Height>2.50472cm</Height>
+          <Width>3.78037cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -692,18 +902,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DeskService_Oferta">
+    <DataSource Name="DeskService_Descuento">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>46776082-cc83-4a25-887a-e4d02bc542ca</rd:DataSourceID>
+      <rd:DataSourceID>3964c871-c79c-4ebf-af82-74cea695e59b</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DSOfertas">
+    <DataSet Name="dsDescuento">
       <Query>
-        <DataSourceName>DeskService_Oferta</DataSourceName>
+        <DataSourceName>DeskService_Descuento</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -715,21 +925,25 @@
           <DataField>actualizacionSpecified</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
-        <Field Name="descripcion">
-          <DataField>descripcion</DataField>
+        <Field Name="categoriaIdCategoria">
+          <DataField>categoriaIdCategoria</DataField>
+          <rd:TypeName>Desk.Service_Descuento.categoria</rd:TypeName>
+        </Field>
+        <Field Name="clienteIdCliente">
+          <DataField>clienteIdCliente</DataField>
+          <rd:TypeName>Desk.Service_Descuento.cliente</rd:TypeName>
+        </Field>
+        <Field Name="codigo">
+          <DataField>codigo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="estadoIdEstado">
-          <DataField>estadoIdEstado</DataField>
-          <rd:TypeName>Desk.Service_Oferta.estado</rd:TypeName>
+        <Field Name="descuentoPK">
+          <DataField>descuentoPK</DataField>
+          <rd:TypeName>Desk.Service_Descuento.descuentoPK</rd:TypeName>
         </Field>
-        <Field Name="idOferta">
-          <DataField>idOferta</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="idOfertaSpecified">
-          <DataField>idOfertaSpecified</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
+        <Field Name="estado">
+          <DataField>estado</DataField>
+          <rd:TypeName>Desk.Service_Descuento.estado</rd:TypeName>
         </Field>
         <Field Name="inicio">
           <DataField>inicio</DataField>
@@ -739,35 +953,19 @@
           <DataField>inicioSpecified</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
-        <Field Name="maximoCompra">
-          <DataField>maximoCompra</DataField>
+        <Field Name="puntosUsados">
+          <DataField>puntosUsados</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="minimoCompra">
-          <DataField>minimoCompra</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="nombre">
-          <DataField>nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="numeroVisitas">
-          <DataField>numeroVisitas</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="precioNormal">
-          <DataField>precioNormal</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="precioOferta">
-          <DataField>precioOferta</DataField>
+        <Field Name="tope">
+          <DataField>tope</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Desk.Service_Oferta</rd:DataSetName>
-        <rd:TableName>oferta</rd:TableName>
-        <rd:ObjectDataSourceType>Desk.Service_Oferta.oferta, Service References.Service_Oferta.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>Desk.Service_Descuento</rd:DataSetName>
+        <rd:TableName>descuento</rd:TableName>
+        <rd:ObjectDataSourceType>Desk.Service_Descuento.descuento, Service References.Service_Descuento.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -898,5 +1096,5 @@ NGJCVn2JkbqBBiJCX6cWnxgDHRhpXUBnwRksPP9VyWGQHAeJRCKRSCQSiUQikZgNLD7+eCiHKNo7wfuu
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>9cbd2e65-ca1d-4454-a673-194c76602dfc</rd:ReportID>
+  <rd:ReportID>df9a29b2-5a54-465f-b09a-e007a1ddd49d</rd:ReportID>
 </Report>

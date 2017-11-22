@@ -42,10 +42,10 @@
             // DescuentosEntregados
             // 
             this.DescuentosEntregados.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "Descuentos_entregados";
+            reportDataSource1.Name = "dsDescuento";
             reportDataSource1.Value = this.descuentoBindingSource;
             this.DescuentosEntregados.LocalReport.DataSources.Add(reportDataSource1);
-            this.DescuentosEntregados.LocalReport.ReportEmbeddedResource = "Desk.View.Descuentos_entregados.rdlc";
+            this.DescuentosEntregados.LocalReport.ReportEmbeddedResource = "Desk.Reportes.Descuentos_Entregados.rdlc";
             this.DescuentosEntregados.Location = new System.Drawing.Point(0, 0);
             this.DescuentosEntregados.Name = "DescuentosEntregados";
             this.DescuentosEntregados.Size = new System.Drawing.Size(714, 501);

@@ -162,7 +162,6 @@
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Size = new System.Drawing.Size(703, 334);
             this.PanelPrincipal.TabIndex = 0;
-            this.PanelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelPrincipal_Paint);
             // 
             // menuStrip1
             // 
@@ -280,7 +279,6 @@
             this.MinimizeBox = false;
             this.Name = "FrHomeGerenteAsociacion";
             this.Text = "FrHomeGerenteAsociacion";
-            this.Load += new System.EventHandler(this.FrHomeGerenteAsociacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.localBindingSource)).EndInit();
             this.TPUsuario.ResumeLayout(false);
