@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="U3ND33VFBPmPi8YkT7glmRjpH68=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="AYV80NMuJc/G3vjqgWxsWjhiMBI=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ProductoServicePortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ProductoServicePort" contract="Service_Producto.ProductoService" bindingType="basicHttpBinding" address="http://localhost:8080/MisOfertasWebService/ProductoService" bindingConfiguration="ProductoServicePortBinding">
+    <endpoint name="ProductoServicePort" contract="Service_Producto.ProductoService" bindingType="basicHttpBinding" address="http://10.20.65.151:8080/MisOfertasWebService/ProductoService" bindingConfiguration="ProductoServicePortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/MisOfertasWebService/ProductoService</serializedValue>
+          <serializedValue>http://10.20.65.151:8080/MisOfertasWebService/ProductoService</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

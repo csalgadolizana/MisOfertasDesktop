@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/MisOfertasWebService/CargoService?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.20.65.151:8080/MisOfertasWebService/CargoService?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CargoService.wsdl" MetadataType="Wsdl" ID="d241678b-ae9a-4e7a-a5bd-a9b95e9fbfdd" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/CargoService?wsdl" />
-    <MetadataFile FileName="CargoService.xsd" MetadataType="Schema" ID="fc0da853-8b79-41b4-a1c6-2f7bd18c1250" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/CargoService?xsd=1" />
+    <MetadataFile FileName="CargoService.xsd" MetadataType="Schema" ID="911b2219-2614-45db-a11e-3e2065bcbd5b" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/CargoService?xsd=1" />
+    <MetadataFile FileName="CargoService.wsdl" MetadataType="Wsdl" ID="6a20e188-9dc7-4843-9720-3bd96879a9ea" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/CargoService?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

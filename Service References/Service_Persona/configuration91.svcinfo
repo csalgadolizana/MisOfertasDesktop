@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="lKGDuoEpy7TwUkLsNHrNy2N8Bes=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Xdlc/ShUL/8hwD+kz+nadbZh79k=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="PersonaServicePortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="PersonaServicePort" contract="Service_Persona.PersonaService" bindingType="basicHttpBinding" address="http://localhost:8080/MisOfertasWebService/PersonaService" bindingConfiguration="PersonaServicePortBinding">
+    <endpoint name="PersonaServicePort" contract="Service_Persona.PersonaService" bindingType="basicHttpBinding" address="http://10.20.65.151:8080/MisOfertasWebService/PersonaService" bindingConfiguration="PersonaServicePortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/MisOfertasWebService/PersonaService</serializedValue>
+          <serializedValue>http://10.20.65.151:8080/MisOfertasWebService/PersonaService</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

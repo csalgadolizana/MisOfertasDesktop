@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/MisOfertasWebService/DescuentoService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.20.65.151:8080/MisOfertasWebService/DescuentoService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DescuentoService.wsdl" MetadataType="Wsdl" ID="2924a974-222a-48b9-8655-fef82a27165a" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/DescuentoService?WSDL" />
-    <MetadataFile FileName="DescuentoService.xsd" MetadataType="Schema" ID="435d7773-9390-434d-ab77-aa47487e3aca" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/DescuentoService?xsd=1" />
+    <MetadataFile FileName="DescuentoService.xsd" MetadataType="Schema" ID="e9ba599d-5eec-479b-88fe-cb604325c67e" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/DescuentoService?xsd=1" />
+    <MetadataFile FileName="DescuentoService.wsdl" MetadataType="Wsdl" ID="44e0f574-5cf4-488d-99d7-6eaf74dc35ee" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/DescuentoService?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

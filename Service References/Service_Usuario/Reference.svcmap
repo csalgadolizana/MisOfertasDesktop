@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/MisOfertasWebService/UsuarioService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.20.65.151:8080/MisOfertasWebService/WebServiceAuthUser?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UsuarioService.wsdl" MetadataType="Wsdl" ID="0d17d3f8-b6a7-4875-808e-5ed187c307d8" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/UsuarioService?WSDL" />
-    <MetadataFile FileName="UsuarioService.xsd" MetadataType="Schema" ID="9778f3bf-af77-4d8e-aaf2-7fed009a1ac7" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/UsuarioService?xsd=1" />
+    <MetadataFile FileName="WebServiceAuthUser.xsd" MetadataType="Schema" ID="54703b93-bda0-4092-99bd-75d7f92d9f0f" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/WebServiceAuthUser?xsd=1" />
+    <MetadataFile FileName="WebServiceAuthUser.wsdl" MetadataType="Wsdl" ID="321994c8-4237-48b5-8eec-77311dbb1ac5" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/WebServiceAuthUser?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

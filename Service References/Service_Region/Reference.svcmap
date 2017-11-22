@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/MisOfertasWebService/RegionService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.20.65.151:8080/MisOfertasWebService/RegionService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="RegionService1.wsdl" MetadataType="Wsdl" ID="697f6138-e024-4361-b98c-f988cf6637ed" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/RegionService?WSDL" />
-    <MetadataFile FileName="RegionService1.xsd" MetadataType="Schema" ID="4e7b6c6e-2d45-4321-9f8d-81f55a91a9fa" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/RegionService?xsd=1" />
+    <MetadataFile FileName="RegionService1.wsdl" MetadataType="Wsdl" ID="c572e1c4-8241-4904-97e8-801eb444584c" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/RegionService?WSDL" />
+    <MetadataFile FileName="RegionService1.xsd" MetadataType="Schema" ID="cc7c4258-2156-421c-8dd2-aa33d6b5d54f" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/RegionService?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -2,26 +2,20 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="PersonaService" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://localhost:8080/MisOfertasWebService/PersonaService?xsd=1" namespace="http://Servicios/" />
+      <xsd:import schemaLocation="http://10.20.65.151:8080/MisOfertasWebService/PersonaService?xsd=1" namespace="http://Servicios/" />
     </xsd:schema>
   </types>
-  <message name="Crear_persona">
-    <part name="parameters" element="tns:Crear_persona" />
-  </message>
-  <message name="Crear_personaResponse">
-    <part name="parameters" element="tns:Crear_personaResponse" />
-  </message>
   <message name="Listado_personas">
     <part name="parameters" element="tns:Listado_personas" />
   </message>
   <message name="Listado_personasResponse">
     <part name="parameters" element="tns:Listado_personasResponse" />
   </message>
-  <message name="Modificar_persona">
-    <part name="parameters" element="tns:Modificar_persona" />
+  <message name="Crear_persona">
+    <part name="parameters" element="tns:Crear_persona" />
   </message>
-  <message name="Modificar_personaResponse">
-    <part name="parameters" element="tns:Modificar_personaResponse" />
+  <message name="Crear_personaResponse">
+    <part name="parameters" element="tns:Crear_personaResponse" />
   </message>
   <message name="Eliminar_persona">
     <part name="parameters" element="tns:Eliminar_persona" />
@@ -29,35 +23,32 @@
   <message name="Eliminar_personaResponse">
     <part name="parameters" element="tns:Eliminar_personaResponse" />
   </message>
+  <message name="Modificar_persona">
+    <part name="parameters" element="tns:Modificar_persona" />
+  </message>
+  <message name="Modificar_personaResponse">
+    <part name="parameters" element="tns:Modificar_personaResponse" />
+  </message>
   <portType name="PersonaService">
-    <operation name="Crear_persona">
-      <input wsam:Action="http://Servicios/PersonaService/Crear_personaRequest" message="tns:Crear_persona" />
-      <output wsam:Action="http://Servicios/PersonaService/Crear_personaResponse" message="tns:Crear_personaResponse" />
-    </operation>
     <operation name="Listado_personas">
       <input wsam:Action="http://Servicios/PersonaService/Listado_personasRequest" message="tns:Listado_personas" />
       <output wsam:Action="http://Servicios/PersonaService/Listado_personasResponse" message="tns:Listado_personasResponse" />
     </operation>
-    <operation name="Modificar_persona">
-      <input wsam:Action="http://Servicios/PersonaService/Modificar_personaRequest" message="tns:Modificar_persona" />
-      <output wsam:Action="http://Servicios/PersonaService/Modificar_personaResponse" message="tns:Modificar_personaResponse" />
+    <operation name="Crear_persona">
+      <input wsam:Action="http://Servicios/PersonaService/Crear_personaRequest" message="tns:Crear_persona" />
+      <output wsam:Action="http://Servicios/PersonaService/Crear_personaResponse" message="tns:Crear_personaResponse" />
     </operation>
     <operation name="Eliminar_persona">
       <input wsam:Action="http://Servicios/PersonaService/Eliminar_personaRequest" message="tns:Eliminar_persona" />
       <output wsam:Action="http://Servicios/PersonaService/Eliminar_personaResponse" message="tns:Eliminar_personaResponse" />
     </operation>
+    <operation name="Modificar_persona">
+      <input wsam:Action="http://Servicios/PersonaService/Modificar_personaRequest" message="tns:Modificar_persona" />
+      <output wsam:Action="http://Servicios/PersonaService/Modificar_personaResponse" message="tns:Modificar_personaResponse" />
+    </operation>
   </portType>
   <binding name="PersonaServicePortBinding" type="tns:PersonaService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="Crear_persona">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="Listado_personas">
       <soap:operation soapAction="" />
       <input>
@@ -67,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Modificar_persona">
+    <operation name="Crear_persona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,6 +68,15 @@
       </output>
     </operation>
     <operation name="Eliminar_persona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Modificar_persona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -88,7 +88,7 @@
   </binding>
   <service name="PersonaService">
     <port name="PersonaServicePort" binding="tns:PersonaServicePortBinding">
-      <soap:address location="http://localhost:8080/MisOfertasWebService/PersonaService" />
+      <soap:address location="http://10.20.65.151:8080/MisOfertasWebService/PersonaService" />
     </port>
   </service>
 </definitions>

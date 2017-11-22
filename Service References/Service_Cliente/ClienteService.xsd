@@ -46,6 +46,17 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="Autenticacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AutenticacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="Listado_clientes">
     <xs:sequence />
   </xs:complexType>
@@ -56,7 +67,7 @@
   </xs:complexType>
   <xs:complexType name="cliente">
     <xs:sequence>
-      <xs:element minOccurs="0" name="aceptaInformativo" type="xs:integer" />
+      <xs:element minOccurs="0" name="aceptaInformativo" type="xs:unsignedShort" />
       <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ciudadIdCiudad" type="tns:ciudad" />
       <xs:element minOccurs="0" name="contrasena" type="xs:string" />
@@ -102,17 +113,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="idSexo" type="xs:decimal" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Autenticacion">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="AutenticacionResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:anyType" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Modificar_cliente">

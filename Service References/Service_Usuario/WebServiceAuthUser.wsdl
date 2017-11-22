@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WebServiceAuthUser" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://10.20.65.151:8080/MisOfertasWebService/WebServiceAuthUser?xsd=1" namespace="http://Servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="Modificar_USUARIO">
+    <part name="parameters" element="tns:Modificar_USUARIO" />
+  </message>
+  <message name="Modificar_USUARIOResponse">
+    <part name="parameters" element="tns:Modificar_USUARIOResponse" />
+  </message>
+  <message name="crear_usuario">
+    <part name="parameters" element="tns:crear_usuario" />
+  </message>
+  <message name="crear_usuarioResponse">
+    <part name="parameters" element="tns:crear_usuarioResponse" />
+  </message>
+  <message name="Eliminar_usuario">
+    <part name="parameters" element="tns:Eliminar_usuario" />
+  </message>
+  <message name="Eliminar_usuarioResponse">
+    <part name="parameters" element="tns:Eliminar_usuarioResponse" />
+  </message>
+  <message name="Listado_usuarios">
+    <part name="parameters" element="tns:Listado_usuarios" />
+  </message>
+  <message name="Listado_usuariosResponse">
+    <part name="parameters" element="tns:Listado_usuariosResponse" />
+  </message>
+  <message name="crear_usuario_2">
+    <part name="parameters" element="tns:crear_usuario_2" />
+  </message>
+  <message name="crear_usuario_2Response">
+    <part name="parameters" element="tns:crear_usuario_2Response" />
+  </message>
+  <message name="Autenticacion">
+    <part name="parameters" element="tns:Autenticacion" />
+  </message>
+  <message name="AutenticacionResponse">
+    <part name="parameters" element="tns:AutenticacionResponse" />
+  </message>
+  <message name="AutenticarTrabajador">
+    <part name="parameters" element="tns:AutenticarTrabajador" />
+  </message>
+  <message name="AutenticarTrabajadorResponse">
+    <part name="parameters" element="tns:AutenticarTrabajadorResponse" />
+  </message>
+  <portType name="WebServiceAuthUser">
+    <operation name="Modificar_USUARIO">
+      <input wsam:Action="http://Servicios/WebServiceAuthUser/Modificar_USUARIORequest" message="tns:Modificar_USUARIO" />
+      <output wsam:Action="http://Servicios/WebServiceAuthUser/Modificar_USUARIOResponse" message="tns:Modificar_USUARIOResponse" />
+    </operation>
+    <operation name="crear_usuario">
+      <input wsam:Action="http://Servicios/WebServiceAuthUser/crear_usuarioRequest" message="tns:crear_usuario" />
+      <output wsam:Action="http://Servicios/WebServiceAuthUser/crear_usuarioResponse" message="tns:crear_usuarioResponse" />
+    </operation>
+    <operation name="Eliminar_usuario">
+      <input wsam:Action="http://Servicios/WebServiceAuthUser/Eliminar_usuarioRequest" message="tns:Eliminar_usuario" />
+      <output wsam:Action="http://Servicios/WebServiceAuthUser/Eliminar_usuarioResponse" message="tns:Eliminar_usuarioResponse" />
+    </operation>
+    <operation name="Listado_usuarios">
+      <input wsam:Action="http://Servicios/WebServiceAuthUser/Listado_usuariosRequest" message="tns:Listado_usuarios" />
+      <output wsam:Action="http://Servicios/WebServiceAuthUser/Listado_usuariosResponse" message="tns:Listado_usuariosResponse" />
+    </operation>
+    <operation name="crear_usuario_2">
+      <input wsam:Action="http://Servicios/WebServiceAuthUser/crear_usuario_2Request" message="tns:crear_usuario_2" />
+      <output wsam:Action="http://Servicios/WebServiceAuthUser/crear_usuario_2Response" message="tns:crear_usuario_2Response" />
+    </operation>
+    <operation name="Autenticacion">
+      <input wsam:Action="http://Servicios/WebServiceAuthUser/AutenticacionRequest" message="tns:Autenticacion" />
+      <output wsam:Action="http://Servicios/WebServiceAuthUser/AutenticacionResponse" message="tns:AutenticacionResponse" />
+    </operation>
+    <operation name="AutenticarTrabajador">
+      <input wsam:Action="http://Servicios/WebServiceAuthUser/AutenticarTrabajadorRequest" message="tns:AutenticarTrabajador" />
+      <output wsam:Action="http://Servicios/WebServiceAuthUser/AutenticarTrabajadorResponse" message="tns:AutenticarTrabajadorResponse" />
+    </operation>
+  </portType>
+  <binding name="WebServiceAuthUserPortBinding" type="tns:WebServiceAuthUser">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Modificar_USUARIO">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="crear_usuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Eliminar_usuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Listado_usuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="crear_usuario_2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Autenticacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AutenticarTrabajador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WebServiceAuthUser">
+    <port name="WebServiceAuthUserPort" binding="tns:WebServiceAuthUserPortBinding">
+      <soap:address location="http://10.20.65.151:8080/MisOfertasWebService/WebServiceAuthUser" />
+    </port>
+  </service>
+</definitions>

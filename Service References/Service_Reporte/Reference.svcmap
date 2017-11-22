@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/MisOfertasWebService/ReporteService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.20.65.151:8080/MisOfertasWebService/ReporteService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReporteService.xsd" MetadataType="Schema" ID="ac0048f8-6332-410c-8fa2-e2fd02e73e3f" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/ReporteService?xsd=1" />
-    <MetadataFile FileName="ReporteService.wsdl" MetadataType="Wsdl" ID="685237ae-42b3-4f8a-9371-ee2406da9bc8" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/ReporteService?WSDL" />
+    <MetadataFile FileName="ReporteService.xsd" MetadataType="Schema" ID="47f50af9-eac7-40f6-a3ac-cc598bd73b4c" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/ReporteService?xsd=1" />
+    <MetadataFile FileName="ReporteService.wsdl" MetadataType="Wsdl" ID="08de4ab5-a2ac-45d5-8e05-f135fb4bff04" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/ReporteService?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

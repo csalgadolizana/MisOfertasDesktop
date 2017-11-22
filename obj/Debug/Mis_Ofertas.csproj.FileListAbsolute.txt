@@ -111,24 +111,33 @@ C:\Users\Acer\Desktop\MisOfertasDesktop-master\obj\Debug\Desk.exe
 C:\Users\Acer\Desktop\MisOfertasDesktop-master\obj\Debug\Desk.pdb
 C:\Users\Acer\Desktop\MisOfertasDesktop-master\obj\Debug\Mis_Ofertas.csprojResolveAssemblyReference.cache
 C:\Users\Acer\Desktop\MisOfertasDesktop-master\obj\Debug\Desk.Reportes.Ofertas.resources
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.Properties.Resources.resources
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.Reportes.Descuentos_Entregados.resources
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.Reportes.Ofertas.resources
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.Reportes.Reporte_Locales.resources
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.Reportes.Usuarios_Registrados.resources
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.Reportes.Valoraciones_Realizadas.resources
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.View.FrHomeAdmin.resources
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.View.FrHomeGerenteAsociacion.resources
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.View.FrLogin.resources
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Mis_Ofertas.csproj.GenerateResource.Cache
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Mis_Ofertas.csproj.CoreCompileInputs.cache
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\bin\Debug\Desk.exe.config
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\bin\Debug\Desk.exe
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\bin\Debug\Desk.pdb
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.exe
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Desk.pdb
-C:\Users\PC-Cristopher\Desktop\Portafolio\MisOfertasDesktop\obj\Debug\Mis_Ofertas.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.Properties.Resources.resources
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.Reportes.Descuentos_Entregados.resources
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.Reportes.Ofertas.resources
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.Reportes.Reporte_Locales.resources
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.Reportes.Usuarios_Registrados.resources
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.Reportes.Valoraciones_Realizadas.resources
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.View.FrHomeAdmin.resources
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.View.FrHomeGerenteAsociacion.resources
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.View.FrLogin.resources
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Mis_Ofertas.csproj.GenerateResource.Cache
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\RdlCompile.cache
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\RdlCompile.compiled
 C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\Desk.exe.config
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\Desk.exe
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\Desk.pdb
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.exe
 C:\Users\Acer\Desktop\Nueva carpeta\MisOfertasDesktop\obj\Debug\Desk.pdb

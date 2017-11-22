@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/MisOfertasWebService/ValoracionService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.20.65.151:8080/MisOfertasWebService/ValoracionService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ValoracionService.wsdl" MetadataType="Wsdl" ID="39181670-22e9-42d3-8a36-5e63be7cde0c" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/ValoracionService?WSDL" />
-    <MetadataFile FileName="ValoracionService.xsd" MetadataType="Schema" ID="e0b071d5-bc26-409a-bf12-058486fb5146" SourceId="1" SourceUrl="http://localhost:8080/MisOfertasWebService/ValoracionService?xsd=1" />
+    <MetadataFile FileName="ValoracionService.wsdl" MetadataType="Wsdl" ID="5053dc9e-0359-4c64-98f3-571e1afd48a6" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/ValoracionService?WSDL" />
+    <MetadataFile FileName="ValoracionService.xsd" MetadataType="Schema" ID="7334a8dc-3941-43e7-8913-d4dab591767f" SourceId="1" SourceUrl="http://10.20.65.151:8080/MisOfertasWebService/ValoracionService?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

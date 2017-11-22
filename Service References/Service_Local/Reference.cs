@@ -16,15 +16,6 @@ namespace Desk.Service_Local {
     public interface LocalService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/LocalService/Listado_localRequest", ReplyAction="http://Servicios/LocalService/Listado_localResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Desk.Service_Local.Listado_localResponse Listado_local(Desk.Service_Local.Listado_localRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/LocalService/Listado_localRequest", ReplyAction="http://Servicios/LocalService/Listado_localResponse")]
-        System.Threading.Tasks.Task<Desk.Service_Local.Listado_localResponse> Listado_localAsync(Desk.Service_Local.Listado_localRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/LocalService/Eliminar_localRequest", ReplyAction="http://Servicios/LocalService/Eliminar_localResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,6 +23,15 @@ namespace Desk.Service_Local {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/LocalService/Eliminar_localRequest", ReplyAction="http://Servicios/LocalService/Eliminar_localResponse")]
         System.Threading.Tasks.Task<Desk.Service_Local.Eliminar_localResponse> Eliminar_localAsync(Desk.Service_Local.Eliminar_localRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/LocalService/Listado_localRequest", ReplyAction="http://Servicios/LocalService/Listado_localResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Desk.Service_Local.Listado_localResponse Listado_local(Desk.Service_Local.Listado_localRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/LocalService/Listado_localRequest", ReplyAction="http://Servicios/LocalService/Listado_localResponse")]
+        System.Threading.Tasks.Task<Desk.Service_Local.Listado_localResponse> Listado_localAsync(Desk.Service_Local.Listado_localRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/LocalService/Crear_localRequest", ReplyAction="http://Servicios/LocalService/Crear_localResponse")]
@@ -52,8 +52,44 @@ namespace Desk.Service_Local {
         System.Threading.Tasks.Task<Desk.Service_Local.Modificar_localResponse> Modificar_localAsync(Desk.Service_Local.Modificar_localRequest request);
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_local", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_localRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public Eliminar_localRequest() {
+        }
+        
+        public Eliminar_localRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_localResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class Eliminar_localResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public Eliminar_localResponse() {
+        }
+        
+        public Eliminar_localResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -155,7 +191,7 @@ namespace Desk.Service_Local {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -243,7 +279,7 @@ namespace Desk.Service_Local {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -303,7 +339,7 @@ namespace Desk.Service_Local {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -363,7 +399,7 @@ namespace Desk.Service_Local {
     }
     
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2117.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -551,42 +587,6 @@ namespace Desk.Service_Local {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_local", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_localRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public Eliminar_localRequest() {
-        }
-        
-        public Eliminar_localRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Eliminar_localResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class Eliminar_localResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public Eliminar_localResponse() {
-        }
-        
-        public Eliminar_localResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Crear_local", WrapperNamespace="http://Servicios/", IsWrapped=true)]
     public partial class Crear_localRequest {
         
@@ -724,27 +724,6 @@ namespace Desk.Service_Local {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Desk.Service_Local.Listado_localResponse Desk.Service_Local.LocalService.Listado_local(Desk.Service_Local.Listado_localRequest request) {
-            return base.Channel.Listado_local(request);
-        }
-        
-        public Desk.Service_Local.local[] Listado_local() {
-            Desk.Service_Local.Listado_localRequest inValue = new Desk.Service_Local.Listado_localRequest();
-            Desk.Service_Local.Listado_localResponse retVal = ((Desk.Service_Local.LocalService)(this)).Listado_local(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Desk.Service_Local.Listado_localResponse> Desk.Service_Local.LocalService.Listado_localAsync(Desk.Service_Local.Listado_localRequest request) {
-            return base.Channel.Listado_localAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Desk.Service_Local.Listado_localResponse> Listado_localAsync() {
-            Desk.Service_Local.Listado_localRequest inValue = new Desk.Service_Local.Listado_localRequest();
-            return ((Desk.Service_Local.LocalService)(this)).Listado_localAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Desk.Service_Local.Eliminar_localResponse Desk.Service_Local.LocalService.Eliminar_local(Desk.Service_Local.Eliminar_localRequest request) {
             return base.Channel.Eliminar_local(request);
         }
@@ -765,6 +744,27 @@ namespace Desk.Service_Local {
             Desk.Service_Local.Eliminar_localRequest inValue = new Desk.Service_Local.Eliminar_localRequest();
             inValue.id = id;
             return ((Desk.Service_Local.LocalService)(this)).Eliminar_localAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Desk.Service_Local.Listado_localResponse Desk.Service_Local.LocalService.Listado_local(Desk.Service_Local.Listado_localRequest request) {
+            return base.Channel.Listado_local(request);
+        }
+        
+        public Desk.Service_Local.local[] Listado_local() {
+            Desk.Service_Local.Listado_localRequest inValue = new Desk.Service_Local.Listado_localRequest();
+            Desk.Service_Local.Listado_localResponse retVal = ((Desk.Service_Local.LocalService)(this)).Listado_local(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Desk.Service_Local.Listado_localResponse> Desk.Service_Local.LocalService.Listado_localAsync(Desk.Service_Local.Listado_localRequest request) {
+            return base.Channel.Listado_localAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Desk.Service_Local.Listado_localResponse> Listado_localAsync() {
+            Desk.Service_Local.Listado_localRequest inValue = new Desk.Service_Local.Listado_localRequest();
+            return ((Desk.Service_Local.LocalService)(this)).Listado_localAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

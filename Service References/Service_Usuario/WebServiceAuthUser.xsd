@@ -13,16 +13,23 @@
   <xs:element name="Modificar_USUARIO" type="tns:Modificar_USUARIO" />
   <xs:element name="Modificar_USUARIOResponse" type="tns:Modificar_USUARIOResponse" />
   <xs:element name="cargo" type="tns:cargo" />
+  <xs:element name="crear_usuario" nillable="true" type="tns:CREAR_USUARIO" />
+  <xs:element name="crear_usuarioResponse" nillable="true" type="tns:CREAR_USUARIOResponse" />
+  <xs:element name="crear_usuario_2" type="tns:crear_usuario_2" />
+  <xs:element name="crear_usuario_2Response" type="tns:crear_usuario_2Response" />
   <xs:element name="estado" type="tns:estado" />
   <xs:element name="persona" type="tns:persona" />
   <xs:element name="sexo" type="tns:sexo" />
   <xs:element name="usuario" type="tns:usuario" />
-  <xs:complexType name="Listado_usuarios">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="Listado_usuariosResponse">
+  <xs:complexType name="AutenticarTrabajador">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AutenticarTrabajadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="usuario">
@@ -63,27 +70,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="idSexo" type="xs:decimal" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Eliminar_usuario">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Eliminar_usuarioResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="AutenticarTrabajador">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="AutenticarTrabajadorResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="CREAR_USUARIO">
@@ -128,6 +114,40 @@
   <xs:complexType name="Modificar_USUARIOResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="crear_usuario_2">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+      <xs:element name="id_estado" type="xs:int" />
+      <xs:element name="id_persona" type="xs:int" />
+      <xs:element name="id_cargo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="crear_usuario_2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_usuario">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Eliminar_usuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Listado_usuarios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Listado_usuariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

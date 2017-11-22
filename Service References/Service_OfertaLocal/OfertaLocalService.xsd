@@ -23,6 +23,19 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="Crear_oferta_local">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="oferta_id" type="xs:int" />
+      <xs:element name="local_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Crear_oferta_localResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="Listado_oferta_local">
     <xs:sequence />
   </xs:complexType>
@@ -99,19 +112,6 @@
       <xs:element minOccurs="0" name="idofertalocal" type="xs:integer" />
       <xs:element minOccurs="0" name="localIdLocal" type="xs:integer" />
       <xs:element minOccurs="0" name="ofertaIdOferta" type="xs:integer" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Crear_oferta_local">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element name="oferta_id" type="xs:int" />
-      <xs:element name="local_id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Crear_oferta_localResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

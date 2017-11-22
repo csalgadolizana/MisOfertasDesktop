@@ -48,7 +48,7 @@
   </xs:complexType>
   <xs:complexType name="cliente">
     <xs:sequence>
-      <xs:element minOccurs="0" name="aceptaInformativo" type="xs:integer" />
+      <xs:element minOccurs="0" name="aceptaInformativo" type="xs:unsignedShort" />
       <xs:element minOccurs="0" name="actualizacion" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ciudadIdCiudad" type="tns:ciudad" />
       <xs:element minOccurs="0" name="contrasena" type="xs:string" />
