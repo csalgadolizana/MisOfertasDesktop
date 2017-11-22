@@ -14,7 +14,7 @@ namespace Desk.Utils
         }
 
 
-        public static string HexStringFromBytes(byte[] bytes)
+        private static string HexStringFromBytes(byte[] bytes)
         {
             var sb = new StringBuilder();
             foreach (byte b in bytes)

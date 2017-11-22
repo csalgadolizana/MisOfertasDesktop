@@ -1,5 +1,5 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿using Desk.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +21,15 @@ namespace Desk.View
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Service_Usuario.UsuarioServiceClient serviceclient = new Service_Usuario.UsuarioServiceClient();
-            var usuario = serviceclient.AutenticarTrabajador(txtUsuario.Text.Trim(), txtPassword.Text.Trim());
+            //www.sha1-online.com conversor
+            //Tienes que hacer el using Desk.Utils; arriba
+            //luego llamas directamente a la clase estatica(no se le puede hacer un new ...)
+            //y escribiendo SHA1Util. puedes llamar al metodo encriptarSHA1(string)
+            //que recive un string por parametros y eso lo puedes guardar en una varible
+            //aqui estoy guardandolo en string pass para luego usar pass en el servicio
+            string pass = SHA1Util.encriptarSHA1(txtPassword.Text.Trim());
+            MessageBox.Show("pass "+pass);
+            var usuario = serviceclient.AutenticarTrabajador(txtUsuario.Text.Trim(), pass);
             if (int.Parse(usuario.idUsuario.ToString()) != 0)
             {
                 switch (int.Parse(usuario.cargoIdcargo.idcargo.ToString()))
