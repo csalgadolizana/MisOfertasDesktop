@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.ServiceModel;
 
 namespace Desk.View
 {
@@ -1193,7 +1194,12 @@ namespace Desk.View
             // Write the string array to a new file named "WriteLines.txt".
             using (StreamWriter outputFile = new StreamWriter(mydocpath + @"\WriteLines.txt"))
             {
+                
+                BasicHttpBinding binding = new BasicHttpBinding();
+                // Use double the default value
+                binding.MaxReceivedMessageSize = 655362000000;
                 List<Service_OfertaVisita.ofertavisi> vio = ofertVisit.Listado_oferta_visitas().ToList();
+
                 foreach (Service_OfertaVisita.ofertavisi item in vio)
                 {
                     string a = ";";
