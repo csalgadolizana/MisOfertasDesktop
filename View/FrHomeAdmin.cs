@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Desk.View
 {
@@ -635,7 +636,7 @@ namespace Desk.View
         {
             initLisProductos();
         }
-        
+
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
 
@@ -724,7 +725,7 @@ namespace Desk.View
                 if (item.idLocal.ToString() == txtIdLocalBuscar.Text.Trim())
                 {
                     loc = item;
-                }                
+                }
             }
             if ((loc != null))
             {
@@ -750,7 +751,7 @@ namespace Desk.View
                 label66.Visible = true;
                 label65.Visible = true;
                 label77.Visible = true;
-                label54.Visible = true;                
+                label54.Visible = true;
 
                 btnActivarLocal.Enabled = false;
                 btnActualizarLocal.Enabled = true;
@@ -802,10 +803,10 @@ namespace Desk.View
                 MessageBox.Show("Local no existe, porfavor ingrese otro id");
             }
 
-            
+
         }
 
-        
+
         private void btnActualizarLocal_Click(object sender, EventArgs e)
         {
             try
@@ -852,7 +853,7 @@ namespace Desk.View
                 txtNombreLocalBuscar.Text = "";
                 txtDireccionLocalBuscar.Text = "";
                 cboIdEmpresaBuscar.Text = "";
-                cboComunaLocalBuscar.Text = "";                
+                cboComunaLocalBuscar.Text = "";
 
             }
             catch (Exception ex)
@@ -1108,7 +1109,7 @@ namespace Desk.View
             {
                 MessageBox.Show("Error -> " + ex.Message);
             }*/
-                    initLisEmpresa();
+            initLisEmpresa();
         }
 
         private void btnActiva_Click(object sender, EventArgs e)
@@ -1159,7 +1160,7 @@ namespace Desk.View
 
                 txtNombreLocalBuscar.Text = loca.nombre;
                 txtDireccionLocalBuscar.Text = loca.direccion;
-                
+
 
                 txtIdLocalBuscar.Text = "";
 
@@ -1177,6 +1178,34 @@ namespace Desk.View
                 MessageBox.Show("Error -> " + ex.Message);
             }
             return;
+        }
+
+        private void btnDescarBI_Click(object sender, EventArgs e)
+        {
+            // Create a string array with the lines of text
+            Service_OfertaVisita.OfertaVistaServiceClient ofertVisit = new Service_OfertaVisita.OfertaVistaServiceClient();
+            //string[] lines = { ofertavisitaservice.Listado_oferta_visitas };
+
+            // Set a variable to the My Documents path.
+            string mydocpath =
+                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            // Write the string array to a new file named "WriteLines.txt".
+            using (StreamWriter outputFile = new StreamWriter(mydocpath + @"\WriteLines.txt"))
+            {
+                List<Service_OfertaVisita.ofertavisi> vio = ofertVisit.Listado_oferta_visitas().ToList();
+                foreach (Service_OfertaVisita.ofertavisi item in vio)
+                {
+                    string a = ";";
+                    a = item.ofertaIdOferta.idOferta.ToString()+";" +item.ofertaIdOferta.nombre+";"+ item.ofertaIdOferta.precioNormal+";"+item.ofertaIdOferta.precioOferta+";"+ item.ofertaIdOferta.descripcion +";"+ item.ofertaIdOferta.minimoCompra+";"+item.ofertaIdOferta.maximoCompra + ";";
+
+                    outputFile.WriteLine(a);
+                }
+
+
+                   
+            }
+            MessageBox.Show("No se saco la chucha");
         }
     }
 }

@@ -86,7 +86,7 @@
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.label37 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDescarBI = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label26 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -856,7 +856,7 @@
             this.tabPage15.BackColor = System.Drawing.Color.Red;
             this.tabPage15.Controls.Add(this.label37);
             this.tabPage15.Controls.Add(this.comboBox1);
-            this.tabPage15.Controls.Add(this.button2);
+            this.tabPage15.Controls.Add(this.btnDescarBI);
             this.tabPage15.Controls.Add(this.dateTimePicker2);
             this.tabPage15.Controls.Add(this.label26);
             this.tabPage15.Controls.Add(this.dateTimePicker1);
@@ -891,14 +891,15 @@
             this.comboBox1.Size = new System.Drawing.Size(156, 27);
             this.comboBox1.TabIndex = 6;
             // 
-            // button2
+            // btnDescarBI
             // 
-            this.button2.Location = new System.Drawing.Point(206, 223);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(277, 75);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Descargar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDescarBI.Location = new System.Drawing.Point(200, 221);
+            this.btnDescarBI.Name = "btnDescarBI";
+            this.btnDescarBI.Size = new System.Drawing.Size(277, 51);
+            this.btnDescarBI.TabIndex = 5;
+            this.btnDescarBI.Text = "Descargar";
+            this.btnDescarBI.UseVisualStyleBackColor = true;
+            this.btnDescarBI.Click += new System.EventHandler(this.btnDescarBI_Click);
             // 
             // dateTimePicker2
             // 
@@ -1568,7 +1569,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(707, 317);
+            this.tabPage2.Size = new System.Drawing.Size(707, 316);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Agregar Local";
             // 
@@ -2335,7 +2336,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDescarBI;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TabPage tHome;
