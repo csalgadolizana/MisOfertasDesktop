@@ -23,6 +23,7 @@ namespace Desk.View
         Service_Region.RegionServiceClient regionService = new Service_Region.RegionServiceClient();
         Service_Cliente.ClienteServiceClient clienteService = new Service_Cliente.ClienteServiceClient();
         Service_Ciudad.CiudadServiceClient ciudadService = new Service_Ciudad.CiudadServiceClient();
+        Service_Persona.PersonaServiceClient personaService = new Service_Persona.PersonaServiceClient();
 
         DateTime FechaCreacion;
         DateTime FechaCreacionUsuario;
@@ -43,6 +44,18 @@ namespace Desk.View
             label28.Hide();
             label6.Hide();
             btnActiva.Hide();
+
+            txtNombreLocalBuscar.Hide();
+            txtDireccionLocalBuscar.Hide();
+            cboIdEmpresaBuscar.Hide();
+            cboComunaLocalBuscar.Hide();
+            label66.Hide();
+            label65.Hide();
+            label54.Hide();
+            label77.Hide();
+            btnActualizarLocal.Hide();
+            btnEliminarLocal.Hide();
+            btnActivarLocal.Hide();
 
 
 
@@ -315,10 +328,10 @@ namespace Desk.View
                     string pass = SHA1Util.encriptarSHA1(txtContrasenaUsuario.Text.Trim());
                     MessageBox.Show("pass " + pass);
 
-                    Service_Persona.PersonaServiceClient perso = new Service_Persona.PersonaServiceClient();
-                    perso.Crear_persona(0, txtNombrePersona.Text, txtApellidoPersona.Text, txtRutPersona.Text, cboSexo.SelectedIndex + 1);
+                    //Service_Persona.PersonaServiceClient perso = new Service_Persona.PersonaServiceClient();
+                    personaService.Crear_persona(0, txtNombrePersona.Text, txtApellidoPersona.Text, txtRutPersona.Text, cboSexo.SelectedIndex + 1);
                     //perso.Listado_personas();
-                    Service_Persona.persona persona1 = perso.Listado_personas().OrderByDescending(x => x.idpersona).First();
+                    Service_Persona.persona persona1 = personaService.Listado_personas().OrderByDescending(x => x.idpersona).First();
                     MessageBox.Show("Persona Creada Correctamente");
 
                     Service_Usuario.WebServiceAuthUserClient usu = new Service_Usuario.WebServiceAuthUserClient();
@@ -622,9 +635,7 @@ namespace Desk.View
         {
             initLisProductos();
         }
-
-
-
+        
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
 
@@ -706,30 +717,95 @@ namespace Desk.View
         private void btnBuscarLocal_Click(object sender, EventArgs e)
         {
             List<Service_Local.local> ListaLocal = localService.Listado_local().ToList();
+            Service_Local.local loc = null;
             foreach (var item in ListaLocal)
             {
+
                 if (item.idLocal.ToString() == txtIdLocalBuscar.Text.Trim())
                 {
-                    txtDireccionLocalBuscar.Text = item.direccion;
-                    txtNombreLocalBuscar.Text = item.nombre;
-                    cboIdEmpresaBuscar.SelectedIndex = int.Parse(item.empresaIdEmpresa.idEmpresa.ToString()) - 1;
-                    cboComunaLocalBuscar.SelectedIndex = int.Parse(item.ciudadIdCiudad.idCiudad.ToString()) - 1;
-
-                    txtDireccionLocalBuscar.Enabled = true;
-                    txtNombreLocalBuscar.Enabled = true;
-                    cboIdEmpresaBuscar.Enabled = true;
-                    cboComunaLocalBuscar.Enabled = true;
-                    btnActualizarLocal.Enabled = true;
-                    btnBuscarLocal.Enabled = true;
-                    txtIdLocalBuscar.Enabled = true;
-                    break;
-
-                }
+                    loc = item;
+                }                
             }
-            return;
+            if ((loc != null))
+            {
+                txtNombreLocalBuscar.Enabled = false;
+                txtDireccionLocalBuscar.Enabled = false;
+                cboIdEmpresaBuscar.Enabled = false;
+                cboComunaLocalBuscar.Enabled = false;
+                MessageBox.Show("Local a sido encontrado");
+
+                txtNombreLocalBuscar.Text = loc.nombre;
+                txtDireccionLocalBuscar.Text = loc.direccion;
+                cboIdEmpresaBuscar.Text = loc.empresaIdEmpresa.nombre;
+                cboComunaLocalBuscar.Text = loc.ciudadIdCiudad.nombre;
+
+
+                btnActivarLocal.Visible = false;
+                btnActualizarLocal.Visible = true;
+                btnEliminarLocal.Visible = true;
+                txtNombreLocalBuscar.Visible = true;
+                txtDireccionLocalBuscar.Visible = true;
+                cboIdEmpresaBuscar.Visible = true;
+                cboComunaLocalBuscar.Visible = true;
+                label66.Visible = true;
+                label65.Visible = true;
+                label77.Visible = true;
+                label54.Visible = true;                
+
+                btnActivarLocal.Enabled = false;
+                btnActualizarLocal.Enabled = true;
+                btnEliminarLocal.Enabled = true;
+                txtNombreLocalBuscar.Enabled = true;
+                txtDireccionLocalBuscar.Enabled = true;
+                cboIdEmpresaBuscar.Enabled = true;
+                cboComunaLocalBuscar.Enabled = true;
+            }
+            else
+            {
+                txtNombreLocalBuscar.Show();
+                txtDireccionLocalBuscar.Show();
+                cboIdEmpresaBuscar.Show();
+                cboComunaLocalBuscar.Show();
+                label66.Show();
+                label65.Show();
+                label77.Show();
+                label54.Show();
+                btnActualizarLocal.Show();
+                btnEliminarLocal.Show();
+
+                txtIdLocalBuscar.Enabled = true;
+                txtNombreLocalBuscar.Enabled = false;
+                txtDireccionLocalBuscar.Enabled = false;
+                cboIdEmpresaBuscar.Enabled = false;
+                cboComunaLocalBuscar.Enabled = false;
+                btnEliminarLocal.Enabled = false;
+                btnActualizarLocal.Enabled = false;
+                btnActivarLocal.Visible = false;
+
+                txtIdLocalBuscar.Text = "";
+                txtNombreLocalBuscar.Text = "";
+                txtDireccionLocalBuscar.Text = "";
+                cboIdEmpresaBuscar.Text = "";
+                cboComunaLocalBuscar.Text = "";
+
+                txtNombreLocalBuscar.Hide();
+                txtDireccionLocalBuscar.Hide();
+                cboIdEmpresaBuscar.Hide();
+                cboComunaLocalBuscar.Hide();
+                label66.Hide();
+                label65.Hide();
+                label54.Hide();
+                label77.Hide();
+                btnActualizarLocal.Hide();
+                btnEliminarLocal.Hide();
+                btnActivarLocal.Hide();
+                MessageBox.Show("Local no existe, porfavor ingrese otro id");
+            }
+
+            
         }
 
-        //______________________________--------------
+        
         private void btnActualizarLocal_Click(object sender, EventArgs e)
         {
             try
@@ -772,12 +848,11 @@ namespace Desk.View
             try
             {
                 localService.Eliminar_local(int.Parse(txtIdLocalBuscar.Text));
-                MessageBox.Show("Local se Elimino Correctamente");
-                txtIdLocalBuscar.Text = "";
-                txtDireccionLocalBuscar.Text = "";
+                MessageBox.Show("Local se a Eliminado Correctamente");
                 txtNombreLocalBuscar.Text = "";
+                txtDireccionLocalBuscar.Text = "";
                 cboIdEmpresaBuscar.Text = "";
-                cboComunaLocalBuscar.Text = "";
+                cboComunaLocalBuscar.Text = "";                
 
             }
             catch (Exception ex)
@@ -846,20 +921,29 @@ namespace Desk.View
 
         private void btnIngresarEmpresa_Click(object sender, EventArgs e)
         {
+            Service_Empresa.EmpresaServiceClient serviceEmpre = new Service_Empresa.EmpresaServiceClient();
             try
             {
-                Service_Empresa.EmpresaServiceClient empre1 = new Service_Empresa.EmpresaServiceClient();
-                empre1.Crear_empresa(txtRutEmpresa.Text, txtNombreEmpresa.Text, txtDescipcionEmpresa.Text, 1);
-
-                Service_Empresa.empresa empre11 = empre1.Listado_empresa().OrderByDescending(x => x.idEmpresa).First();
-                MessageBox.Show("Empresa Creada Correctamente");
-
-                //Service_Empresa.EmpresaServiceClient emp = new Service_Empresa.EmpresaServiceClient();
-                //emp.Crear_empresa(0, txtRutEmpresa.Text, txtNombreEmpresa.Text, txtDescripcionEmpresa.Text, DateTime.Parse(dtFechaInicioEmpresa.Value.ToShortDateString()), DateTime.Parse(dtFechaActualizacionEmpresa.Value.ToShortDateString()), 0);
+                Service_Empresa.empresa eee = serviceEmpre.Listado_empresa().First(x => x.rut == txtRutEmpresa.Text.Trim());
+                MessageBox.Show("Error!! \nEl Rut " + eee.rut + " ya existe");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Empresa No se a Creado");
+                try
+                {
+                    Service_Empresa.EmpresaServiceClient empre1 = new Service_Empresa.EmpresaServiceClient();
+                    empre1.Crear_empresa(txtRutEmpresa.Text, txtNombreEmpresa.Text, txtDescipcionEmpresa.Text, 1);
+
+                    Service_Empresa.empresa empre11 = empre1.Listado_empresa().OrderByDescending(x => x.idEmpresa).First();
+                    MessageBox.Show("Empresa Creada Correctamente");
+
+                    //Service_Empresa.EmpresaServiceClient emp = new Service_Empresa.EmpresaServiceClient();
+                    //emp.Crear_empresa(0, txtRutEmpresa.Text, txtNombreEmpresa.Text, txtDescripcionEmpresa.Text, DateTime.Parse(dtFechaInicioEmpresa.Value.ToShortDateString()), DateTime.Parse(dtFechaActualizacionEmpresa.Value.ToShortDateString()), 0);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Empresa No se a Creado");
+                }
             }
         }
 
@@ -907,7 +991,7 @@ namespace Desk.View
         private void btnBuscarEmpre_Click(object sender, EventArgs e)
         {
             List<Service_Empresa.empresa> empresa = empresaService.Listado_empresa().ToList();
-            Service_Empresa.empresa emp=null;
+            Service_Empresa.empresa emp = null;
             foreach (var item in empresa)
             {
                 if (item.idEmpresa.ToString() == txtIdEmpresaModificar.Text.Trim())
@@ -918,7 +1002,6 @@ namespace Desk.View
             }
             if (emp != null)
             {
-
                 if (emp.estadoIdEstado.idEstado == 2)
                 {
 
@@ -927,17 +1010,18 @@ namespace Desk.View
                     txtDescripcionEM.Enabled = false;
                     btnModificarEmpre.Enabled = false;
                     btnEliminarEmpre.Enabled = false;
+
                     MessageBox.Show("La Empresa se encuentra desactivada");
                     btnActiva.Visible = true;
                     txtRutEM.Visible = true;
                     txtNombreEM.Visible = true;
                     txtDescripcionEM.Visible = true;
-                    label30.Visible=true;
+                    label30.Visible = true;
                     label28.Visible = true;
                     label6.Visible = true;
                     btnModificarEmpre.Visible = false;
                     btnEliminarEmpre.Visible = false;
-                    
+
 
                 }
                 else
@@ -964,14 +1048,14 @@ namespace Desk.View
                     txtDescripcionEM.Text = emp.descripcion;
                     txtRutEmpresa.Text = emp.rut;
                     FechaInicioEmpresa = emp.inicio;
-                    MessageBox.Show("Empresa encontrada");
+                    MessageBox.Show("Empresa a sido encontrada");
                 }
             }
             else
             {
-                MessageBox.Show("Empresa no se encontro");
+                MessageBox.Show("El ID Empresa no existe porfavor ingrese otro ID");
             }
-            
+
         }
 
         private void btnEliminarEmpre_Click(object sender, EventArgs e)
@@ -1024,7 +1108,7 @@ namespace Desk.View
             {
                 MessageBox.Show("Error -> " + ex.Message);
             }*/
-            initLisEmpresa();
+                    initLisEmpresa();
         }
 
         private void btnActiva_Click(object sender, EventArgs e)
@@ -1036,7 +1120,7 @@ namespace Desk.View
                 empresaService.Modificar_empresa(idd, em.rut, em.nombre, em.descripcion, 1);
                 MessageBox.Show("Empresa se encuentra activada");
                 txtIdEmpresaModificar.Enabled = true;
-                
+
                 txtRutEM.Text = em.rut;
                 txtNombreEM.Text = em.nombre;
                 txtDescripcionEM.Text = em.descripcion;
@@ -1059,6 +1143,40 @@ namespace Desk.View
             {
                 MessageBox.Show("Error ->" + ex.Message);
             };
+        }
+
+        private void btnActivarLocal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Service_Local.local loca = localService.Listado_local().First(cc => cc.idLocal.ToString() == txtIdLocalBuscar.Text.Trim());
+                int idd = int.Parse(loca.idLocal + "");
+                int emp = int.Parse(loca.empresaIdEmpresa.idEmpresa + "");
+                int com = int.Parse(loca.ciudadIdCiudad.idCiudad + "");
+                localService.Modificar_local(idd, loca.direccion, loca.nombre, emp, com);
+                MessageBox.Show("Local se encuentra desactivada");
+                txtIdLocalBuscar.Enabled = true;
+
+                txtNombreLocalBuscar.Text = loca.nombre;
+                txtDireccionLocalBuscar.Text = loca.direccion;
+                
+
+                txtIdLocalBuscar.Text = "";
+
+                txtNombreLocalBuscar.Enabled = true;
+                txtDireccionLocalBuscar.Enabled = true;
+                cboIdEmpresaBuscar.Enabled = true;
+                cboComunaLocalBuscar.Enabled = true;
+                btnActualizarLocal.Show();
+                btnEliminarLocal.Show();
+                btnActivarLocal.Hide();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error -> " + ex.Message);
+            }
+            return;
         }
     }
 }

@@ -162,6 +162,7 @@
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnActivarLocal = new System.Windows.Forms.Button();
             this.cboComunaLocalBuscar = new System.Windows.Forms.ComboBox();
             this.cboIdEmpresaBuscar = new System.Windows.Forms.ComboBox();
             this.label54 = new System.Windows.Forms.Label();
@@ -194,6 +195,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnActivar = new System.Windows.Forms.TabPage();
+            this.btnActiva = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
             this.btnBuscarEmpre = new System.Windows.Forms.Button();
             this.btnEliminarEmpre = new System.Windows.Forms.Button();
@@ -213,7 +215,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.btnActiva = new System.Windows.Forms.Button();
             this.TPUsuario.SuspendLayout();
             this.tHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -1481,10 +1482,10 @@
             this.tabControl5.Controls.Add(this.tabPage2);
             this.tabControl5.Controls.Add(this.tabPage3);
             this.tabControl5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl5.Location = new System.Drawing.Point(0, 30);
+            this.tabControl5.Location = new System.Drawing.Point(0, 31);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(715, 349);
+            this.tabControl5.Size = new System.Drawing.Size(715, 348);
             this.tabControl5.TabIndex = 3;
             // 
             // tabPage1
@@ -1497,7 +1498,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(707, 317);
+            this.tabPage1.Size = new System.Drawing.Size(707, 316);
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Ver Locales";
             // 
@@ -1688,6 +1689,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Red;
+            this.tabPage3.Controls.Add(this.btnActivarLocal);
             this.tabPage3.Controls.Add(this.cboComunaLocalBuscar);
             this.tabPage3.Controls.Add(this.cboIdEmpresaBuscar);
             this.tabPage3.Controls.Add(this.label54);
@@ -1706,9 +1708,20 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(707, 317);
+            this.tabPage3.Size = new System.Drawing.Size(707, 316);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Modificar Local";
+            // 
+            // btnActivarLocal
+            // 
+            this.btnActivarLocal.ForeColor = System.Drawing.Color.Black;
+            this.btnActivarLocal.Location = new System.Drawing.Point(519, 236);
+            this.btnActivarLocal.Name = "btnActivarLocal";
+            this.btnActivarLocal.Size = new System.Drawing.Size(116, 34);
+            this.btnActivarLocal.TabIndex = 38;
+            this.btnActivarLocal.Text = "Activar";
+            this.btnActivarLocal.UseVisualStyleBackColor = true;
+            this.btnActivarLocal.Click += new System.EventHandler(this.btnActivarLocal_Click);
             // 
             // cboComunaLocalBuscar
             // 
@@ -1762,7 +1775,7 @@
             // 
             this.btnActualizarLocal.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarLocal.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizarLocal.Location = new System.Drawing.Point(216, 236);
+            this.btnActualizarLocal.Location = new System.Drawing.Point(197, 236);
             this.btnActualizarLocal.Name = "btnActualizarLocal";
             this.btnActualizarLocal.Size = new System.Drawing.Size(121, 34);
             this.btnActualizarLocal.TabIndex = 8;
@@ -1772,7 +1785,7 @@
             // 
             // txtDireccionLocalBuscar
             // 
-            this.txtDireccionLocalBuscar.Location = new System.Drawing.Point(136, 153);
+            this.txtDireccionLocalBuscar.Location = new System.Drawing.Point(136, 152);
             this.txtDireccionLocalBuscar.Name = "txtDireccionLocalBuscar";
             this.txtDireccionLocalBuscar.Size = new System.Drawing.Size(149, 27);
             this.txtDireccionLocalBuscar.TabIndex = 7;
@@ -2057,6 +2070,19 @@
             this.btnActivar.TabIndex = 2;
             this.btnActivar.Text = "Modificar Empresa";
             // 
+            // btnActiva
+            // 
+            this.btnActiva.BackColor = System.Drawing.Color.Transparent;
+            this.btnActiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActiva.ForeColor = System.Drawing.Color.Black;
+            this.btnActiva.Location = new System.Drawing.Point(495, 233);
+            this.btnActiva.Name = "btnActiva";
+            this.btnActiva.Size = new System.Drawing.Size(123, 23);
+            this.btnActiva.TabIndex = 16;
+            this.btnActiva.Text = "Activar";
+            this.btnActiva.UseVisualStyleBackColor = false;
+            this.btnActiva.Click += new System.EventHandler(this.btnActiva_Click);
+            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -2219,19 +2245,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
-            // 
-            // btnActiva
-            // 
-            this.btnActiva.BackColor = System.Drawing.Color.Transparent;
-            this.btnActiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActiva.ForeColor = System.Drawing.Color.Black;
-            this.btnActiva.Location = new System.Drawing.Point(495, 233);
-            this.btnActiva.Name = "btnActiva";
-            this.btnActiva.Size = new System.Drawing.Size(123, 23);
-            this.btnActiva.TabIndex = 16;
-            this.btnActiva.Text = "Activar";
-            this.btnActiva.UseVisualStyleBackColor = false;
-            this.btnActiva.Click += new System.EventHandler(this.btnActiva_Click);
             // 
             // FrHomeAdmin
             // 
@@ -2496,5 +2509,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Button btnActiva;
+        private System.Windows.Forms.Button btnActivarLocal;
     }
 }
