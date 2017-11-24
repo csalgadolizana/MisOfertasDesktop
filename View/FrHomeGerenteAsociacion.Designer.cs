@@ -30,14 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrHomeGerenteAsociacion));
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.localBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TPUsuario = new System.Windows.Forms.TabControl();
             this.tHome = new System.Windows.Forms.TabPage();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tdocumentos = new System.Windows.Forms.TabPage();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,35 +39,33 @@
             this.usuariosRegistradosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descuentosEntregadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valoracionesRealizadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.topDeOfertasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label40 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.localBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.valoracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.descuentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.topDeOfertasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.localBindingSource)).BeginInit();
             this.TPUsuario.SuspendLayout();
             this.tHome.SuspendLayout();
+            this.tdocumentos.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tdocumentos.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.valoracionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.descuentoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataSource = typeof(Desk.Service_Usuario.usuario);
-            // 
-            // localBindingSource
-            // 
-            this.localBindingSource.DataSource = typeof(Desk.Service_Local.local);
             // 
             // TPUsuario
             // 
@@ -103,46 +95,6 @@
             this.tHome.Size = new System.Drawing.Size(706, 364);
             this.tHome.TabIndex = 0;
             this.tHome.Text = "Home";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(356, -6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(350, 184);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-1, -6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(361, 184);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(356, 164);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(350, 209);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-5, 175);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(365, 198);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // tdocumentos
             // 
@@ -205,6 +157,13 @@
             this.valoracionesRealizadasToolStripMenuItem.Text = "Valoraciones Realizadas";
             this.valoracionesRealizadasToolStripMenuItem.Click += new System.EventHandler(this.valoracionesRealizadasToolStripMenuItem_Click);
             // 
+            // topDeOfertasToolStripMenuItem
+            // 
+            this.topDeOfertasToolStripMenuItem.Name = "topDeOfertasToolStripMenuItem";
+            this.topDeOfertasToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.topDeOfertasToolStripMenuItem.Text = "Top de Ofertas";
+            this.topDeOfertasToolStripMenuItem.Click += new System.EventHandler(this.topDeOfertasToolStripMenuItem_Click);
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -239,6 +198,46 @@
             this.panel1.Size = new System.Drawing.Size(101, 42);
             this.panel1.TabIndex = 7;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(356, -6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(350, 184);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(-1, -6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(361, 184);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(356, 164);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(350, 209);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-5, 175);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(365, 198);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
@@ -249,6 +248,14 @@
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Desk.Service_Usuario.usuario);
+            // 
+            // localBindingSource
+            // 
+            this.localBindingSource.DataSource = typeof(Desk.Service_Local.local);
+            // 
             // valoracionBindingSource
             // 
             this.valoracionBindingSource.DataSource = typeof(Desk.Service_Valoracion.valoracion);
@@ -256,12 +263,6 @@
             // descuentoBindingSource
             // 
             this.descuentoBindingSource.DataSource = typeof(Desk.Service_Descuento.descuento);
-            // 
-            // topDeOfertasToolStripMenuItem
-            // 
-            this.topDeOfertasToolStripMenuItem.Name = "topDeOfertasToolStripMenuItem";
-            this.topDeOfertasToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
-            this.topDeOfertasToolStripMenuItem.Text = "Top de Ofertas";
             // 
             // FrHomeGerenteAsociacion
             // 
@@ -279,19 +280,19 @@
             this.MinimizeBox = false;
             this.Name = "FrHomeGerenteAsociacion";
             this.Text = "FrHomeGerenteAsociacion";
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.localBindingSource)).EndInit();
             this.TPUsuario.ResumeLayout(false);
             this.tHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tdocumentos.ResumeLayout(false);
             this.tdocumentos.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.valoracionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.descuentoBindingSource)).EndInit();
             this.ResumeLayout(false);

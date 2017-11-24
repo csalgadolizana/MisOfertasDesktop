@@ -5,6 +5,8 @@ using System.Linq;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 using Desk.Reportes;
+using System.Drawing;
+using Desk.Grafico;
 
 namespace Desk.View
 {
@@ -16,9 +18,9 @@ namespace Desk.View
         public FrHomeGerenteAsociacion()
         {
             InitializeComponent();
-            
+
         }
-        
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             FrLogin logi = new FrLogin();
@@ -33,7 +35,7 @@ namespace Desk.View
             lo.ShowDialog();
             this.Close();
         }
-        
+
         private void reporteLocalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Reporte_Locales local = new Reporte_Locales();
@@ -46,7 +48,7 @@ namespace Desk.View
         }
 
         private void usuariosRegistradosToolStripMenuItem_Click(object sender, EventArgs e)
-        {            
+        {
             Usuarios_Registrados usu = new Usuarios_Registrados();
             PanelPrincipal.Controls.Clear();
             usu.TopLevel = false;
@@ -76,6 +78,17 @@ namespace Desk.View
             valo.FormBorderStyle = FormBorderStyle.None;
             valo.Dock = DockStyle.Fill;
             valo.Show();
+        }
+
+        private void topDeOfertasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PanelPrincipal.Controls.Clear();
+            FormGraficoMensual pnGrafico = new FormGraficoMensual();
+            //pnGrafico.TopLevel = false;
+            //pnGrafico.Parent = PanelPrincipal;
+            //pnGrafico.FormBorderStyle = FormBorderStyle.None;
+            //pnGrafico.Dock = DockStyle.Fill;
+            pnGrafico.Show();
         }
     }
 }
