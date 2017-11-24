@@ -87,9 +87,9 @@
             this.label37 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnDescarBI = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpHastaBI = new System.Windows.Forms.DateTimePicker();
             this.label26 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDesdeBI = new System.Windows.Forms.DateTimePicker();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.tUsuario = new System.Windows.Forms.TabPage();
@@ -857,9 +857,9 @@
             this.tabPage15.Controls.Add(this.label37);
             this.tabPage15.Controls.Add(this.comboBox1);
             this.tabPage15.Controls.Add(this.btnDescarBI);
-            this.tabPage15.Controls.Add(this.dateTimePicker2);
+            this.tabPage15.Controls.Add(this.dtpHastaBI);
             this.tabPage15.Controls.Add(this.label26);
-            this.tabPage15.Controls.Add(this.dateTimePicker1);
+            this.tabPage15.Controls.Add(this.dtpDesdeBI);
             this.tabPage15.Controls.Add(this.label25);
             this.tabPage15.Controls.Add(this.label24);
             this.tabPage15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -883,6 +883,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Archivo BI"});
@@ -901,12 +902,12 @@
             this.btnDescarBI.UseVisualStyleBackColor = true;
             this.btnDescarBI.Click += new System.EventHandler(this.btnDescarBI_Click);
             // 
-            // dateTimePicker2
+            // dtpHastaBI
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(362, 56);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(213, 27);
-            this.dateTimePicker2.TabIndex = 4;
+            this.dtpHastaBI.Location = new System.Drawing.Point(362, 56);
+            this.dtpHastaBI.Name = "dtpHastaBI";
+            this.dtpHastaBI.Size = new System.Drawing.Size(213, 27);
+            this.dtpHastaBI.TabIndex = 4;
             // 
             // label26
             // 
@@ -919,12 +920,12 @@
             this.label26.TabIndex = 3;
             this.label26.Text = "Hasta:";
             // 
-            // dateTimePicker1
+            // dtpDesdeBI
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(74, 56);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(213, 27);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpDesdeBI.Location = new System.Drawing.Point(74, 56);
+            this.dtpDesdeBI.Name = "dtpDesdeBI";
+            this.dtpDesdeBI.Size = new System.Drawing.Size(213, 27);
+            this.dtpDesdeBI.TabIndex = 2;
             // 
             // label25
             // 
@@ -2334,10 +2335,10 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TabPage tabPage15;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDesdeBI;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnDescarBI;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpHastaBI;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TabPage tHome;
         private System.Windows.Forms.Label label37;

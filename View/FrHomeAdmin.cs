@@ -1,15 +1,13 @@
 ﻿using Desk.Utils;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.ServiceModel;
+using System.Xml;
+using System.Net;
 
 namespace Desk.View
 {
@@ -1183,35 +1181,30 @@ namespace Desk.View
 
         private void btnDescarBI_Click(object sender, EventArgs e)
         {
-            // Create a string array with the lines of text
+            WebClient client = new WebClient();
+            string desktop = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            var folder = Path.Combine(desktop, "Reportes");
+            Directory.CreateDirectory(folder);
+            string folderNow = Path.Combine(folder, DateTime.Now.ToString("dd-MM-yyyy"));
+            Directory.CreateDirectory(folderNow);
             Service_OfertaVisita.OfertaVistaServiceClient ofertVisit = new Service_OfertaVisita.OfertaVistaServiceClient();
-            //string[] lines = { ofertavisitaservice.Listado_oferta_visitas };
-
-            // Set a variable to the My Documents path.
-            string mydocpath =
-                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
-            // Write the string array to a new file named "WriteLines.txt".
-            using (StreamWriter outputFile = new StreamWriter(mydocpath + @"\WriteLines.txt"))
+            string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string hora = DateTime.Now.ToString("HH");
+            string minutos = hora + "hrs " + DateTime.Now.ToString("mm") + "min";
+            string ruta_final_archivo = folderNow + @"\Reporte " + minutos + ".txt";
+            using (StreamWriter outputFile = new StreamWriter(ruta_final_archivo))
             {
-                
-                BasicHttpBinding binding = new BasicHttpBinding();
-                // Use double the default value
-                binding.MaxReceivedMessageSize = 655362000000;
-                List<Service_OfertaVisita.ofertavisi> vio = ofertVisit.Listado_oferta_visitas().ToList();
-
+                DateTime desde = dtpDesdeBI.Value;
+                DateTime hasta = dtpHastaBI.Value;
+                List<Service_OfertaVisita.ofertavisi> vio = ofertVisit.Listado_oferta_visitas().Where(x => x.fechaVisita >= desde && x.fechaVisita <= hasta).ToList();
                 foreach (Service_OfertaVisita.ofertavisi item in vio)
                 {
                     string a = ";";
-                    a = item.ofertaIdOferta.idOferta.ToString()+";" +item.ofertaIdOferta.nombre+";"+ item.ofertaIdOferta.precioNormal+";"+item.ofertaIdOferta.precioOferta+";"+ item.ofertaIdOferta.descripcion +";"+ item.ofertaIdOferta.minimoCompra+";"+item.ofertaIdOferta.maximoCompra + ";";
-
+                    a = item.ofertaIdOferta.idOferta.ToString() + ";" + item.fechaVisita.ToString() + ";" + item.ofertaIdOferta.nombre + ";" + item.ofertaIdOferta.precioNormal + ";" + item.ofertaIdOferta.precioOferta + ";" + item.ofertaIdOferta.descripcion + ";" + item.ofertaIdOferta.minimoCompra + ";" + item.ofertaIdOferta.maximoCompra + ";";
                     outputFile.WriteLine(a);
                 }
-
-
-                   
             }
-            MessageBox.Show("No se saco la chucha");
+            MessageBox.Show("Su archivo quedo guardado en\n"+ ruta_final_archivo);
         }
     }
 }
